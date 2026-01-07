@@ -27,6 +27,40 @@
 - Assign access ports to the correct VLAN
 - Configure end devices with static IP addresses
 
+### Example Configuration (CLI)
+```bash
+SWITCH>enable
+SWITCH#configure terminal
+
+SWITCH(config)#interface range f0/1 - 2
+SWITCH(config-if-range)#switchport mode access
+SWITCH(config-if-range)#switchport access vlan 10
+SWITCH(config-if-range)#exit
+
+SWITCH(config)#interface range f0/3 - 4
+SWITCH(config-if-range)#switchport mode access
+SWITCH(config-if-range)#switchport access vlan 20
+SWITCH(config-if-range)#exit
+
+SWITCH(config)#interface range f0/5 - 6
+SWITCH(config-if-range)#switchport mode access
+SWITCH(config-if-range)#switchport access vlan 30
+SWITCH(config-if-range)#exit
+
+SWITCH(config)#vlan 10
+SWITCH(config-vlan)#name SALES
+SWITCH(config-vlan)#exit
+
+SWITCH(config)#vlan 20
+SWITCH(config-vlan)#name IT
+SWITCH(config-vlan)#exit
+
+SWITCH(config)#VLAN 30
+SWITCH(config-vlan)#name HR
+SWITCH(config-vlan)#exit
+
+```
+
 ### Verification 
 - Verify VLAN assignment:
   - *show vlan brief*
@@ -40,7 +74,11 @@
 
 ### Troubleshooting / Common Mistakes
 - Ports assigned to the wrong VLAN
-- Verify using *show vlan brief*
+- Verify using *```show vlan brief```*
+
+- Mac address table may apear emty if no traffic has been generated.
+- Verify using *```show mac-address-table```*. Generate traffic by using *```ping IP address```* in PC's Command Prompt within the same VLAN.
+  - (eg. Ping 192.168.1.2 from PC1 to PC2 in VLAN 10)
 
 - VLAN not created before assigning ports
 - Ports remain in default VLAN 1
