@@ -21,7 +21,7 @@ Each folder represents one independent lab and contains:
   - Common troubleshooting notes (if any)
 
 ## Labs Included
-
+- Lab 01: Basic VLAN Configuration (Access Ports)
 ## Goal 
 
 This ropository documents my CCNA learning journey and prepares me for real-world network configuration and troubleshooting scenarios.
