@@ -15,6 +15,7 @@ Each folder represents one independent lab and contains:
 - Lab-specify README with:
   - Topology description
   - Goal
+  - Example Configuration (CLI)
   - Key configurations
   - Verification steps
   - Common troubleshooting notes (if any)
