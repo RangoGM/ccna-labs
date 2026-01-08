@@ -22,6 +22,9 @@ Each folder represents one independent lab and contains:
 
 ## Labs Included
 - Lab 01: Basic VLAN Configuration (Access Ports)
+- Lab 02A: VLAN Trunking (Default Trunk)
+- Lab 02B: VLAN Trunking (Restrict VLAN)
+
 ## Goal 
 
 This ropository documents my CCNA learning journey and prepares me for real-world network configuration and troubleshooting scenarios.
