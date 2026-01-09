@@ -21,9 +21,11 @@ Each folder represents one independent lab and contains:
   - Common troubleshooting notes (if any)
 
 ## Labs Included
-- Lab 01: Basic VLAN Configuration (Access Ports)
-- Lab 02A: VLAN Trunking (Default Trunk)
-- Lab 02B: VLAN Trunking (Restrict VLAN)
+- **Lab 01**: Basic VLAN Configuration (Access Ports)
+- **Lab 02A**: VLAN Trunking (Default Trunk)
+- **Lab 02B**: VLAN Trunking (Allowed VLAN Restriction)
+- **Lab 02C** **(EXTRA)**: VLAN Trunking (Native VLAN mismatch)
+- **Lab 03**: Inter-VLAN Routing (Router-on-a-Stick)
 
 ## Goal 
 
