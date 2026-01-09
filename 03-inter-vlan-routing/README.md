@@ -119,5 +119,8 @@ Inter-VLAN routing requires a Layer 3 device.
 In this lab, a single router interface is used with multiple subinterfaces,
 each associated with a VLAN using IEEE 802.1Q tagging.
 
+Only one router is required, as inter-VLAN routing is performed per VLAN,
+not per switch.
+
 This lab demonstrates how Layer 3 routing enables communication between
 separate VLANs while maintaining Layer 2 segmentation.
