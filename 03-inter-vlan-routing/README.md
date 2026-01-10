@@ -35,9 +35,9 @@ A router is added and connected to the switch using a trunk link.
 
 | VLAN | Subnet | Default Gateway |
 |------|--------|-----------------|
-| 10 | 192.168.10.0/24 | 192.168.10.1 |
-| 20 | 192.168.20.0/24 | 192.168.20.1 |
-| 30 | 192.168.30.0/24 | 192.168.30.1 |
+| 10 | 192.168.1.0/24 | 192.168.1.1 |
+| 20 | 192.168.2.0/24 | 192.168.2.1 |
+| 30 | 192.168.3.0/24 | 192.168.3.1 |
 
 ---
 
@@ -65,15 +65,15 @@ SWITCH(config-if)# switchport mode trunk
 ```bash
 ROUTER(config)# interface <physical-interface>.10
 ROUTER(config-subif)# encapsulation dot1Q 10
-ROUTER(config-subif)# ip address 192.168.10.1 255.255.255.0
+ROUTER(config-subif)# ip address 192.168.1.1 255.255.255.0
 
 ROUTER(config)# interface <physical-interface>.20
 ROUTER(config-subif)# encapsulation dot1Q 20
-ROUTER(config-subif)# ip address 192.168.20.1 255.255.255.0
+ROUTER(config-subif)# ip address 192.168.2.1 255.255.255.0
 
 ROUTER(config)# interface <physical-interface>.30
 ROUTER(config-subif)# encapsulation dot1Q 30
-ROUTER(config-subif)# ip address 192.168.30.1 255.255.255.0
+ROUTER(config-subif)# ip address 192.168.3.1 255.255.255.0
 ```
 *(Physical router interface is enabled by default)*
 
