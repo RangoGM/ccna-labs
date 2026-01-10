@@ -26,6 +26,7 @@ Each folder represents one independent lab and contains:
 - **Lab 02B**: VLAN Trunking (Allowed VLAN Restriction)
 - **Lab 02C** **(EXTRA)**: VLAN Trunking (Native VLAN mismatch)
 - **Lab 03**: Inter-VLAN Routing (Router-on-a-Stick)
+- **Lab 04**: DHCP
 
 ## Goal 
 
