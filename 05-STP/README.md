@@ -67,7 +67,7 @@ connectivity.
 ---
 
 ### Result
-- One switch is elected as the root bridge
+- SW3 is elected as the root bridge by default based on STP priority and MAC address.
 - One or more redundant ports are placed in a blocking state
 - Layer 2 loops are prevented
 - Network connectivity is maintained
