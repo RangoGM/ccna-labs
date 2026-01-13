@@ -27,6 +27,9 @@ Each folder represents one independent lab and contains:
 - **Lab 02C** **(EXTRA)**: VLAN Trunking (Native VLAN mismatch)
 - **Lab 03**: Inter-VLAN Routing (Router-on-a-Stick)
 - **Lab 04**: DHCP
+- **LAB 05(A)**: STP
+- **LAB 05B**: STP Root Bridge
+- **LAB 05C**: STP PortFast & BPDU Guard
 
 ## Goal 
 
