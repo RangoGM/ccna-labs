@@ -30,6 +30,7 @@ Each folder represents one independent lab and contains:
 - **LAB 05(A)**: STP
 - **LAB 05B**: STP Root Bridge
 - **LAB 05C**: STP PortFast & BPDU Guard
+- **LAB 06**: Ethernet Channel
 
 ## Goal 
 
