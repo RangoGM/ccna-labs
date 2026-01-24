@@ -37,6 +37,7 @@ Each folder represents one independent lab and contains:
 - **LAB 9B**: Dynamic Routing (EIGRP - Unequal-Cost Load Balancing)
 - **LAB 10A**: Dynamic Routing (OSPF - Single Path)
 - **LAB 10B**: Dynamic Routing (OSPF - DR - BDR - DROTHER Election)
+- **LAB 10C**: Dynamic Routing (OSPF - Multi Area)
 ## Goal 
 
 This ropository documents my CCNA learning journey and prepares me for real-world network configuration and troubleshooting scenarios.
