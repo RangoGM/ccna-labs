@@ -39,6 +39,8 @@ Each folder represents one independent lab and contains:
 - **LAB 10B**: Dynamic Routing (OSPF - DR - BDR - DROTHER Election)
 - **LAB 10C**: Dynamic Routing (OSPF - Multi Area)
 - **LAB 11**: HSRP Enterprise Redundancy
+- **LAB 12A**: IPv6 Addressing & Basic Connectivity
+- **LAB 12B**: IPv6 Static Routing
 ## Goal 
 
 This ropository documents my CCNA learning journey and prepares me for real-world network configuration and troubleshooting scenarios.
