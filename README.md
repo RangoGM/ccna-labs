@@ -39,10 +39,12 @@ Each folder represents one independent lab and contains:
 
 ### 📂 Labs Included
 
-#### [High-Fidelity Labs - CML/VMware Focus]
+#### [High-Fidelity Labs - CML/VMware Focus] **(Start At Lab 12D)**
 - **L2 Security:** MAC Flooding and DHCP Starvation using Kali Linux against real IOSvL2 images.
 - **IPv6 SLAAC Deep-Dive:** Analyzing Linux host behavior and tuning `net.ipv6.conf.all.accept_ra` to ensure RA acceptance.
 - **DHCP Snooping & IP Source Guard:** Hardware-level security verification.
+- **Lab 12D**: IPv6 SLAAC
+- **Lab 12E (12E.1 + 12E.2)**: DHCPv6 Implement Stateless/Statefull
 
 #### [Enterprise Topology Labs - Packet Tracer Focus]
 - **Lab 01**: Basic VLAN Configuration (Access Ports)
