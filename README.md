@@ -39,16 +39,14 @@ Each folder represents one independent lab and contains:
 
 ### 📂 Labs Included
 
-#### [High-Fidelity Labs - CML/VMware Focus] **(Start At Lab 12D)**
+#### [Enterprise Topology Labs - Packet Tracer Focus]
+#### [High-Fidelity Labs - CML/VMware Focus]
 - **L2 Security:** MAC Flooding and DHCP Starvation using Kali Linux against real IOSvL2 images.
 - **IPv6 SLAAC Deep-Dive:** Analyzing Linux host behavior and tuning `net.ipv6.conf.all.accept_ra` to ensure RA acceptance.
 - **DHCP Snooping & IP Source Guard:** Hardware-level security verification.
-- **Lab 12D**: IPv6 SLAAC
-- **Lab 12E (12E.1 + 12E.2)**: DHCPv6 Implement Stateless/Statefull
-
-#### [Enterprise Topology Labs - Packet Tracer Focus]
-- **Lab 01**: Basic VLAN Configuration (Access Ports)
-- **Lab 02A**: VLAN Trunking (Default Trunk)
+##### LABS LIST:
+- **Lab 01**: Basic VLAN Configuration (Access Ports) 
+- **Lab 02A**: VLAN Trunking (Default Trunk) 
 - **Lab 02B**: VLAN Trunking (Allowed VLAN Restriction)
 - **Lab 02C** **(EXTRA)**: VLAN Trunking (Native VLAN mismatch)
 - **Lab 03**: Inter-VLAN Routing (Router-on-a-Stick)
@@ -68,6 +66,9 @@ Each folder represents one independent lab and contains:
 - **LAB 12A**: IPv6 Addressing & Basic Connectivity
 - **LAB 12B**: IPv6 Static Routing
 - **LAB 12C**: IPv6 - OSPFv3 IPv6 Dynamic Routing
+- **Lab 12D**: IPv6 SLAAC (**CML FOCUSED**)
+- **Lab 12E (12E.1 + 12E.2)**: DHCPv6 Implement Stateless/Statefull (**CML FOCUSED**)
+- **Lab 12F**: IPv6 RA GUARD (**CML FOCUSED**)
 
 *Note: These labs focus on building large-scale networks to understand complex routing propagation and redundancy.*
 
