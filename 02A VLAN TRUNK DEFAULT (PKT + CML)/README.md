@@ -5,6 +5,12 @@ This lab reuses the access-layer topology from **Lab 01 - Basic VLAN Configurati
 
 The same VLAN and access port configuration is appllied on both switches. A second switch is added, and the two switches are connected using an IEEE 802.1Q trunk link.
 
+**📸 Screenshot:**
+
+<img width="1015" height="250" alt="Screenshot 2026-02-01 125402" src="https://github.com/user-attachments/assets/b66cc69a-9559-45fc-af99-78ad32d01381" />
+
+*(Example Topology)*
+
 ---
 
 ### Goal 
@@ -26,6 +32,12 @@ The same VLAN and access port configuration is appllied on both switches. A seco
 - VLAN 20 - IT
 - VLAN 30 - HR
 
+**📸 Screenshot:**
+
+<img width="491" height="194" alt="Screenshot 2026-02-01 125448" src="https://github.com/user-attachments/assets/07c694b8-45f7-4a64-b47b-bda5991c910e" />
+
+*(Both switches are configured the same)*
+
 ---
 
 ### Key Configuration 
@@ -43,6 +55,10 @@ SW-CORE(config)#interface <trunk-interface>
 SW-CORE(config-if)#switchport mode trunk
 ```
 
+**📸 Screenshot:**
+
+<img width="604" height="252" alt="Screenshot 2026-02-01 131642" src="https://github.com/user-attachments/assets/5c797c68-b3ae-45fa-9953-188401ca4514" />
+
 *(Access port configuration is omited for brevity)*
 
 ---
@@ -52,7 +68,32 @@ SW-CORE(config-if)#switchport mode trunk
 - Verify trunk status by using *```show interfaces trunk```* command
 - Test connectivity using ping:
   - Same VLAN, different switch
+     - VLAN 10:
+
+     **📸 Screenshot:**
+       
+     <img width="608" height="165" alt="Screenshot 2026-02-01 125558" src="https://github.com/user-attachments/assets/db035b27-6232-4f60-976e-41b195c230f8" />
+
+     *(Kali_IT VLAN 10)*
+
+     <img width="569" height="99" alt="Screenshot 2026-02-01 125714" src="https://github.com/user-attachments/assets/4b2996d8-2e87-4bef-8031-c51fac8d3842" />
+
+     *(Router act like a Client in VLAN 10)*
+
+     <img width="1271" height="351" alt="Screenshot 2026-02-01 125742" src="https://github.com/user-attachments/assets/5eef2e75-dda0-4413-b34c-346597614a0a" />
+
+     *(Use Wireshark to capture the packet from eth0 in Linux) - Optional*
+
   - Different VLAN
+    - Vlan 20 -> 10:
+   
+    **📸 Screenshot:**
+
+    <img width="483" height="132" alt="Screenshot 2026-02-01 125832" src="https://github.com/user-attachments/assets/d0d7fd99-e8d6-444d-aec0-2950707a6f38" />
+
+    <img width="620" height="158" alt="Screenshot 2026-02-01 125851" src="https://github.com/user-attachments/assets/278de681-64d2-40e4-bdf4-05729ba446d7" />
+
+    *(As expected VLAN 20 can not communicate with VLAN 10 in different switch via a trunk link)*
 
 ---
 
