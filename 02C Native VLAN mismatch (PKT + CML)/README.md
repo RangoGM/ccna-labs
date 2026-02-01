@@ -135,7 +135,7 @@ SWITCH(config-if)# switchport trunk native vlan 99
 - *(Typically, different VLANs are assigned to different subnets. To enable communication between hosts in mismatched VLANs for this lab, we must manually override this by placing both hosts into the same subnet.)*
 - *(By default, Cisco switches employ **PVID Consistency Check** via **STP**. When a Native VLAN mismatch is detected, STP places the port into a **'broken' (root-inconsistent) state** to prevent potential **Layer 2 loops** and traffic leaking between different broadcast domains.)*
 
--> By disabling all this features *NOT RECOMMEND IN REALIFE** this will allowed different VLAN can reach each other.
+-> By disabling all this features (*NOT RECOMMEND IN REALIFE*) this will allowed different VLAN can reach each other.
 
 <img width="520" height="183" alt="Screenshot 2026-02-01 144101" src="https://github.com/user-attachments/assets/f6a64a10-940c-4c68-a6fc-3f9ccedb059d" />
 
