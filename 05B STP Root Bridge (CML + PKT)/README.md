@@ -6,6 +6,11 @@ This lab builds on **Lab 05 - Spanning Tree Protocol (STP)**.
 The same three-switch triangular topology is used. The purpose of this lab
 is to manually influence the STP root bridge election.
 
+**📸 Screenshot:**
+
+<img width="756" height="246" alt="image" src="https://github.com/user-attachments/assets/2aa83d59-f7bd-43c9-84a4-2b6f01b06c1c" />
+
+
 ---
 
 ### Goal
@@ -62,8 +67,22 @@ SW2(config)# spanning-tree vlan 1 root secondary
 - Verify STP status:
   - *`show spanning-tree`*
 - Confirm:
-  - SW1 is elected as the root bridge
-  - Port roles and states adjust accordingly
+  - SW1 is elected as the root bridge. **(IN THIS CML CASE I CHOOSED SW2 TO ELECTED AS ROOT BRIDGE)**
+
+**📸 Screenshot:**
+
+<img width="645" height="444" alt="Screenshot 2026-02-01 202921" src="https://github.com/user-attachments/assets/d46f8ba2-61e2-4a97-9c91-8b3c8df02edb" />
+
+*(SW1 - **28673**)*
+
+<img width="650" height="430" alt="Screenshot 2026-02-01 202935" src="https://github.com/user-attachments/assets/a58ca059-e459-445d-a917-d50c5f1bf4e8" />
+
+
+*(SW2 - **24577**)*
+
+*(When manually configured root bridge on the switch it will lower the priority than default priority **32768**, on SW1 because I manually configured **seccondary root** so it lower than default priority via SW3 and SW2 is lowest because it is **primary root**)* 
+  
+- Port roles and states adjust accordingly
 - (Optional) shut down a link or reload a switch to observe STP reconvergence
 
 ---
@@ -95,4 +114,5 @@ manually tuning bridge priority or path cost.
 
 In production networks, the root bridge is typically placed at the
 distribution or core layer rather than the access layer.
+
 
