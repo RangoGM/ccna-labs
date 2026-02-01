@@ -132,7 +132,7 @@ SWITCH(config-if)# switchport trunk native vlan 99
 *(Kali_HR VLAN 20 IP Adress)*
 
 - *(Theres no default gateway configured on both hosts because theres no Inter-VLAN Routing (Next Lab), so hosts can send ARP request to reach other hosts in the same subnet)*
-- *(As normal different VLAN configured as different Subnet so in this case if want host in different can reach each other you should configured both in the same subnet)*
+- *(Typically, different VLANs are assigned to different subnets. To enable communication between hosts in mismatched VLANs for this lab, we must manually override this by placing both hosts into the same subnet.)*
 - *(By default, Cisco switches employ **PVID Consistency Check** via **STP**. When a Native VLAN mismatch is detected, STP places the port into a **'broken' (root-inconsistent) state** to prevent potential **Layer 2 loops** and traffic leaking between different broadcast domains.)*
 
 -> By disabling all this features *NOT RECOMMEND IN REALIFE** this will allowed different VLAN can reach each other.
