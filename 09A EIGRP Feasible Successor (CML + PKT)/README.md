@@ -75,6 +75,18 @@ An external network (INTERNET) is connected to R3 and reached via a default rout
 #### Adjust Bandwidth on Secondary Path
 
 ```bash
+router eigrp 100
+ no auto-summary
+ network 192.168.1.0 0.0.0.15
+ network 192.168.30.0 0.0.0.3
+ network 192.168.40.0 0.0.0.3
+ network 192.168.50.0 0.0.0.3
+ passive-interface g0/2
+ passive-interface g0/0/0
+```
+*(Network statements vary per router)*
+
+```bash
 interface <interface-to-secondary-path>
  bandwidth 1000
 ```
