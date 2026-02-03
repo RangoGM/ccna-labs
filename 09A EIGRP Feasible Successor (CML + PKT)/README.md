@@ -18,6 +18,33 @@ An external network (INTERNET) is connected to R3 and reached via a default rout
 
 ---
 
+### Topology Design (PKT)
+
+**Devices**
+- Routers: R1, R2, R3
+- Switch (LAN)
+- PC
+- INTERNET (simulated router)
+
+---
+
+### IP Addressing Plan
+
+**LAN**
+- R1 G0/2: 192.168.1.1/28
+- PC: 192.168.1.10/28
+
+**Inter-router Links**
+- R1 G0/0 – R2 G0/0: 192.168.30.0/30
+- R1 G0/1 – R3 G0/1: 192.168.40.0/30
+- R2 G0/2 – R3 G0/2: 192.168.50.0/30
+
+**Internet Link**
+- R3 G0/0/0: 1.2.3.5/30
+- INTERNET G0/0/0: 1.2.3.6/30
+
+---
+
 ### Goal
 - Observe EIGRP single best-path routing behavior
 - Understand successor and feasible successor concepts
