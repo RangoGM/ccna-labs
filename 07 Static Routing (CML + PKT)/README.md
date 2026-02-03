@@ -149,7 +149,7 @@ ROUTER(config)# ip route <destination-network> <subnet-mask> <next-hop-ip>
 
 <img width="1916" height="667" alt="Screenshot 2026-02-02 233513" src="https://github.com/user-attachments/assets/af7b7970-21fd-4a07-9b54-f7af046cee15" />
 
-*(**ICMP Packets now only go through **Backup Path**)*
+*(**ICMP Packets now only go through **Backup Path****)*
 
 ---
 
