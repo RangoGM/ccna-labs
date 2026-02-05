@@ -1,12 +1,19 @@
 ## Lab 10C - OSPF Multi-Area (ABR & LSA Propagation)
 
-### Topology
+### Topology (PKT)
 
 This lab demonstrates **multi-area OSPF operation** using three OSPF areas:
 - Area 0 (Backbone)
 - Area 1
 - Area 2
 The topology includes **two Area Border Routers (ABRs)** that connect non-backbone areas to the backbone, allowing observation of inter-area routing and LSA propagation.
+
+### Topology (CML)
+
+**📸 Screenshot:**
+
+<img width="919" height="303" alt="Screenshot 2026-02-05 214800" src="https://github.com/user-attachments/assets/d20a21df-41d6-46e0-8d02-a4d399f6d926" />
+
 
 ---
 
@@ -19,7 +26,7 @@ The topology includes **two Area Border Routers (ABRs)** that connect non-backbo
 
 ---
 
-### Topology Design
+### Topology Design (PKT)
 
 #### Devices
 - Routers: **R1, R2, R3, R4, R5**
@@ -28,7 +35,7 @@ The topology includes **two Area Border Routers (ABRs)** that connect non-backbo
 
 --- 
 
-### Network & Area Design
+### Network & Area Design (PKT)
 
 #### Area 1
 - **LAN 1**
@@ -103,14 +110,51 @@ router ospf 1
 
 - Verify OSPF neighbors:
   - *`show ip ospf neighbor`*
+
+ **📸 Screenshot:**
+
+ <img width="630" height="116" alt="Screenshot 2026-02-05 220645" src="https://github.com/user-attachments/assets/55b62627-c29e-4b34-a105-4745e50fef6f" />
+
+
 - Verify OSPF routes:
   - *`show ip route ospf`*
+ 
+ **📸 Screenshot:**
+
+<img width="556" height="261" alt="Screenshot 2026-02-05 215710" src="https://github.com/user-attachments/assets/f46620f5-9bf3-466a-8146-aa7aad6e5367" />
+
+- **Inter-Area Routing**: Verified the propagation of **Type 3 LSAs (Summary LSAs)**. Routes from **Area 1** appeared as **O IA** in the routing tables of **Area 0** routers or vice versa.
+
 - Verify OSPF areas:
   - *`show ip ospf`*
+ 
+ **📸 Screenshot:**
+ 
+<img width="570" height="458" alt="Screenshot 2026-02-05 215931" src="https://github.com/user-attachments/assets/1934f1be-f423-4af9-a286-830d17dda3f9" />
+
+
+
 - Verify LSAs:
   - *`show ip ospf database`*
+
+  **📸 Screenshot:**
+
+<img width="467" height="488" alt="Screenshot 2026-02-05 215839" src="https://github.com/user-attachments/assets/e237f533-d272-41fa-877a-53b4355cdacd" />
+
+<img width="526" height="49" alt="Screenshot 2026-02-05 215900" src="https://github.com/user-attachments/assets/e367399a-563c-4778-8f13-b3a34b5a37d3" />
+
+**ABR Role:** Configured R2 as the Area Border Router (ABR), maintaining separate Link-State Databases (LSDB) for Area 0 (Backbone) and Area 1.
+
 - Test connectivity:
   - Host in Area 1 -> Host in Area 2
+ 
+**Traffic Isolation:** Confirmed via Wireshark that link-local multicasts (Hello packets) are strictly confined to their respective segments, validating the scalability benefits of OSPF areas.
+
+**📸 Screenshot:**
+
+<img width="1914" height="534" alt="Screenshot 2026-02-05 220034" src="https://github.com/user-attachments/assets/3e791ec5-ca38-4220-85fe-3866419c604b" />
+
+*(No **Hello Packets** from **Area 0** only **Area 1** multicast address has been captured on the link and vice versa)*
 
 ---
 
