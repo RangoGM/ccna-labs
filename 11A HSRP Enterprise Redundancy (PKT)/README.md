@@ -1,4 +1,4 @@
-## Lab 11 - HSRP Enterprise Redundancy
+## Lab 11 - HSRP Enterprise Redundancy (PKT Optimal)
 
 #### **(HSRP + STP Load Sharing + Dual DHCP on L3 Switches)**
 
@@ -9,6 +9,11 @@
 This lab demonstrates an **enterprise-style gateway redundancy design** using **HSRP, STP load sharing, and dual DHCP services** on Layer 3 switches.
 
 The topology is designed to provide **high availability** at both **Layer 2 and Layer 3**, ensuring uninterrupted connectivity for end devices even during device or link failures.
+
+**📸 Screen shot:**
+
+<img width="487" height="510" alt="Screenshot 2026-01-27 021802" src="https://github.com/user-attachments/assets/cbff6ff5-6ad0-4a1f-b1dc-d441f8f0b9e3" />
+
 
 ---
 
