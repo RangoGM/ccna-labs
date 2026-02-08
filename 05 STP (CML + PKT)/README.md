@@ -108,7 +108,7 @@ connectivity.
 
 ---
 
-### Key Insight
+### 💡 Key Insight
 
 **📸 Screenshot:**
 
@@ -120,7 +120,7 @@ connectivity.
 
 - But the link between **SW1 - SW3** is also a rootport at **SW3**, but the ICMP packet did not pass this link. Why?
 
-**Here is how the STP Intelligence and Loop Prevention works**
+#### 🧠 **Here is how the STP Intelligence and Loop Prevention works**
 
 <img width="436" height="30" alt="Screenshot 2026-02-01 12" src="https://github.com/user-attachments/assets/8ccd24a9-7742-4320-813f-8f4a1101b5d1" />
 
@@ -185,13 +185,11 @@ connectivity.
 ---
 
 ### Notes
-STP is enabled by default on Cisco switches and operates automatically to prevent Layer 2 loops.
-
-Although some ports may appear blocked, this behavior is expected and ensures a stable and loop-free network.
-
-End devices use static IP addresses for basic connectivity testing.
-
-STP recalculates the topology if a link fails, allowing blocked ports to transition into a forwarding state.
+> [!NOTE]
+> - STP is enabled by default on Cisco switches and operates automatically to prevent Layer 2 loops.
+> - Although some ports may appear blocked, this behavior is expected and ensures a stable and loop-free network.
+> - End devices use static IP addresses for basic connectivity testing.
+> - STP recalculates the topology if a link fails, allowing blocked ports to transition into a forwarding state.
 
 ---
 | [⬅️ Previous Lab](../04%20DHCP%20(CML%20%2B%20PKT)) | [🏠 Main Menu](../README.md) | [Next Lab ➡️](../05B%20STP%20Root%20Bridge%20(CML%20%2B%20PKT)) |
