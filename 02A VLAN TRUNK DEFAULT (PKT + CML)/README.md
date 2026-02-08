@@ -1,3 +1,9 @@
+<br>
+
+| [⬅️ Back to Table of Contents](../README.md) |
+| :--- |
+---
+
 ## Lab 02A - VLAN Trunking (Default Allow All)
 
 ### Topology
@@ -129,3 +135,9 @@ forwarded across the trunk.
 
 VLAN 1 is used as the native VLAN by default. Native VLAN configuration and
 mismatch scenarios are not covered in this lab.
+
+---
+
+| [⬅️ Previous Lab](../01%20VLAN%20BASIC%20(PKT)) | [🏠 Main Menu](../README.md) | [Next Lab ➡️](../02B%20VLAN%20Trunking%20(Allowed%20VLAN%20Restriction)%20(PKT)) |
+|:--- | :---: | ---: |
+
