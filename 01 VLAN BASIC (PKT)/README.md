@@ -96,8 +96,9 @@ SWITCH(config-vlan)#exit
 - Inter-VLAN Routing is not configured in this lab
 
 ### Notes 
-Each VLAN respresents a seperate broadcast domain.
-Inter-VLAN communication requires a Layer 3 device such as router or Layer 3 switch.
+> [!NOTE] 
+> - Each VLAN respresents a seperate broadcast domain.
+> - Inter-VLAN communication requires a Layer 3 device such as router or Layer 3 switch.
 
 ---
  [🏠 Main Menu](../README.md) | [Next Lab ➡️](../02A%20VLAN%20TRUNK%20DEFAULT%20(PKT%20%2B%20CML)) |
