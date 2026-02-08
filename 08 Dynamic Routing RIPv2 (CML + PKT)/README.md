@@ -1,3 +1,9 @@
+<br>
+
+| [⬅️ Back to Table of Contents](../README.md) |
+| :--- |
+
+
 ## Lab 08 - Dynamic Routing Protocol (RIP v2)
 
 ### Topology
@@ -256,3 +262,7 @@ RIP is a distance-vector routing protocol that uses hop count as its metric.
 The maximum hop count supported by RIP is 15, which limits its scalability.
 
 Although RIP is rarely used in modern production networks, it is included in CCNA to help understand the fundamentals of dynamic routing protocols.
+
+
+| [⬅️ Previous Lab](../07%20Static%20Routing%20(CML%20%2B%20PKT)) | [🏠 Main Menu](../README.md) | [Next Lab ➡️](../09A%20EIGRP%20Feasible%20Successor%20(CML)) |
+|:--- | :---: | ---: |
