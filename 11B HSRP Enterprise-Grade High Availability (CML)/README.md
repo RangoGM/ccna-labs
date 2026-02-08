@@ -1,3 +1,10 @@
+<br>
+
+| [⬅️ Back to Table of Contents](../README.md) |
+| :--- |
+
+
+
 ## Lab 11B Enterprise-Grade High Availability "X-House" Topology
 
 #### HSRP Multi-Group, IP SLA Tracking, and Symmetric Routing Design
@@ -290,6 +297,10 @@ Configured on the ISP (R1) to ensure traffic returns to the LAN via the correct 
 |**Speed**| **Slower speed (s)** | **Extremely fast (ms)**|
 |**System Load**| **More CPU load** because it has to process the full ICMP packet |Very **lightweight**, can be handled by hardware **(ASIC)**|
 |**Application**| **Static Route** or when **depth testing** is needed | Specifically used for **OSPF, BGP, EIGRP** for **immediate and gentle disconnection** (Neighbor) when a connection is established|
+
+| [⬅️ Previous Lab](../11A%20HSRP%20Enterprise%20Redundancy%20(PKT)) | [🏠 Main Menu](../README.md) | [Next Lab ➡️](../12A%20IPv6%20Addressing%20%26%20Basic%20Connectivity%20(PKT)) |
+|:--- | :---: | ---: |
+
 
 
 
