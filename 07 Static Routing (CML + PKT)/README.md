@@ -157,10 +157,9 @@ ROUTER(config)# ip route <destination-network> <subnet-mask> <next-hop-ip>
 *(**ICMP Packets now only go through **Backup Path****)*
 
 ---
-
-#### ⚠️ The Static Routing "Black Hole" Effect
-
-**Static routing** is fundamentally "blind" to remote network changes. In this multi-router topology, I observed a critical **limitation**: **Asymmetric Routing**.
+> [!CAUTION]
+> ### 🛑 The Static Routing "Black Hole" Effect
+> - **Static routing** is fundamentally "blind" to remote network changes. In this multi-router topology, I observed a critical **limitation**: **Asymmetric Routing**.
 
 **📸 Screenshot:**
 
@@ -172,11 +171,12 @@ ROUTER(config)# ip route <destination-network> <subnet-mask> <next-hop-ip>
 
 *(Ping suddenly stop when shut down **1 primary link** of **total 2** between src and dst Routers & **not changing to backup** path too)*
 
-When a primary link fails, the local router successfully switches to the floating static path. However, the remote router remains unaware of the failure and continues to forward return traffic toward the dead link. Without a mechanism to communicate link states between nodes, the data simply drops into a routing black hole.
+> [!WARNING]
+> - When a primary link fails, the local router successfully switches to the floating static path. However, the remote router remains unaware of the failure and continues to forward return traffic toward the dead link. Without a mechanism to communicate link states between nodes, the data simply drops into a routing black hole.
+> - Manual path management is clearly not scalable for high-availability environments...
 
-Manual path management is clearly not scalable for high-availability environments...
-
-**That’s why we will be deploying Dynamic Routing Protocols in the next lab.** 😉
+> [!TIP]
+> **That’s why we will be deploying Dynamic Routing Protocols in the next lab.** 😉
 
 ---
 
@@ -196,9 +196,9 @@ Manual path management is clearly not scalable for high-availability environment
 ---
 
 ### Notes
-Static routing requires manual configuration and does not scale well in large networks.
-
-This lab helps build a foundation for understanding dynamic routing protocols such as RIP, EIGRP and OSPF.
+> [!NOTE]
+> - Static routing requires manual configuration and does not scale well in large networks.
+> - This lab helps build a foundation for understanding dynamic routing protocols such as RIP, EIGRP and OSPF.
 
 | [⬅️ Previous Lab](../06%20Ethernet%20Channel%20%26%20ASIC%20Hashing%20(CML%20%2B%20PKT)) | [🏠 Main Menu](../README.md) | [Next Lab ➡️](../08%20Dynamic%20Routing%20RIPv2%20(CML%20%2B%20PKT)) |
 |:--- | :---: | ---: |
