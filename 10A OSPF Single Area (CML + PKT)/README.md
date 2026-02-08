@@ -1,3 +1,9 @@
+<br>
+
+| [⬅️ Back to Table of Contents](../README.md) |
+| :--- |
+
+
 ## Lab 10A - OSPF Single Area (Path Selection & Convergence) **(Long Lab - CCNA Focused)**
 
 ### Topology (PKT)
@@ -295,3 +301,6 @@ This lab demonstrates basic OSPF single-area operation using cost-based path sel
 Manual router ID configuration ensures predictable OSPF behavior and simplifies troubleshooting.
 
 OSPF automatically recalculates the shortest path using the SPF algorithm when topology changes occur.
+
+| [⬅️ Previous Lab](../09B%20EIGRP%20Unequal-Cost%20(CML%20%2B%20PKT)) | [🏠 Main Menu](../README.md) | [Next Lab ➡️](../10B%20OSPF%20Elections%20(CML%20%2B%20PKT)) |
+|:--- | :---: | ---: |
