@@ -29,7 +29,8 @@ To ensure technical accuracy and eliminate "Bridge Shortcuts" (where traffic byp
 
 **(R1 E0/0 Interface)**
 
-**DevOps Insight:** Using separate virtual bridges forces every packet from the Attacker to traverse the Switch's **Data Plane (IOL)**, preventing the host machine from automatically bridging the traffic at the software layer.
+>[!TIP]
+> **DevOps Insight:** Using separate virtual bridges forces every packet from the Attacker to traverse the Switch's **Data Plane (IOL)**, preventing the host machine from automatically bridging the traffic at the software layer.
 
 ---
 
@@ -119,9 +120,11 @@ ip -6 addr show eth0
 
 ---
 ### Troubleshooting & Lessons Learned
-- **Link-Local Recovery:** Disconnecting NAT bridges often drops the `fe80::` address. Manually assigning a `scope link` address is essential for maintaining Layer 2 reachability in isolated labs.
-- **Simulation Limitations:** Testing revealed that `device-role` monitor may fail to drop packets in some virtual IOL images; switching to `device-role host` ensured 100% enforcement.
-- **Bridge Shortcut Mitigation:** Successfully implemented `Network Segmentation` by using separate virtual adapters to force traffic through the security control layer.
+
+>[!NOTE]
+> - **Link-Local Recovery:** Disconnecting NAT bridges often drops the `fe80::` address. Manually assigning a `scope link` address is essential for maintaining Layer 2 reachability in isolated labs.
+> - **Simulation Limitations:** Testing revealed that `device-role` monitor may fail to drop packets in some virtual IOL images; switching to `device-role host` ensured 100% enforcement.
+> - **Bridge Shortcut Mitigation:** Successfully implemented `Network Segmentation` by using separate virtual adapters to force traffic through the security control layer.
 
 | [⬅️ Previous Lab](../15%20DHCPv6%20Implementation%20STATELESS%20%26%20STATEFUL%20(CML%20FOCUSED)) | [🏠 Main Menu](../README.md) | [Next Lab ➡️] |
 |:--- | :---: | ---: |
