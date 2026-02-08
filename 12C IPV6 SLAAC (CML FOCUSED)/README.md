@@ -1,4 +1,4 @@
-## Lab 12D - IPv6 SLAAC (Router Advertisement & Linux Kernel Behavior)
+## Lab 12C - IPv6 SLAAC (Router Advertisement & Linux Kernel Behavior)
 
 ### 1. Topology 
 
