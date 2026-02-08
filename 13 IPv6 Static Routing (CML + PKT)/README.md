@@ -64,7 +64,8 @@ ipv6 route <destination-prefix> <next-hop-address>
 ```bash
 ipv6 route <destination-prefix> <exit-interface>
 ```
-⚠️ *In IPv6, this method may cause issues in some scenarios and is not recommended.*
+>[!WARNING]
+> #### ⚠️ *In IPv6, this method may cause issues in some scenarios and is not recommended.*
 
 ---
 3️⃣ **Fully Specified Static Route (Recommended)**
@@ -93,7 +94,9 @@ ipv6 route 2001:db8:2::/64 g0/0
 ```bash
 ipv6 route 2001:db8:2::/64 g0/0 2001:db8:12::2
 ```
-*(Fully specified static route - preferred method)*
+
+>[!TIP]
+> #### *(Fully specified static route - preferred method)*
 
 ---
 
@@ -159,7 +162,8 @@ ping ipv6 <destination>
 ```
 
 ---
-### "Golden Rule: IP SLA goes hand-in-hand with Static Routing for both IPv4 and IPv6."
+>[!TIP]
+> ### 🥇 "Golden Rule: IP SLA goes hand-in-hand with Static Routing for both IPv4 and IPv6."
 
 - **The Limitation:** Standard Static Routes are "blind"—they remain in the routing table as long as the local interface is 'Up', even if the destination is unreachable further down the path.
 
@@ -186,11 +190,12 @@ ping ipv6 <destination>
 --- 
 
 ### Notes
-- IPv6 static routing supports **recursive, directly connected, and fully specified routes**
-- **Fully specified static routes are recommended** in IPv6 to avoid ambiguity
-- Directly connected IPv6 static routes may fail in some implementations
-- Recursive static routing is commonly used and preferred for simplicity
-- This lab demonstrates why IPv6 static routing must be configured more carefully than IPv4
+> [!NOTE]
+> - IPv6 static routing supports **recursive, directly connected, and fully specified routes**
+> - **Fully specified static routes are recommended** in IPv6 to avoid ambiguity
+> - Directly connected IPv6 static routes may fail in some implementations
+> - Recursive static routing is commonly used and preferred for simplicity
+> - This lab demonstrates why IPv6 static routing must be configured more carefully than IPv4
 
 | [⬅️ Previous Lab](../12C%20IPV6%20SLAAC%20(CML%20FOCUSED)) | [🏠 Main Menu](../README.md) | [Next Lab ➡️](../14%20OSPFv3%20(CML%20%2B%20PKT)) |
 |:--- | :---: | ---: |
