@@ -79,11 +79,12 @@ SW-CORE(config-if)# switchport trunk allowed vlan 10,20
 ---
 
 ### Notes
-This lab uses the same topology as Lab 02A.
-The only variable changed is the allowed VLAN configuration, which clearly
-demonstrates the impact of VLAN restriction on trunk links.
-Although VLAN 30 exists on both switches, it is not included in the allowed
-VLAN list on the trunk. As a result, frames belonging to VLAN 30 are dropped
+> [!NOTE]
+> - This lab uses the same topology as Lab 02A.
+> - The only variable changed is the allowed VLAN configuration, which clearly
+> - demonstrates the impact of VLAN restriction on trunk links.
+> - Although VLAN 30 exists on both switches, it is not included in the allowed
+> - VLAN list on the trunk. As a result, frames belonging to VLAN 30 are dropped
 and cannot traverse the trunk link.
 
 ---
