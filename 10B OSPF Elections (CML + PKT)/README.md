@@ -156,7 +156,8 @@ interface <interface-id>
 
 #### SHUT DOWN R4
 
-**1. Non-Preemptive Behavior:** Verified that increasing priority on a DROTHER to 255 does not trigger an immediate re-election. The current DR remains until the process is manually cleared or the DR fails.
+> [!CAUTION]
+> **1. Non-Preemptive Behavior:** Verified that increasing priority on a DROTHER to 255 does not trigger an immediate re-election. The current DR remains until the process is manually cleared or the DR fails.
 
 **📸 Screenshot:**
 
@@ -189,8 +190,8 @@ interface <interface-id>
 
 <img width="501" height="59" alt="Screenshot 2026-02-05 121242" src="https://github.com/user-attachments/assets/b8a4363a-3dca-43d0-bbc3-39215518cf6c" />
 
-
-**3. Data Plane vs. Control Plane:** Confirmed that R1 and R2 can successfully exchange ICMP traffic despite being in a **2-WAY state**. Adjacency state only dictates the exchange of Link-State information, not reachability.
+>[!WARNING]
+> **3. Data Plane vs. Control Plane:** Confirmed that R1 and R2 can successfully exchange ICMP traffic despite being in a **2-WAY state**. Adjacency state only dictates the exchange of Link-State information, not reachability.
 
 **4. LSA Type 2 Identification:** Captured and analyzed Network **LSAs (Type 2)** in the LSDB, which are exclusive to multi-access segments and originated by the DR.
 
@@ -261,15 +262,15 @@ interface <interface-id>
 ---
 
 ### Notes
-OSPF elects DR and BDR **only on broadcast and NBMA networks**, not on point-to-point links.
+>[!NOTE]
+> - OSPF elects DR and BDR **only on broadcast and NBMA networks**, not on point-to-point links.
+>    - **224.0.0.5** Multicast Address: For **all OSPF Routers.**
+>    - **224.0.0.6** Multicast Address: For **DR / BDR elections.**
+> - Router ID is the primary factor in DR election when interface priority is not manually configured.
 
-- **224.0.0.5** Multicast Address: For all OSPF Routers.
 
-- **224.0.0.6** Multicast Address: For DR / BDR elections.
-
-Router ID is the primary factor in DR election when interface priority is not manually configured.
-
-Best practice is to place DR and BDR on routers located at the core or distribution layer, while edge routers (such as Internet-facing routers) operate as DROTHER.
+> [!TIP]
+>  Best practice is to place DR and BDR on routers located at the core or distribution layer, while edge routers (such as Internet-facing routers) operate as DROTHER.
 
 | [⬅️ Previous Lab](../10A%20OSPF%20Single%20Area%20(CML%20%2B%20PKT)) | [🏠 Main Menu](../README.md) | [Next Lab ➡️](../10C%20OSPF%20Multi-Area%20(CML%20%2B%20PKT)) |
 |:--- | :---: | ---: |
