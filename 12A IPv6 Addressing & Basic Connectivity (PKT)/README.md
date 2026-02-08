@@ -1,3 +1,9 @@
+<br>
+
+| [⬅️ Back to Table of Contents](../README.md) |
+| :--- |
+
+
 ## Lab 12A - IPv6 Addressing & Basic Connectivity 
 
 ### Topology
@@ -111,3 +117,7 @@ ping ipv6 <destination>
 - Additional routing configuration is required to reach remote IPv6 networks
 
 ➡️ **This limitation will be addressed in Lab 12B - IPv6 Static Routing**
+
+| [⬅️ Previous Lab](../11B%20HSRP%20Enterprise-Grade%20High%20Availability%20(CML)) | [🏠 Main Menu](../README.md) | [Next Lab ➡️](../12B%20IPv6%20Basic%20Connectivity%20%26%20Windows%20Stack%20Deep-Dive%20(CML)) |
+|:--- | :---: | ---: |
+
