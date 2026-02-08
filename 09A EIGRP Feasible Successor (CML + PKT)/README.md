@@ -178,7 +178,8 @@ In this experiment, I intentionally increased the **delay** on the backup neighb
   - The backup path was stripped of its **Feasible Successor** status.
   - Upon primary link failure, the router entered the **ACTIVE state**, sending out **DUAL Queries** to find a new path.
   - Even with BFD enabled, the recovery was noticeably slower because the router had to perform a full re-calculation instead of an instant switchover.
-➡️ **Verdict:** A physical backup link is useless for high availability if it doesn't satisfy EIGRP's logic **($RD < FD$).**
+ 
+➡️ **Verdict:** A physical backup link is useless for high availability if it doesn't satisfy EIGRP's logic **(RD < FD).**
 
 ---
 
