@@ -1,3 +1,9 @@
+<br>
+
+| [⬅️ Back to Table of Contents](../README.md) |
+| :--- |
+
+
 ## Lab 16: IPv6 RA GUARD - Defeating Rogue Router Advertisement Attacks
 
 ### Objective
@@ -117,5 +123,7 @@ ip -6 addr show eth0
 - **Simulation Limitations:** Testing revealed that `device-role` monitor may fail to drop packets in some virtual IOL images; switching to `device-role host` ensured 100% enforcement.
 - **Bridge Shortcut Mitigation:** Successfully implemented `Network Segmentation` by using separate virtual adapters to force traffic through the security control layer.
 
+| [⬅️ Previous Lab](../15%20DHCPv6%20Implementation%20STATELESS%20%26%20STATEFUL%20(CML%20FOCUSED)) | [🏠 Main Menu](../README.md) | [Next Lab ➡️] |
+|:--- | :---: | ---: |
 
 
