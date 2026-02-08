@@ -1,3 +1,10 @@
+<br>
+
+| [⬅️ Back to Table of Contents](../README.md) |
+| :--- |
+
+---
+
 ## Lab 02C - Native VLAN Mismatch (Extra)
 
 ### Topology
@@ -171,5 +178,10 @@ exists and warning messages may be observed.
 
 Best practice is to avoid using a user VLAN as the native VLAN and to explicitly
 configure and match the native VLAN on both ends of a trunk.
+
+---
+| [⬅️ Previous Lab](../02B%20VLAN%20Trunking%20(Allowed%20VLAN%20Restriction)%20(PKT)) | [🏠 Main Menu](../README.md) | [Next Lab ➡️](../03%20Inter%20VLAN%20Routing%20(CML%20%2B%20PKT)) |
+|:--- | :---: | ---: |
+
 
 
