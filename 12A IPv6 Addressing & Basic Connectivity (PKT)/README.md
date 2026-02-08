@@ -111,12 +111,14 @@ ping ipv6 <destination>
 ---
 
 ### Notes
-- IPv6 automatically generates **link-local addresses** on all interfaces
-- Neighbor Discovery (ND) is used instead of ARP
-- `ipv6 unicast-routing` enables forwarding but **does not create routes**
-- Additional routing configuration is required to reach remote IPv6 networks
 
-➡️ **This limitation will be addressed in Lab 12B - IPv6 Static Routing**
+> [!NOTE]
+> - IPv6 automatically generates **link-local addresses** on all interfaces
+> - Neighbor Discovery (ND) is used instead of ARP
+> - `ipv6 unicast-routing` enables forwarding but **does not create routes**
+> - Additional routing configuration is required to reach remote IPv6 networks
+
+➡️ **This limitation will be addressed in Lab 13 - IPv6 Static Routing**
 
 | [⬅️ Previous Lab](../11B%20HSRP%20Enterprise-Grade%20High%20Availability%20(CML)) | [🏠 Main Menu](../README.md) | [Next Lab ➡️](../12B%20IPv6%20Basic%20Connectivity%20%26%20Windows%20Stack%20Deep-Dive%20(CML)) |
 |:--- | :---: | ---: |
