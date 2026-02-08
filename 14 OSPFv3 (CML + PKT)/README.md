@@ -82,16 +82,15 @@ OSPFv3 is used to dynamically exchange IPv6 routes between routers, eliminating 
 |R2|2.2.2.2|
 |R3|3.3.3.3|
 
-#### The 32-bit Router-ID in an IPv6 World
+> [!NOTE]
+> #### The 32-bit Router-ID in an IPv6 World
+> *A common question in OSPFv3 is: "Since IPv6 uses 128-bit addresses, why does OSPFv3 still require a 32-bit Router-ID in the x.x.x.x format?"*
+> - **The Reasons:**
+>   - **SPF Algorithm Compatibility:** OSPFv3 is an evolution of OSPFv2. Retaining the **32 bits** format allows the protocol to use the same **Shortest Path First (SPF)** engine and **Dijkstra** algorithm logic to build the topology map.
+>   - **Identification vs. Routing:** The Router-ID is a logical "name" for a node in the Link-State Database (LSDB). It is used for identification, not for packet forwarding. Therefore, it does not need to match the **128 bits** IPv6 address format.
 
-*A common question in OSPFv3 is: "Since IPv6 uses 128-bit addresses, why does OSPFv3 still require a 32-bit Router-ID in the x.x.x.x format?"*
-**The Reasons:**
-
-- **SPF Algorithm Compatibility:** OSPFv3 is an evolution of OSPFv2. Retaining the **32 bits** format allows the protocol to use the same **Shortest Path First (SPF)** engine and **Dijkstra** algorithm logic to build the topology map.
-
-- **Identification vs. Routing:** The Router-ID is a logical "name" for a node in the Link-State Database (LSDB). It is used for identification, not for packet forwarding. Therefore, it does not need to match the **128 bits** IPv6 address format.
-
-- **Mandatory Manual Configuration:** In OSPFv2, a router could "auto-elect" an ID from its IPv4 interfaces. In an IPv6-only environment (like this lab), there are no IPv4 addresses to pick from. If you don't manually set the `router-id`, the OSPFv3 process will **fail to start.**
+>[!WARNING]
+> #### **Mandatory Manual Configuration:** In OSPFv2, a router could "auto-elect" an ID from its IPv4 interfaces. In an IPv6-only environment (like this lab), there are no IPv4 addresses to pick from. If you don't manually set the `router-id`, the OSPFv3 process will **fail to start.**
 
 **➡️ *In OSPFv3, the Router-ID is an abstract 32-bit identifier. Without an IPv4 address on the interface, the router-id command becomes a mandatory first step for protocol initialization.***
 
@@ -190,14 +189,12 @@ interface g0/1
 
 *(Noticed that OSPF is learned by **Link-Local Addresses (fe80::)** not **Global-Unicast Addresses**)*
 
-#### Why OSPFv3 Uses Link-Local Addresses (LLA)
-Unlike OSPFv2 (IPv4) which relies on interface IPs, OSPFv3 uses **Link-Local Addresses (fe80::)** as its foundation. This shift provides three major advantages:
-
-- **Decoupling of Topology and Addressing:** OSPFv3 separates "network mapping" from "prefix advertising." Routers establish adjacencies using LLAs first. Global Unicast Addresses (GUAs) are then treated simply as "prefix information" rather than the basis for the connection.
-
-- **Enhanced Stability:** Modifying, adding, or deleting Global Unicast prefixes on an interface will not cause OSPF neighbor flaps. In OSPFv2, changing an interface IP resets the adjacency; in OSPFv3, the neighbor relationship remains rock-solid.
-
-- **Protocol Efficiency:** On Point-to-Point links, OSPFv3 can form neighbors and route traffic using only Link-Local addresses. Configuring Global Unicast addresses becomes optional for transit links, simplifying the addressing scheme.
+>[!NOTE]
+> #### Why OSPFv3 Uses Link-Local Addresses (LLA)
+> - Unlike OSPFv2 (IPv4) which relies on interface IPs, OSPFv3 uses **Link-Local Addresses (fe80::)** as its foundation. This shift provides three major advantages:
+>   - **Decoupling of Topology and Addressing:** OSPFv3 separates "network mapping" from "prefix advertising." Routers establish adjacencies using LLAs first. Global Unicast Addresses (GUAs) are then treated simply as "prefix information" rather than the basis for the connection.
+>   - **Enhanced Stability:** Modifying, adding, or deleting Global Unicast prefixes on an interface will not cause OSPF neighbor flaps. In OSPFv2, changing an interface IP resets the adjacency; in OSPFv3, the neighbor relationship remains rock-solid.
+>   - **Protocol Efficiency:** On Point-to-Point links, OSPFv3 can form neighbors and route traffic using only Link-Local addresses. Configuring Global Unicast addresses becomes optional for transit links, simplifying the addressing scheme.
 
 **➡️ *In short: OSPFv2 is 'IP-specific', while OSPFv3 is 'Link-specific'. This makes IPv6 routing much more resilient to addressing changes*.**
 
@@ -250,6 +247,8 @@ ping ipv6 2001:db8:1::10
 
 *(R2 database)*
 
+---
+
 #### LSA Evolution: From "Summary" to "Inter-Area-Prefix"
 
 OSPFv3 renames several LSA types to better reflect their functions in an IPv6 environment. The most notable change is with **Type 3 LSAs:**
@@ -264,12 +263,13 @@ OSPFv3 renames several LSA types to better reflect their functions in an IPv6 en
 
 - **Protocol Neutrality:** By focusing on "Prefixes" rather than "Networks/Subnets," the naming convention aligns with the IPv6 philosophy where addressing is treated as an attribute of the link, not the link itself.
 
-|LSA Type|OSPFv2 Name (IPv4)|**OSPFv3 Name (IPv6)**|
-|-|-|-|
-|**Type 3**|Summary LSA|**Inter-Area-Prefix-LSA**|
-|**Type 4**|ASBR Summary LSA|**Inter-Area-Router-LSA**|
-|**Type 8**|*N/A*|**Link-LSA** (New - Only v3)|
-|**Type 9**|*N/A*|**Intra-Area-Prefix-LSA** (New - Only v3)|
+> [!NOTE]
+> |LSA Type|OSPFv2 Name (IPv4)|**OSPFv3 Name (IPv6)**|
+> |-|-|-|
+> |**Type 3**|Summary LSA|**Inter-Area-Prefix-LSA**|
+> |**Type 4**|ASBR Summary LSA|**Inter-Area-Router-LSA**|
+> |**Type 8**|*N/A*|**Link-LSA** (New - Only v3)|
+> |**Type 9**|*N/A*|**Intra-Area-Prefix-LSA** (New - Only v3)|
 
 - **OSPFv3 LSA Type Evolution - Observations:**
 
@@ -279,7 +279,8 @@ OSPFv3 renames several LSA types to better reflect their functions in an IPv6 en
 
 --- 
 
-### Optimization Insight: Beyond DR/BDR Election
+> [!TIP]
+> ### Optimization Insight: Beyond DR/BDR Election
 
 In my previous **OSPFv2 (IPv4)** labs, I focused on manipulating the election process by adjusting interface priorities to force specific DR/BDR roles or bypass the election.
 
@@ -301,9 +302,9 @@ In this **OSPFv3 (IPv6)** lab, I want to highlight an even more efficient method
 
 *(No DR / BDR elected)*
 
-Remind OSPF adjacencies step: 
-
-`Down` -> `Init` -> `Two-Way` -> `ExStart` -> `Exchange` -> `Loading` -> `Full`.
+> [!IMPORTANT]
+> #### Remind OSPF adjacencies step: 
+> #### `Down` → `Init` → `Two-Way` → `ExStart` → `Exchange` → `Loading` → `Full`.
 
 - So in this case it is **Full State** without DR / BDR elections.
 
@@ -328,10 +329,11 @@ Remind OSPF adjacencies step:
 ---
 
 ### Notes
-- OSPFv3 is **interface-based**, unlike OSPFv2
-- Neighbor adjacencies use **link-local IPv6 addresses**
-- Router ID is mandatory and uses IPv4 format
-- This topology reflects a **realistic IPv6 routed enterprise segment**
+>[!NOTE]
+> - OSPFv3 is **interface-based**, unlike OSPFv2
+> - Neighbor adjacencies use **link-local IPv6 addresses**
+> - Router ID is mandatory and uses IPv4 format
+> - This topology reflects a **realistic IPv6 routed enterprise segment**
 
 | [⬅️ Previous Lab](../13%20IPv6%20Static%20Routing%20(CML%20%2B%20PKT)) | [🏠 Main Menu](../README.md) | [Next Lab ➡️](../15%20DHCPv6%20Implementation%20STATELESS%20%26%20STATEFUL%20(CML%20FOCUSED)) |
 |:--- | :---: | ---: |
