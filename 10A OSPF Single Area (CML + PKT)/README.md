@@ -151,20 +151,20 @@ router ospf 1
 ---
 
 ### Convergence Test
-- Shut down the primary OSPF path between R1 and R3 - **When a device is shut down, the router immediately recognizes the "Good-bye" signal**. So the reconvergence also like **EIGRP** but **IMPORTANT** to know this,
-last EIGRP - Feasible Successor Lab (I have highlight the word **MINIMAL PACKET LOSS**) and this is why:
+>[!CAUTION]
+> Shut down the primary OSPF path between R1 and R3 - **When a device is shut down, the router immediately recognizes the "Good-bye" signal**. So the reconvergence also like **EIGRP** but is **IMPORTANT** to know this,
+last EIGRP - Feasible Successor Lab (I have **highlight** the word **MINIMAL PACKET LOSS**) and this is why:
 
 #### EIGRP vs OSPF – Final Conclusion
 
-**EIGRP** converges **faster** than **OSPF** at the **control-plane** level due to its event-driven **DUAL algorithm**. However, lab testing shows that **EIGRP** may still experience **packet loss** because **CEF/FIB** updates in the **data plane** are not **instantaneous**, creating a **short forwarding gap**.
+>[!WARNING]
+> **EIGRP** converges **faster** than **OSPF** at the **control-plane** level due to its event-driven **DUAL algorithm**. However, lab testing shows that **EIGRP** may still experience **packet loss** because **CEF/FIB** updates in the **data plane** are not **instantaneous**, creating a **short forwarding gap**.
+> - **As Cisco states:**
+> - *“DUAL guarantees loop-free convergence, not lossless forwarding.”*
+> - **OSPF**, while logically **slower** due to **SPF recalculation**, often forwards traffic **more smoothly** in **small topologies** because **SPF and CEF** updates occur in a **batched manner**, resulting in **little or no observable packet loss.**
 
-**As Cisco states:**
-
-*“DUAL guarantees loop-free convergence, not lossless forwarding.”*
-
-**OSPF**, while logically **slower** due to **SPF recalculation**, often forwards traffic **more smoothly** in **small topologies** because **SPF and CEF** updates occur in a **batched manner**, resulting in **little or no observable packet loss.**
-
-In real-world networks, minimizing packet loss requires **BFD**, regardless of whether **EIGRP or OSPF** is used.
+>[!TIP]
+> In real-world networks, minimizing packet loss requires **BFD**, regardless of whether **EIGRP or OSPF** is used.
 
 ➡️ **EIGRP decides faster, OSPF forwards smoother in small labs; BFD is the real solution in production.**
 
@@ -205,7 +205,7 @@ Established a static default route on R3 pointing towards the external network.
 
 Utilized the `default-information originate` command within the OSPF process to flood a **Type 5 LSA** across the entire 5-node pentagon.
 
-**The Outcome:** All internal routers (R1, R2, R4, R5) now automatically receive an **O*E2** default route. This ensures that any traffic from Kali 1 destined for unknown networks is correctly forwarded through the OSPF backbone to the Internet gateway at R3.
+➡️ **The Outcome:** All internal routers (R1, R2, R4, R5) now automatically receive an **O*E2** default route. This ensures that any traffic from Kali 1 destined for unknown networks is correctly forwarded through the OSPF backbone to the Internet gateway at R3.
 
 **📸 Screenshot:**
 
@@ -219,7 +219,8 @@ Utilized the `default-information originate` command within the OSPF process to 
 
 <img width="489" height="79" alt="Screenshot 2026-02-04 234209" src="https://github.com/user-attachments/assets/7fb70a33-78ff-40ea-b0b5-b6800cd60428" />
 
-**Edge Security:** Applied passive-interface on the gateway link to Kali 2, ensuring **OSPF control** traffic is not leaked to the **external network**.
+> [!TIP]
+> **Edge Security:** Applied passive-interface on the gateway link to Kali 2, ensuring **OSPF control** traffic is not leaked to the **external network**.
 
 **End-to-End Verification:** A ping from the internal host (Kali 1) to a **non-existent external** IP (`1.2.3.4`) was successfully traced all the way to the "Internet" interface on R3.
 
@@ -234,13 +235,14 @@ Utilized the `default-information originate` command within the OSPF process to 
 *(Packets stuck here: between **R3 - Internet** links)*
 
 
-This demonstrates a real-world enterprise edge configuration where OSPF interacts with external static routing.
+➡️ **This demonstrates a real-world enterprise edge configuration where OSPF interacts with external static routing.**
 
 ---
 
 ### Precision Routing: Adjusting OSPF Reference Bandwidth
 
-By default, OSPF uses a reference bandwidth of **100 Mbps**, which fails to distinguish between modern High-Speed Ethernet links (Gigabit and beyond). 
+> [!WARNING]
+> By default, OSPF uses a reference bandwidth of **100 Mbps**, which fails to distinguish between modern High-Speed Ethernet links (Gigabit and beyond). 
 
 $$\text{Cost} = \frac{\text{Reference Bandwidth}}{\text{Interface Bandwidth}}$$
 
@@ -248,13 +250,15 @@ $$\text{Cost} = \frac{\text{Reference Bandwidth}}{\text{Interface Bandwidth}}$$
 
 **Link 1000 Mbps (Fast Ethernet)**: $\frac{100}{1000} = \mathbf{1}$ (*Still 1*)
 
-**The Solution:** Just changed the `auto-cost reference-bandwidth` command higher than default (*100Mps*). This ensures that the SPF algorithm can accurately differentiate between $100$ Mbps and $1000$ Mbps links, preventing suboptimal routing and Equal-Cost Load Balancing over mismatched speed paths.
+> [!TIP]
+> **The Solution:** Just changed the `auto-cost reference-bandwidth` command higher than default (*100Mps*). This ensures that the SPF algorithm can accurately differentiate between $100$ Mbps and $1000$ Mbps links, preventing suboptimal routing and Equal-Cost Load Balancing over mismatched speed paths.
 
 **Link 100 Mbps (Fast Ethernet)**: $\frac{1000}{100} = \mathbf{10}$ 
 
 **Link 1000 Mbps (Fast Ethernet)**: $\frac{1000}{1000} = \mathbf{1}$ (*Preferred*)
 
-- But in this case the `auto-cost` already **higher** than my **interfaces Bandwidth** so I just **decrease** my **bandwidth** from **preffered path**:
+> [!WARNING]
+> But in this case the `auto-cost` already **higher** than my **interfaces Bandwidth** so I just **decrease** my **bandwidth** from **preffered path**:
 
  **📸 Screenshot:**
 
@@ -296,11 +300,10 @@ $$\text{Cost} = \frac{\text{Reference Bandwidth}}{\text{Interface Bandwidth}}$$
 
 ### Notes 
 
-This lab demonstrates basic OSPF single-area operation using cost-based path selection.
-
-Manual router ID configuration ensures predictable OSPF behavior and simplifies troubleshooting.
-
-OSPF automatically recalculates the shortest path using the SPF algorithm when topology changes occur.
+> [!NOTE]
+> - This lab demonstrates basic OSPF single-area operation using cost-based path selection.
+> - Manual router ID configuration ensures predictable OSPF behavior and simplifies troubleshooting.
+> - OSPF automatically recalculates the shortest path using the SPF algorithm when topology changes occur.
 
 | [⬅️ Previous Lab](../09B%20EIGRP%20Unequal-Cost%20(CML%20%2B%20PKT)) | [🏠 Main Menu](../README.md) | [Next Lab ➡️](../10B%20OSPF%20Elections%20(CML%20%2B%20PKT)) |
 |:--- | :---: | ---: |
