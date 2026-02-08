@@ -45,7 +45,7 @@ Each folder represents one independent lab and contains:
 - **IPv6 SLAAC Deep-Dive:** Analyzing Linux host behavior and tuning `net.ipv6.conf.all.accept_ra` to ensure RA acceptance.
 - **DHCP Snooping & IP Source Guard:** Hardware-level security verification.
 ##### LABS LIST:
-- [Lab 01: Basic VLAN Configuration (Access Ports)](./01%20VLAN%20BASIC%20(PKT))
+- [**Lab 01**: Basic VLAN Configuration (Access Ports)](./01%20VLAN%20BASIC%20(PKT))
 - [**Lab 02A**: VLAN Trunking (Default Trunk)](./02A%20VLAN%20TRUNK%20DEFAULT%20(PKT%20+%20CML)) 
 - [**Lab 02B**: VLAN Trunking (Allowed VLAN Restriction)](./02B%20VLAN%20Trunking%20(Allowed%20VLAN%20Restriction)%20(PKT))
 - [**Lab 02C** **(EXTRA)**: VLAN Trunking (Native VLAN mismatch)](./02C%20Native%20VLAN%20mismatch%20(PKT%20+%20CML))
