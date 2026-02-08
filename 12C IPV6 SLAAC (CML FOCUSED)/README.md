@@ -124,7 +124,8 @@ cat /proc/sys/net/ipv6/conf/eth0/accept_ra
 
 <img width="485" height="65" alt="Screenshot 2026-01-30 184135" src="https://github.com/user-attachments/assets/45bb34d5-0018-458e-9082-c76ef6b55f47" />
 
-- Linux may ignore RA even if IPv6 kernel is enabled.
+> [!WARNING]
+> #### Linux may ignore RA even if IPv6 kernel is enabled.
 
 ---
 
@@ -145,7 +146,8 @@ cat /proc/sys/net/ipv6/conf/eth0/accept_ra
 
 <img width="463" height="117" alt="Screenshot 2026-01-30 184222" src="https://github.com/user-attachments/assets/2394b769-a7d4-4ec1-b118-87cc714151e7" />
 
-- `2` allows RA even if forwarding is enabled (common in lab & VM setups).
+> [!TIP]
+> #### `2` allows RA even if forwarding is enabled (common in lab & VM setups).
 
 ---
 
@@ -191,7 +193,8 @@ default via fe80::xxxx:xxxx:xxxx:xxxx dev eth0 proto ra
 ```
 ping 2001:db8:10:1
 ```
-*(You can use `debug ipv6 icmp` to catch the ipv6 icmp packets from **KALI_HOST**)*
+> [!TIP]
+> *(You can use `debug ipv6 icmp` to catch the ipv6 icmp packets from **KALI_HOST**)*
 
 📸 **Screenshot:**
 
@@ -222,13 +225,17 @@ ping 2001:db8:10:1
 ---
 
 ### 9. Notes
-- SLAAC depends on **both IPv6 kernel and Router Advertisement**
-- RA alone is useless if IPv6 is disabled at kernel level
-- Linux provides fine-grained control over RA processing
-- This lab cannot be accurately simulated in Packet Tracer
-- Using real Kali Linux provides enterprise-realistic behavior
-- **SLAAC on Linux may take a few seconds to appear.
-This is expected behavior. If configuration is correct, wait briefly before troubleshooting.**
+
+>[!NOTE]
+> - SLAAC depends on **both IPv6 kernel and Router Advertisement**
+> - RA alone is useless if IPv6 is disabled at kernel level
+> - Linux provides fine-grained control over RA processing
+> - This lab cannot be accurately simulated in Packet Tracer
+> - Using real Kali Linux provides enterprise-realistic behavior
+
+> [!WARNING]
+> ####  SLAAC on Linux may take a few seconds to appear.
+> - This is expected behavior. If configuration is correct, wait briefly before troubleshooting.**
 
 
 📸 **Screenshot:**
