@@ -46,31 +46,31 @@ Each folder represents one independent lab and contains:
 - **DHCP Snooping & IP Source Guard:** Hardware-level security verification.
 ##### LABS LIST:
 - [Lab 01: Basic VLAN Configuration (Access Ports)](./01%20VLAN%20BASIC%20(PKT))
-- **Lab 02A**: VLAN Trunking (Default Trunk) 
-- **Lab 02B**: VLAN Trunking (Allowed VLAN Restriction)
-- **Lab 02C** **(EXTRA)**: VLAN Trunking (Native VLAN mismatch)
-- **Lab 03**: Inter-VLAN Routing (Router-on-a-Stick)
-- **Lab 04**: DHCP
-- **LAB 05(A)**: STP
-- **LAB 05B**: STP Root Bridge
-- **LAB 05C**: STP PortFast & BPDU Guard
-- **LAB 06**: Ethernet Channel & ASIC Hashing
-- **LAB 07**: Static Routing
-- **LAB 08**: Dynamic Routing (RIPv2)
-- **LAB 9A**: Dynamic Routing (EIGRP - Feasible Successor)
-- **LAB 9B**: Dynamic Routing (EIGRP - Unequal-Cost Load Balancing)
-- **LAB 10A**: Dynamic Routing (OSPF - Single Area)
-- **LAB 10B**: Dynamic Routing (OSPF - DR - BDR - DROTHER Election)
-- **LAB 10C**: Dynamic Routing (OSPF - Multi Area)
-- **LAB 11A**: HSRP Enterprise Redundancy (PKT Optimized)
-- **LAB 11B**: HSRP Enterprise-Grade High Availability (CML more Optimized)
-- **LAB 12A**: IPv6 Addressing & Basic Connectivity
-- **LAB 12B**: IPv6 Basic Connectivity & Windows Stack Deep-Dive 
-- **LAB 12C**: IPv6 SLAAC & Linux Kernel Behavior (**CML FOCUSED**)
-- **Lab 13**: IPv6 Static Routing
-- **Lab 14**: OSPFv3
-- **Lab 15 (15.1 + 15.2)**: DHCPv6 Implement Stateless/Statefull (**CML FOCUSED**)
-- **Lab 16**: IPv6 RA GUARD (**CML FOCUSED**)
+- [**Lab 02A**: VLAN Trunking (Default Trunk)](./02A%20VLAN%20TRUNK%20DEFAULT%20(PKT%20+%20CML)) 
+- [**Lab 02B**: VLAN Trunking (Allowed VLAN Restriction)](./02B%20VLAN%20Trunking%20(Allowed%20VLAN%20Restriction)%20(PKT))
+- [**Lab 02C** **(EXTRA)**: VLAN Trunking (Native VLAN mismatch)](./02C%20Native%20VLAN%20mismatch%20(PKT%20+%20CML))
+- [**Lab 03**: Inter-VLAN Routing (Router-on-a-Stick)](./03%20Inter%20VLAN%20Routing%20(CML%20+%20PKT))
+- [**Lab 04**: DHCP](./04%20DHCP%20(CML%20+%20PKT))
+- [**LAB 05(A)**: STP](./05%20STP%20(CML%20+%20PKT))
+- [**LAB 05B**: STP Root Bridge](./05B%20STP%20Root%20Bridge%20(CML%20+%20PKT))
+- [**LAB 05C**: STP PortFast & BPDU Guard](./05C%20STP%20Port%20Fast%20&%20BDPU%20GUARD%20(CML%20+%20PKT))
+- [**LAB 06**: Ethernet Channel & ASIC Hashing](./06%20Ethernet%20Channel%20&%20ASIC%20Hashing%20(CML%20+%20PKT))
+- [**LAB 07**: Static Routing](./07%20Static%20Routing%20(CML%20+%20PKT))
+- [**LAB 08**: Dynamic Routing (RIPv2)](./08%20Dynamic%20Routing%20RIPv2%20(CML%20+%20PKT))
+- [**LAB 9A**: Dynamic Routing (EIGRP - Feasible Successor)](./09A%20EIGRP%20Feasible%20Successor%20(CML%20+%20PKT))
+- [**LAB 9B**: Dynamic Routing (EIGRP - Unequal-Cost Load Balancing)](./09B%20EIGRP%20Unequal-Cost%20(CML%20+%20PKT))
+- [**LAB 10A**: Dynamic Routing (OSPF - Single Area)](./10A%20OSPF%20Single%20Area%20(CML%20+%20PKT))
+- [**LAB 10B**: Dynamic Routing (OSPF - DR - BDR - DROTHER Election)](./10B%20OSPF%20Elections%20(CML%20+%20PKT))
+- [**LAB 10C**: Dynamic Routing (OSPF - Multi Area)](./10C%20OSPF%20Multi-Area%20(CML%20+%20PKT))
+- [**LAB 11A**: HSRP Enterprise Redundancy (PKT Optimized)](./11A%20HSRP%20Enterprise%20Redundancy%20(PKT))
+- [**LAB 11B**: HSRP Enterprise-Grade High Availability (CML more Optimized)](./11B%20HSRP%20Enterprise-Grade%20High%20Availability%20(CML))
+- [**LAB 12A**: IPv6 Addressing & Basic Connectivity](./12A%20IPv6%20Addressing%20&%20Basic%20Connectivity%20(PKT))
+- [**LAB 12B**: IPv6 Basic Connectivity & Windows Stack Deep-Dive](./12B%20IPv6%20Basic%20Connectivity%20&%20Windows%20Stack%20Deep-Dive%20(CML))
+- [**LAB 12C**: IPv6 SLAAC & Linux Kernel Behavior (**CML FOCUSED**)](./12C%20IPV6%20SLAAC%20(CML%20FOCUSED))
+- [**Lab 13**: IPv6 Static Routing](./13%20IPv6%20Static%20Routing%20(CML%20+%20PKT))
+- [**Lab 14**: OSPFv3](./14%20OSPFv3%20(CML%20+%20PKT))
+- [**Lab 15 (15.1 + 15.2)**: DHCPv6 Implement Stateless/Statefull (**CML FOCUSED**)](./15%20DHCPv6%20Implementation%20STATELESS%20&%20STATEFUL%20(CML%20FOCUSED))
+- [**Lab 16**: IPv6 RA GUARD (**CML FOCUSED**)](./16%20IPv6%20RA%20GUARD%20(CML%20FOCUSED))
 
 *Note: These labs focus on building large-scale networks to understand complex routing propagation and redundancy.*
 
