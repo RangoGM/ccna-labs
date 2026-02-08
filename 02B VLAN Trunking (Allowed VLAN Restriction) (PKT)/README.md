@@ -1,3 +1,9 @@
+<br>
+
+| [⬅️ Back to Table of Contents](../README.md) |
+| :--- |
+
+---
 ## Lab 02B - VLAN Trunking (Allowed VLAN Restriction)
 
 ### Topology
@@ -79,3 +85,7 @@ demonstrates the impact of VLAN restriction on trunk links.
 Although VLAN 30 exists on both switches, it is not included in the allowed
 VLAN list on the trunk. As a result, frames belonging to VLAN 30 are dropped
 and cannot traverse the trunk link.
+
+---
+| [⬅️ Previous Lab](../02A%20VLAN%20TRUNK%20DEFAULT%20(PKT%20%2B%20CML)) | [🏠 Main Menu](../README.md) | [Next Lab ➡️](../02C%20Native%20VLAN%20mismatch%20(PKT%20%2B%20CML)) |
+|:--- | :---: | ---: |
