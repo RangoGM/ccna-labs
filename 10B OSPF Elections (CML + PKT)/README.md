@@ -1,3 +1,9 @@
+<br>
+
+| [⬅️ Back to Table of Contents](../README.md) |
+| :--- |
+
+
 ## Lab 10B - OSPF DR / BDR / DROTHER Election
 
 ### Topology (PKT)
@@ -264,3 +270,8 @@ OSPF elects DR and BDR **only on broadcast and NBMA networks**, not on point-to-
 Router ID is the primary factor in DR election when interface priority is not manually configured.
 
 Best practice is to place DR and BDR on routers located at the core or distribution layer, while edge routers (such as Internet-facing routers) operate as DROTHER.
+
+| [⬅️ Previous Lab](../10A%20OSPF%20Single%20Area%20(CML%20%2B%20PKT)) | [🏠 Main Menu](../README.md) | [Next Lab ➡️](../10C%20OSPF%20Multi-Area%20(CML%20%2B%20PKT)) |
+|:--- | :---: | ---: |
+
+
