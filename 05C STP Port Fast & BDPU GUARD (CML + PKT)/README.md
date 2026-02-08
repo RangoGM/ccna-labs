@@ -136,11 +136,10 @@ SWITCH(config)# spanning-tree bpduguard default
 
 ### Notes
 
-PortFast is designed for end-device access ports and should not be used on links between switches.
-
-BPDU Guard provides protection by disabling a port that receives BPDUs, preventing accidental or unauthorized switches from affecting the STP topology.
-
-These features are commonly used together as a best practice in enterprise access-layer networks.
+>[!NOTE]
+> - PortFast is designed for end-device access ports and should not be used on links between switches.
+> - BPDU Guard provides protection by disabling a port that receives BPDUs, preventing accidental or unauthorized switches from affecting the STP topology.
+> - These features are commonly used together as a best practice in enterprise access-layer networks.
 
 | [⬅️ Previous Lab](../05B%20STP%20Root%20Bridge%20(CML%20%2B%20PKT)) | [🏠 Main Menu](../README.md) | [Next Lab ➡️](../06%20Ethernet%20Channel%20%26%20ASIC%20Hashing%20(CML%20%2B%20PKT)) |
 |:--- | :---: | ---: |
