@@ -78,16 +78,16 @@ OSPFv3 is used to dynamically exchange IPv6 routes between routers, eliminating 
 
 #### The 32-bit Router-ID in an IPv6 World
 
-*A common question in OSPFv3 is: "Since IPv6 uses 128-bit addresses, why does OSPFv3 still require a 32-bit Router-ID in the $x.x.x.x$ format?"*
+*A common question in OSPFv3 is: "Since IPv6 uses 128-bit addresses, why does OSPFv3 still require a 32-bit Router-ID in the x.x.x.x format?"*
 **The Reasons:**
 
-- **SPF Algorithm Compatibility:** OSPFv3 is an evolution of OSPFv2. Retaining the $32\text{-}bit$ format allows the protocol to use the same **Shortest Path First (SPF)** engine and **Dijkstra** algorithm logic to build the topology map.
+- **SPF Algorithm Compatibility:** OSPFv3 is an evolution of OSPFv2. Retaining the **32 bits** format allows the protocol to use the same **Shortest Path First (SPF)** engine and **Dijkstra** algorithm logic to build the topology map.
 
-- **Identification vs. Routing:** The Router-ID is a logical "name" for a node in the Link-State Database (LSDB). It is used for identification, not for packet forwarding. Therefore, it does not need to match the $128\text{-}bit$ IPv6 address format.
+- **Identification vs. Routing:** The Router-ID is a logical "name" for a node in the Link-State Database (LSDB). It is used for identification, not for packet forwarding. Therefore, it does not need to match the **128 bits** IPv6 address format.
 
 - **Mandatory Manual Configuration:** In OSPFv2, a router could "auto-elect" an ID from its IPv4 interfaces. In an IPv6-only environment (like this lab), there are no IPv4 addresses to pick from. If you don't manually set the `router-id`, the OSPFv3 process will **fail to start.**
 
-**➡️ *In OSPFv3, the Router-ID is an abstract 32-bit identifier. Without an IPv4 address on the interface, the router-id command becomes a mandatory first step for protocol initialization.*
+**➡️ *In OSPFv3, the Router-ID is an abstract 32-bit identifier. Without an IPv4 address on the interface, the router-id command becomes a mandatory first step for protocol initialization.***
 
 ---
 
@@ -193,7 +193,7 @@ Unlike OSPFv2 (IPv4) which relies on interface IPs, OSPFv3 uses **Link-Local Add
 
 - **Protocol Efficiency:** On Point-to-Point links, OSPFv3 can form neighbors and route traffic using only Link-Local addresses. Configuring Global Unicast addresses becomes optional for transit links, simplifying the addressing scheme.
 
-**➡️ *In short: OSPFv2 is 'IP-specific', while OSPFv3 is 'Link-specific'. This makes IPv6 routing much more resilient to addressing changes*.
+**➡️ *In short: OSPFv2 is 'IP-specific', while OSPFv3 is 'Link-specific'. This makes IPv6 routing much more resilient to addressing changes*.**
 
 - Verify OSPFv3 process:
 ```show ipv6 ospf```
@@ -297,7 +297,7 @@ In this **OSPFv3 (IPv6)** lab, I want to highlight an even more efficient method
 
 Remind OSPF adjacencies step: 
 
-`Down` $\rightarrow$ `Init` $\rightarrow$ `Two-Way` $\rightarrow$ `ExStart` $\rightarrow$ `Exchange` $\rightarrow$ `Loading` $\rightarrow$ `Full`.
+`Down` -> `Init` -> `Two-Way` -> `ExStart` -> `Exchange` -> `Loading` -> `Full`.
 
 - So in this case it is **Full State** without DR / BDR elections.
 
