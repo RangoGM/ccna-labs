@@ -142,7 +142,7 @@ ip dhcp pool VLAN10
 - No manual intervention required during failover
 
 
-✅ In all scenarios, PCs retain connectivity and can reach the Internet.
+**✅ In all scenarios, PCs retain connectivity and can reach the Internet.**
 
 ---
 
@@ -165,14 +165,13 @@ ip dhcp pool VLAN10
 ---
 
 ### Notes
-This lab represents a **real-world enterprise campus design** combining:
-- Layer 2 redundancy
-- Layer 3 gateway redundancy
-- Service-level redundancy (DHCP)
-
-HSRP and STP are intentionally aligned to optimize traffic flow and avoid suboptimal forwarding paths.
-
-This design scales well and serves as a strong foundation for advanced technologies such as routing protocols, IP SLA tracking, and automation.
+> [!NOTE]
+> - This lab represents a **real-world enterprise campus design** combining:
+>   - Layer 2 redundancy
+>   - Layer 3 gateway redundancy
+>   - Service-level redundancy (DHCP)
+> - HSRP and STP are intentionally aligned to optimize traffic flow and avoid suboptimal forwarding paths.
+> - This design scales well and serves as a strong foundation for advanced technologies such as routing protocols, IP SLA tracking, and automation.
 
 
 | [⬅️ Previous Lab](../10C%20OSPF%20Multi-Area%20(CML%20%2B%20PKT)) | [🏠 Main Menu](../README.md) | [Next Lab ➡️](../11B%20HSRP%20Enterprise-Grade%20High%20Availability%20(CML)) |
