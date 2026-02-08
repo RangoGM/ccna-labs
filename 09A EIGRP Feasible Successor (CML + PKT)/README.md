@@ -95,7 +95,8 @@ router eigrp 100
 interface <interface-to-secondary-path>
  bandwidth 1000
 ```
-*(Bandwidth / delay is adjusted to make this path less preferred while still satisfying the feasibility condition)*
+>[!TIP]
+> *(Bandwidth / delay is adjusted to make this path less preferred while still satisfying the feasibility condition)*
 
 ---
 
@@ -141,9 +142,9 @@ interface <interface-to-secondary-path>
  
 ### Optimization: Achieving Sub-Second Failover in Virtual Environments (Extra)
 
-Although EIGRP's **Feasible Successor** provides a ready-to-use backup path, the default detection time (15s Hold Timer) is too slow for modern standards. To achieve near-zero redundancy downtime in CML, I implemented **BFD (Bidirectional Forwarding Detection).**
-
-**The Solution:** By offloading link failure detection to BFD with a 50ms interval, the router no longer waits for EIGRP Hello timeouts.
+> [!TIP]
+> - Although EIGRP's **Feasible Successor** provides a ready-to-use backup path, the default detection time (15s Hold Timer) is too slow for modern standards. To achieve near-zero redundancy downtime in CML, I implemented **BFD (Bidirectional Forwarding Detection).**
+> - **The Solution:** By offloading link failure detection to BFD with a 50ms interval, the router no longer waits for EIGRP Hello timeouts.
 
 
 **📸: Screenshot**
@@ -155,28 +156,29 @@ Although EIGRP's **Feasible Successor** provides a ready-to-use backup path, the
 
 - **Explanation** : Check every 50ms, if 3 packets (150ms) are lost, the service will be cut off.
 
--> Configured this with all Routers.
+→ Configured this with **all Routers**.
 
 
-**The Result:** The "sequence jump" in ICMP traffic was minimized to the point of being negligible, proving that sub-second convergence is possible even in a virtualized CPU-bound environment.
+➡️ **The Result:** The "sequence jump" in ICMP traffic was minimized to the point of being negligible, proving that sub-second convergence is possible even in a virtualized CPU-bound environment.
 
 **📸: Screenshot**
 
 <img width="696" height="65" alt="Screenshot 2026-02-03 212102" src="https://github.com/user-attachments/assets/4ad2f1b7-231b-4e64-b735-f9b9cdab0aca" />
 
-
-**This marks the transition from basic routing to High Availability (HA) design.**
+>[!TIP]
+> **This marks the transition from basic routing to High Availability (HA) design.**
 
 --- 
 
-### ⚠️ The "Anti-Theory" Test: Breaking the Feasibility Condition
+>[!WARNING]
+> ### ⚠️ The "Anti-Theory" Test: Breaking the Feasibility Condition
 
 In this experiment, I intentionally increased the **delay** on the backup neighbor (R4) to ensure its **Reported Distance (RD)** **exceeded** the primary **Feasible Distance (FD)**.
 - The Consequence:
   - The backup path was stripped of its **Feasible Successor** status.
   - Upon primary link failure, the router entered the **ACTIVE state**, sending out **DUAL Queries** to find a new path.
   - Even with BFD enabled, the recovery was noticeably slower because the router had to perform a full re-calculation instead of an instant switchover.
-- **Verdict:** A physical backup link is useless for high availability if it doesn't satisfy EIGRP's logic **($RD < FD$).**
+➡️ **Verdict:** A physical backup link is useless for high availability if it doesn't satisfy EIGRP's logic **($RD < FD$).**
 
 ---
 
@@ -202,11 +204,10 @@ In this experiment, I intentionally increased the **delay** on the backup neighb
 ---
 
 ### Notes
-In this lab, EIGRP metrics are influenced by adjusting interface bandwidth / delay.
-
-Only the best path is installed in the routing table, while alternate paths that satisfy the feasibility condition are kept in the EIGRP topology table as feasible successors.
-
-This behavior demonstrates EIGRP's fast convergence and reliability compared to traditional distance-vector routing protocols.
+>[!NOTE]
+> - In this lab, EIGRP metrics are influenced by adjusting interface bandwidth / delay.
+> - Only the best path is installed in the routing table, while alternate paths that satisfy the feasibility condition are kept in the EIGRP topology table as feasible successors.
+> - This behavior demonstrates EIGRP's fast convergence and reliability compared to traditional distance-vector routing protocols.
 
 
 | [⬅️ Previous Lab](../08%20Dynamic%20Routing%20RIPv2%20(CML%20%2B%20PKT)) | [🏠 Main Menu](../README.md) | [Next Lab ➡️](../09B%20EIGRP%20Unequal-Cost%20(CML%20%2B%20PKT)) |
