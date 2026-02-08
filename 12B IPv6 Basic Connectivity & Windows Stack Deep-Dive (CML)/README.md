@@ -3,7 +3,7 @@
 | [⬅️ Back to Table of Contents](../README.md) |
 | :--- |
 
-
+   
 ## Lab 12B: IPv6 Basic Connectivity & Windows Stack Deep-Dive
 
 ### Project Overview
@@ -55,7 +55,8 @@ The highlight of this lab was troubleshooting why Windows bypassed the manual IP
 
 ---
 
-### Method 1 - Assigned IPv6 Addresses by Using Adapter GUI Properties in Window
+> [!TIP]
+> ### Method 1 - Assigned IPv6 Addresses by Using Adapter GUI Properties in Window
 
 **📸 Screenshot:**
 
@@ -67,17 +68,17 @@ The highlight of this lab was troubleshooting why Windows bypassed the manual IP
 
 *(The ping works)*
 
-**🛑 Notice:**
-- There are multiple IPv6 Address has been assigned and one which is **Temporary IPv6 Address**
-- Default Gateway has `%7` after the LLA which called **Interface Index**
+>[!WARNING]
+> **⚠️ Notice:**
+> - There are multiple IPv6 Address has been assigned and one which is **Temporary IPv6 Address**
+> - Default Gateway has `%7` after the LLA which called **Interface Index**
 
 **➡️ Explained briefly in Method 2**
 
 ---
-
-### Method 2 - Assigned IPv6 Addresses by Using Windows PowerShell Commands (Interface Index)
-
-#### 1. In PowerShell, identifying the ifIndex via `Get-NetIPInterface` is the mandatory first step before applying any L3 configurations to ensure hardware-level accuracy.
+> [!TIP]
+> ### Method 2 - Assigned IPv6 Addresses by Using Windows PowerShell Commands (Interface Index)
+> #### 1. In PowerShell, identifying the ifIndex via `Get-NetIPInterface` is the mandatory first step before applying any L3 configurations to ensure hardware-level accuracy.
 
 - `Get-NetIPInterface -AddressFamily IPv6`
 
@@ -120,8 +121,9 @@ Think of the ifIndex as the unique **ID Card Number** assigned to a network adap
 - `New-NetRoute -InterfaceIndex [ID] -DestinationPrefix "::/0" -NextHop "fe80::1"`
 
   - *Explanation:* Manually adds the Default Gateway.
- 
-  - Insight: We use this instead of the `-DefaultGateway` flag to bypass the **Subnet Mismatch** error caused by using a Link-Local Gateway with a Global IP.
+
+> [!TIP]
+>  Insight: We use this instead of the `-DefaultGateway` flag to bypass the **Subnet Mismatch** error caused by using a Link-Local Gateway with a Global IP.
 
 **📸 Screenshot:**
 
@@ -129,7 +131,8 @@ Think of the ifIndex as the unique **ID Card Number** assigned to a network adap
 
 ---
 
-### Method 2 - Assigned IPv6 Addresses by Using Windows PowerShell Commands (Temporary IPv6 Address)
+> [!TIP]
+> ### Method 2 - Assigned IPv6 Addresses by Using Windows PowerShell Commands (Temporary IPv6 Address)
 
 **📸 Screenshot:**
 
@@ -207,41 +210,31 @@ Think of the ifIndex as the unique **ID Card Number** assigned to a network adap
 
 ---
 
-### ⚠️ Important: Security & Privacy Disclaimer
+> [!WARNING]
+> ### ⚠️ Important: Security & Privacy Disclaimer
+> - While this lab demonstrates how to disable certain IPv6 features for **educational and troubleshooting purposes**, it is crucial to understand their real-world importance.
+> - **Why we disable them in a LAB:**
+> - **Deterministic Identification:** By disabling `RandomizeIdentifiers` and `UseTemporaryAddresses`, we force Windows to use a consistent, predictable IP address. This is essential for:
+>   - Identifying specific hosts in Wireshark captures.
+>   - Maintaining static Neighbor Discovery entries.
+>   - Ensuring "Muscle Memory" when calculating EUI-64 addresses.
 
-While this lab demonstrates how to disable certain IPv6 features for **educational and troubleshooting purposes**, it is crucial to understand their real-world importance.
 
-**Why we disable them in a LAB:**
+> [!CAUTION]
+> ### 🛑 Why you should NOT disable them in REAL LIFE:
+> - In a production or public network environment, these Windows features are your first line of defense for IPv6 privacy:
+>   - **IPv6 Privacy Extensions (RFC 4941):** Temporary addresses prevent websites and advertisers from tracking your device's activity across the internet based on a static Interface ID.
+>   - **Identifier Randomization:** Using a random Interface ID instead of one based on your MAC address (EUI-64) prevents "Device Fingerprinting," making it harder for attackers to identify your hardware type or track your physical movements between networks.
 
-- **Deterministic Identification:** By disabling `RandomizeIdentifiers` and `UseTemporaryAddresses`, we force Windows to use a consistent, predictable IP address. This is essential for:
 
-  - Identifying specific hosts in Wireshark captures.
-
-  - Maintaining static Neighbor Discovery entries.
-
-  - Ensuring "Muscle Memory" when calculating EUI-64 addresses.
-
-**Why you should NOT disable them in REAL LIFE:**
-
-In a production or public network environment, these Windows features are your first line of defense for IPv6 privacy:
-
-- **IPv6 Privacy Extensions (RFC 4941):** Temporary addresses prevent websites and advertisers from tracking your device's activity across the internet based on a static Interface ID.
-
-- **Identifier Randomization:** Using a random Interface ID instead of one based on your MAC address (EUI-64) prevents "Device Fingerprinting," making it harder for attackers to identify your hardware type or track your physical movements between networks.
-
-💡 **Best Practice:** Always keep these features **ENABLED** on personal and corporate devices. Only disable them in controlled laboratory environments where specific IP tracking is required for scientific analysis.
-
-#### Final Cheat Sheet Update (The "Safety First" Version)
-
-- `Set-NetIPv6Protocol -RandomizeIdentifiers Enabled`
-
-- `Set-NetIPv6Protocol -UseTemporaryAddresses Enabled`
-
-##### Refresh the adapter
-
-- `Disable-NetAdapter -Name "YourAdapterName"`
-
-- `Enable-NetAdapter -Name "YourAdapterName"`
+> [!TIP]
+> 💡 **Best Practice:** Always keep these features **ENABLED** on personal and corporate devices. Only disable them in controlled laboratory environments where specific IP tracking is required for scientific analysis.
+> #### Final Cheat Sheet Update (The "Safety First" Version)
+> - `Set-NetIPv6Protocol -RandomizeIdentifiers Enabled`
+> - `Set-NetIPv6Protocol -UseTemporaryAddresses Enabled`
+> ##### Refresh the adapter
+> - `Disable-NetAdapter -Name "YourAdapterName"`
+> - `Enable-NetAdapter -Name "YourAdapterName"`
 
 ---
 
@@ -283,11 +276,10 @@ In a production or public network environment, these Windows features are your f
 
 ### Key Learnings
 
-- **Operating System Bias:** Windows prioritizes security (Temporary IPs) over manual configuration for external communication.
-
-- **PowerShell Granularity:** Learned the strict distinction between managing IP addresses (NetIPAddress) and routing tables (NetRoute).
-
-- **Muscle Memory:** Developed reflexes for EUI-64 address calculation and manual LLA management to simplify troubleshooting in complex environments.
+> [!NOTE]
+> - **Operating System Bias:** Windows prioritizes security (Temporary IPs) over manual configuration for external communication.
+> - **PowerShell Granularity:** Learned the strict distinction between managing IP addresses (NetIPAddress) and routing tables (NetRoute).
+> - **Muscle Memory:** Developed reflexes for EUI-64 address calculation and manual LLA management to simplify troubleshooting in complex environments.
 
 | [⬅️ Previous Lab](../12A%20IPv6%20Addressing%20%26%20Basic%20Connectivity%20(PKT)) | [🏠 Main Menu](../README.md) | [Next Lab ➡️](../12C%20IPV6%20SLAAC%20(CML%20FOCUSED)) |
 |:--- | :---: | ---: |
