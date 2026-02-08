@@ -1,3 +1,9 @@
+<br>
+
+| [⬅️ Back to Table of Contents](../README.md) |
+| :--- |
+
+
 ## Lab 12B: IPv6 Basic Connectivity & Windows Stack Deep-Dive
 
 ### Project Overview
@@ -282,6 +288,9 @@ In a production or public network environment, these Windows features are your f
 - **PowerShell Granularity:** Learned the strict distinction between managing IP addresses (NetIPAddress) and routing tables (NetRoute).
 
 - **Muscle Memory:** Developed reflexes for EUI-64 address calculation and manual LLA management to simplify troubleshooting in complex environments.
+
+| [⬅️ Previous Lab](../12A%20IPv6%20Addressing%20%26%20Basic%20Connectivity%20(PKT)) | [🏠 Main Menu](../README.md) | [Next Lab ➡️](../12C%20IPV6%20SLAAC%20(CML%20FOCUSED)) |
+|:--- | :---: | ---: |
 
 
 
