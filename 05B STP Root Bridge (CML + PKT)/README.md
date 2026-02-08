@@ -110,15 +110,14 @@ SW2(config)# spanning-tree vlan 1 root secondary
 --- 
 
 ### Notes 
-STP root bridge selection is based on bridge priority and MAC address.
 
-Using *`root primary`* simplifies priority configuration and helps ensure
+> [!NOTE]
+> - STP root bridge selection is based on bridge priority and MAC address.
+> - Using *`root primary`* simplifies priority configuration and helps ensure
 a predictable Layer 2 topology.
-
-The root bridge is selected using the `root primary` command, without
+> - The root bridge is selected using the `root primary` command, without
 manually tuning bridge priority or path cost.
-
-In production networks, the root bridge is typically placed at the
+> - In production networks, the root bridge is typically placed at the
 distribution or core layer rather than the access layer.
 
 | [⬅️ Previous Lab](../05%20STP%20(CML%20%2B%20PKT)) | [🏠 Main Menu](../README.md) | [Next Lab ➡️](../05C%20STP%20Port%20Fast%20%26%20BDPU%20GUARD%20(CML%20%2B%20PKT)) |
