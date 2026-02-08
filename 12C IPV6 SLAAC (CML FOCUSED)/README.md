@@ -1,3 +1,9 @@
+<br>
+
+| [⬅️ Back to Table of Contents](../README.md) |
+| :--- |
+
+
 ## Lab 12C - IPv6 SLAAC (Router Advertisement & Linux Kernel Behavior)
 
 ### 1. Topology 
@@ -224,7 +230,11 @@ ping 2001:db8:10:1
 - **SLAAC on Linux may take a few seconds to appear.
 This is expected behavior. If configuration is correct, wait briefly before troubleshooting.**
 
+
 📸 **Screenshot:**
 
 <img width="925" height="235" alt="Screenshot 2026-01-30 183920" src="https://github.com/user-attachments/assets/c24158d4-3085-4711-87f2-7228782fff67" />
+
+| [⬅️ Previous Lab](../12B%20IPv6%20Basic%20Connectivity%20%26%20Windows%20Stack%20Deep-Dive%20(CML)) | [🏠 Main Menu](../README.md) | [Next Lab ➡️](../13%20IPv6%20Static%20Routing%20(CML%20%2B%20PKT)) |
+|:--- | :---: | ---: |
 
