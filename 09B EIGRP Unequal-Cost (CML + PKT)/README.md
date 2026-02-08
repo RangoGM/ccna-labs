@@ -29,7 +29,9 @@ default route.
 - Observe EIGRP unequal-cost load balancing
 - Verify that multiple routes are installed in the routing table
 - Confirm end-to-end connectivity from LAN to INTERNET
-- **The ultimate goal** of networking isn't just connectivity; it's **deterministic behavior**. By using BFD for sub-second failure detection and EIGRP UCLB for intelligent bandwidth utilization, we move from a 'hope-it-works' network to a highly available, high-performance infrastructure.
+
+>[!TIP]
+> **The ultimate goal** of networking isn't just connectivity; it's **deterministic behavior**. By using BFD for sub-second failure detection and EIGRP UCLB for intelligent bandwidth utilization, we move from a 'hope-it-works' network to a highly available, high-performance infrastructure.
 
 ---
 
@@ -73,9 +75,9 @@ router eigrp 100
   varriance X
 `
 
-- In this case if you want to use both links to transmitting data use must use "X" = 3 as long as this condition is met:
-
-**FD multiply Variance > Metric thats you want the link to perform unequal cost load balancing**
+> [!WARNING]
+>  - In this case if you want to use both links to transmitting data use must use "X" = 3 as long as this condition is met:
+> - **FD multiply Variance > Metric thats you want the link to perform unequal cost load balancing**
 
 **448000 x 3 > 921600 (Accept)**
 
@@ -118,7 +120,8 @@ router eigrp 100
 
 *(Ping both Hosts, this time the unequal load balancing method is performed more clearly)*
 
-- To visually confirm the **proportional traffic distribution**, I used `hping3` in flood mode from the Kali hosts. Unlike a standard ping, this generates a high volume of packets, allowing us to observe the **Traffic Share Ratio** in real-time.
+> [!TIP]
+> - To visually confirm the **proportional traffic distribution**, I used `hping3` in flood mode from the Kali hosts. Unlike a standard ping, this generates a high volume of packets, allowing us to observe the **Traffic Share Ratio** in real-time.
 
 📸: Screenshot
 
@@ -126,19 +129,21 @@ router eigrp 100
 
 <img width="925" height="362" alt="Screenshot 2026-02-03 222510" src="https://github.com/user-attachments/assets/cf63f39c-9ed0-4d51-855d-114681d82f0b" />
 
-**Final Proof:** Proportional Traffic Distribution in UCLB
+
+
+#### **Final Proof:** Proportional Traffic Distribution in UCLB
 
 The ultimate test of EIGRP's **Unequal Cost Load Balancing** was verified through real-time interface statistics. By utilizing two distinct traffic flows, the router successfully distributed packets across both the primary and backup links simultaneously.
 
 **The Data:**
 
-**Primary Link (Low Metric):** 612 Packets/Sec
+- **Primary Link (Low Metric):** 612 Packets/Sec
 
-**Backup Link (High Metric):** 474 Packets/Sec
+- **Backup Link (High Metric):** 474 Packets/Sec
 
-- Analysis: This ratio confirms that EIGRP does not just load balance; it **load weighs**. The DUAL algorithm intelligently calculates a traffic share count, ensuring that higher-capacity links handle the bulk of the data while secondary links provide supplemental bandwidth rather than remaining dormant.
+**Analysis:** This ratio confirms that EIGRP does not just load balance; it **load weighs**. The DUAL algorithm intelligently calculates a traffic share count, ensuring that higher-capacity links handle the bulk of the data while secondary links provide supplemental bandwidth rather than remaining dormant.
 
-**Conclusion:** With **BFD** for instant failover and **UCLB** for optimized throughput, this EIGRP configuration represents a robust, high-availability enterprise design.
+➡️ **Conclusion:** With **BFD** for instant failover and **UCLB** for optimized throughput, this EIGRP configuration represents a robust, high-availability enterprise design.
 
 ---
 
@@ -168,9 +173,9 @@ The ultimate test of EIGRP's **Unequal Cost Load Balancing** was verified throug
 ---
 
 ### Notes
-EIGRP supports unequal-cost load balancing, allowing multiple routes with different metrics to be installed in the routing table as long as they satisfy the feasibility condition.
-
-This behavior is useful in networks with redundant links of different bandwidths or delays.
+> [!NOTE]
+> - EIGRP supports unequal-cost load balancing, allowing multiple routes with different metrics to be installed in the routing table as long as they satisfy the feasibility condition.
+> - This behavior is useful in networks with redundant links of different bandwidths or delays.
 
 | [⬅️ Previous Lab](../09A%20EIGRP%20Feasible%20Successor%20(CML%20%2B%20PKT)) | [🏠 Main Menu](../README.md) | [Next Lab ➡️](../10A%20OSPF%20Single%20Area%20(CML%20%2B%20PKT)) |
 |:--- | :---: | ---: |
