@@ -48,10 +48,10 @@ This lab implements a highly resilient "Diamond" (X-House) topology designed for
 
 *(R2 example configuration & vice versa for R3)*
 
-**3. Advanced Failover (IP SLA & Object Tracking)**
-To handle **"Silent Link Failures"** (where an interface stays UP but the path is DEAD), I implemented:
-
-- **Outbound Tracking:** R2 and R3 monitor upstream reachability to the ISP via ICMP Echo. If the probe fails, HSRP decrements priority by 10, triggering a graceful failover to the healthy peer.
+>[!TIP]
+> #### **3. Advanced Failover (IP SLA & Object Tracking)**
+> To handle **"Silent Link Failures"** (where an interface stays UP but the path is DEAD), I implemented:
+> - **Outbound Tracking:** R2 and R3 monitor upstream reachability to the ISP via ICMP Echo. If the probe fails, HSRP decrements priority by 10, triggering a graceful failover to the healthy peer.
 
 **📸 Screenshot:**
 
@@ -76,11 +76,10 @@ To handle **"Silent Link Failures"** (where an interface stays UP but the path i
 
 *(R3 is the same with all the configuration above but different the **ISP destination** and **source Interface**)*
 
-**4. Symmetric Routing & Floating Static Routes**
-
-Configured on the ISP (R1) to ensure traffic returns to the LAN via the correct Active gateway.
-
-- **Inbound Tracking (ISP Side):** Configured IP SLA on the **ISP (R1)** to track the internal gateways. This allows the ISP to dynamically switch between Floating Static Routes (AD 1 vs. AD 5), ensuring symmetric return traffic.
+>[!TIP]
+> #### **4. Symmetric Routing & Floating Static Routes**
+> Configured on the ISP (R1) to ensure traffic returns to the LAN via the correct Active gateway.
+> - **Inbound Tracking (ISP Side):** Configured IP SLA on the **ISP (R1)** to track the internal gateways. This allows the ISP to dynamically switch between Floating Static Routes (AD 1 vs. AD 5), ensuring symmetric return traffic.
 
 **📸 Screenshot:**
 
@@ -98,8 +97,9 @@ Configured on the ISP (R1) to ensure traffic returns to the LAN via the correct 
 
 ### Critical Troubleshooting
 
-⚠️ The VLAN 1 "Native Trap"
-- **The Issue:** HSRP entered a **Dual-Active** state for VLAN 1 even though the configuration seemed correct.
+> [!WARNING]
+> ⚠️ The VLAN 1 "Native Trap"
+> - **The Issue:** HSRP entered a **Dual-Active** state for VLAN 1 even though the configuration seemed correct.
 
 **📸 Screenshot:**
 
@@ -107,7 +107,8 @@ Configured on the ISP (R1) to ensure traffic returns to the LAN via the correct 
 
 *(Try to used **VLAN 1** & only created **VLAN 2** instead of created 2 **seperated VLAN** (e.g., **VLAN 2** for Host 1, **VLAN 3** for Host 2)
 
-- **Root Cause:** Cisco IOSv automatically appends the `native` keyword to `encapsulation dot1q 1`. This caused the router to send **untagged frames**. Since the Switch used a different Native VLAN (1001), it misidentified the untagged HSRP hellos, isolating the two routers.
+> [!CAUTION]
+> #### **Root Cause:** Cisco IOSv automatically appends the `native` keyword to `encapsulation dot1q 1`. This caused the router to send **untagged frames**. Since the Switch used a different Native VLAN (1001), it misidentified the untagged HSRP hellos, isolating the two routers.
 
 **📸 Screenshot:**
 
@@ -118,7 +119,8 @@ Configured on the ISP (R1) to ensure traffic returns to the LAN via the correct 
 
 ➡️ The ping from every packets has **entered** the routers with **VLAN 1** then **sent out will be untagged** and **request time out**.
 
-- **The Fix:** Explicitly removed the `native` keyword or moved the native VLAN away from VLAN 1 to force explicit tagging.
+>[!TIP]
+> #### **The Fix:** Explicitly removed the `native` keyword or moved the native VLAN away from VLAN 1 to force explicit tagging.
 
 **📸 Screenshot:**
 
@@ -126,20 +128,31 @@ Configured on the ISP (R1) to ensure traffic returns to the LAN via the correct 
 
 *(moved `native` from VLAN 1 to VLAN 1001)*
 
-**❗❗❗ PLEASE BE AWARE ALL THE VLANS LABS SUCH AS 01, 02A, 02B, 02C, 03, etc.. ❗❗❗**
+> [!CAUTION]
+> **❗❗❗ PLEASE BE AWARE ALL THE VLANS LABS SUCH AS 01, 02A, 02B, 02C, 03, etc.. ❗❗❗**
 
-⚠️ Encapsulation Side-Effects
+--- 
+
+> [!WARNING]
+> ##### ⚠️ Encapsulation Side-Effects
 
 - **Observation:** During troubleshooting, IP addresses were mysteriously disappearing from sub-interfaces.
 
 - **Discovery:** In Cisco IOS, re-applying or modifying the encapsulation dot1q command wipes the assigned IP address.
 
-- **Lesson:** Always verify Layer 3 configuration after modifying Layer 2 encapsulation parameters.
+>[!TIP]
+> #### **Lesson:** Always verify Layer 3 configuration after modifying Layer 2 encapsulation parameters.
 
-⚠️ Stale Object States
+---
+
+
+> [!WARNING]
+> #### ⚠️ Stale Object States
+
 - **Scenario:** IP SLA was functional (ICMP OK), but the Track Object stayed DOWN.
 
-- **Resolution:** Re-initialized the track and ip sla schedule processes. In virtualized environments like CML, process synchronization can occasionally lag, requiring a configuration "refresh."
+>[!TIP]
+> #### **Resolution:** Re-initialized the track and ip sla schedule processes. In virtualized environments like CML, process synchronization can occasionally lag, requiring a configuration "refresh."
 
 ---
 
@@ -200,7 +213,7 @@ Configured on the ISP (R1) to ensure traffic returns to the LAN via the correct 
 
 *(Windows has successfully binding address with **DHCP Server**)* - It is good to be back with familiar OS than Linux 😉
 
-**🛑 NOTICE**
+**👁️ NOTICE**
 
 <img width="635" height="98" alt="Screenshot 2026-02-06 192902" src="https://github.com/user-attachments/assets/16ee6457-757e-4291-86c7-1580b18f378a" />
 
@@ -208,14 +221,14 @@ Configured on the ISP (R1) to ensure traffic returns to the LAN via the correct 
 
 <img width="975" height="185" alt="Screenshot 2026-02-06 213519" src="https://github.com/user-attachments/assets/4d45346f-2bc7-4199-90a8-6ff4ad416bef" />
 
-- **FHRP Table:**
-
-|**FHRP**|**Terminology**|**Multicast IP**|**Virtual MAC**|**Cisco Proprietary**|
-|-|-|-|-|-|
-| **HSRPv1** | **Active / Standby** | **224.0.0.2** | **00-00-0c-07-ac-XX** | **Yes** |
-| **HSRPv2** | **Active / Standby** | **224.0.0.102** | **00-00-0c-09-fX-XX** | **Yes** |
-| **VRRP** | **Master / Backup** | **224.0.0.18** | **00-00-5e-00-01-XX** | **No** |
-| **GLBP** | **AVG / AVF** | **224.0.0.102** | **00-07-b4-00-XX-YY** | **Yes** |
+>[!NOTE]
+> #### **FHRP Table:**
+> |**FHRP**|**Terminology**|**Multicast IP**|**Virtual MAC**|**Cisco Proprietary**|
+> |-|-|-|-|-|
+> | **HSRPv1** | **Active / Standby** | **224.0.0.2** | **00-00-0c-07-ac-XX** | **Yes** |
+> | **HSRPv2** | **Active / Standby** | **224.0.0.102** | **00-00-0c-09-fX-XX** | **Yes** |
+> | **VRRP** | **Master / Backup** | **224.0.0.18** | **00-00-5e-00-01-XX** | **No** |
+> | **GLBP** | **AVG / AVF** | **224.0.0.102** | **00-07-b4-00-XX-YY** | **Yes** |
 
 **📸 Screenshot:**
 
@@ -254,7 +267,8 @@ Configured on the ISP (R1) to ensure traffic returns to the LAN via the correct 
 
 *(There is a sequence jump while routers change from **Standby** to **Active** mode)*
 
-⚠️ Because the implemented of **IP SLA** this worked properbly normal:
+> [!WARNING]
+> #### ⚠️ Because the implemented of **IP SLA** this worked properbly normal:
 
 **📸 Screenshot:**
 
@@ -275,6 +289,7 @@ Configured on the ISP (R1) to ensure traffic returns to the LAN via the correct 
 
 *(VLAN 1 and VLAN 2 paths)*
 
+> [!CAUTION]
 **❗❗❗ With **no IP SLA implemented** this will cause the **"Silent Link Failures"** (where an interface stays UP but the path is DEAD) the ping will **stuck forever** because ISP **never replace the floating static route** when it **doesnt know the link is DEAD** so it is **keep forwarding** packets to DEAD link - Shows that **static routing** has **its sub-optimal aspects**, in the **Packet Tracer** is function very simple when you just down the Router and the link turn red so it is surely dead but in CML it is a **very big story** to work with❗❗❗**
 
 
@@ -290,13 +305,13 @@ Configured on the ISP (R1) to ensure traffic returns to the LAN via the correct 
 ---
 
 ### Notes
-
-|**Criteria**|**IP SLA (Static)**|**BFD (Dynamic)**|
-|-|-|-|
-|**Mechanism**| Sends **ICMP packets** **(Ping)** and **responds**| Two devices continuously send **extremely lightweight packets to each other**|
-|**Speed**| **Slower speed (s)** | **Extremely fast (ms)**|
-|**System Load**| **More CPU load** because it has to process the full ICMP packet |Very **lightweight**, can be handled by hardware **(ASIC)**|
-|**Application**| **Static Route** or when **depth testing** is needed | Specifically used for **OSPF, BGP, EIGRP** for **immediate and gentle disconnection** (Neighbor) when a connection is established|
+> [!NOTE]
+> |**Criteria**|**IP SLA (Static)**|**BFD (Dynamic)**|
+> |-|-|-|
+> |**Mechanism**| Sends **ICMP packets** **(Ping)** and **responds**| Two devices continuously send **extremely lightweight packets to each other**|
+> |**Speed**| **Slower speed (s)** | **Extremely fast (ms)**|
+> |**System Load**| **More CPU load** because it has to process the full ICMP packet |Very **lightweight**, can be handled by hardware **(ASIC)**|
+> |**Application**| **Static Route** or when **depth testing** is needed | Specifically used for **OSPF, BGP, EIGRP** for **immediate and gentle disconnection** (Neighbor) when a connection is established|
 
 | [⬅️ Previous Lab](../11A%20HSRP%20Enterprise%20Redundancy%20(PKT)) | [🏠 Main Menu](../README.md) | [Next Lab ➡️](../12A%20IPv6%20Addressing%20%26%20Basic%20Connectivity%20(PKT)) |
 |:--- | :---: | ---: |
