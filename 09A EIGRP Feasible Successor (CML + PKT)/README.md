@@ -204,11 +204,11 @@ In this experiment, I intentionally increased the **delay** on the backup neighb
 ### Notes
 In this lab, EIGRP metrics are influenced by adjusting interface bandwidth / delay.
 
----
-| [⬅️ Previous Lab](../08%20Dynamic%20Routing%20RIPv2%20(CML%20%2B%20PKT)) | [🏠 Main Menu](../README.md) | [Next Lab ➡️](../09B%20EIGRP%20Unequal-Cost%20(CML%20%2B%20PKT)) |
-|:--- | :---: | ---: |
-
-
 Only the best path is installed in the routing table, while alternate paths that satisfy the feasibility condition are kept in the EIGRP topology table as feasible successors.
 
 This behavior demonstrates EIGRP's fast convergence and reliability compared to traditional distance-vector routing protocols.
+
+
+| [⬅️ Previous Lab](../08%20Dynamic%20Routing%20RIPv2%20(CML%20%2B%20PKT)) | [🏠 Main Menu](../README.md) | [Next Lab ➡️](../09B%20EIGRP%20Unequal-Cost%20(CML%20%2B%20PKT)) |
+|:--- | :---: | ---: |
+
