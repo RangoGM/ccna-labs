@@ -197,14 +197,12 @@ ROUTER(dhcp-config)# default-router 192.168.30.1
 ---
 
 ### Notes
-
-In this lab, the router provides DHCP services for multiple VLANs.
-Because the router is directly connected to all VLANs via subinterfaces, no DHCP relay (*`ip helper-address`*) is required.
-
-The first ten IP addresses are excluded to reserve space for infrastructure devices. 
-This range is optional and used for demonstration purposes.
-
-This design is common in small to medium-sized networks.
+> [!NOTE]
+> - In this lab, the router provides DHCP services for multiple VLANs.
+> - Because the router is directly connected to all VLANs via subinterfaces, no DHCP relay (*`ip helper-address`*) is required.
+> - The first ten IP addresses are excluded to reserve space for infrastructure devices. 
+> - This range is optional and used for demonstration purposes.
+> - This design is common in small to medium-sized networks.
 
 ---
 | [⬅️ Previous Lab](../03%20Inter%20VLAN%20Routing%20(CML%20%2B%20PKT)) | [🏠 Main Menu](../README.md) | [Next Lab ➡️](../05%20STP%20(CML%20%2B%20PKT)) |
