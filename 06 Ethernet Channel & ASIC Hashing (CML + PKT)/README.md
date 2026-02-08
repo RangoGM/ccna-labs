@@ -1,3 +1,8 @@
+<br>
+
+| [⬅️ Back to Table of Contents](../README.md) |
+| :--- |
+
 ## Lab 06 - EtherChannel (LACP)
 
 ### Topology
@@ -271,3 +276,7 @@ EtherChannel requires all member interfaces to have identical Layer 2 configurat
 When EtherChannel is formed, STP no longer sees individual physical links. Instead, the Port-channel is treated as a single logical interface, which may cause STP to recalculate port roles and blocking states.
 
 LACP is an IEEE standard protocol and is recommended for safer and more predictable EtherChannel negotiation.
+
+| [⬅️ Previous Lab](../05C%20STP%20Port%20Fast%20%26%20BDPU%20GUARD%20(CML%20%2B%20PKT)) | [🏠 Main Menu](../README.md) | [Next Lab ➡️](../07%20Static%20Routing%20(CML%20%2B%20PKT)) |
+|:--- | :---: | ---: |
+
