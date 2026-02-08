@@ -1,3 +1,10 @@
+<br>
+
+| [⬅️ Back to Table of Contents](../README.md) |
+| :--- |
+
+---
+
 ## Lab 03 - Inter-VLAN Routing (Router-on-a-Stick) (PKT + CML)
 
 ### Topology
@@ -169,3 +176,7 @@ not per switch.
 
 This lab demonstrates how Layer 3 routing enables communication between
 separate VLANs while maintaining Layer 2 segmentation.
+
+---
+| [⬅️ Previous Lab](../02C%20Native%20VLAN%20mismatch%20(PKT%20%2B%20CML)) | [🏠 Main Menu](../README.md) | [Next Lab ➡️](../04%20DHCP%20(CML%20%2B%20PKT)) |
+|:--- | :---: | ---: |
