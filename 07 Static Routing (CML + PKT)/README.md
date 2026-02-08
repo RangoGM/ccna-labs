@@ -200,6 +200,6 @@ Static routing requires manual configuration and does not scale well in large ne
 
 This lab helps build a foundation for understanding dynamic routing protocols such as RIP, EIGRP and OSPF.
 
-| [⬅️ Previous Lab](../06%20Ethernet%20Channel%20%26%20ASIC%20Ha) | [🏠 Main Menu](../README.md) | [Next Lab ➡️](../08%20Dynamic%20Routing%20RIPv2%20(CML%20%2B%20PKT)) |
+| [⬅️ Previous Lab](../06%20Ethernet%20Channel%20%26%20ASIC%20Hashing%20(CML%20%2B%20PKT)) | [🏠 Main Menu](../README.md) | [Next Lab ➡️](../08%20Dynamic%20Routing%20RIPv2%20(CML%20%2B%20PKT)) |
 |:--- | :---: | ---: |
 
