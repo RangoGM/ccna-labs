@@ -1,3 +1,9 @@
+<br>
+
+| [⬅️ Back to Table of Contents](../README.md) |
+| :--- |
+
+
 ## Lab 05B - Spanning Tree Protocol (STP) Root Bridge
 
 ### Topology
@@ -115,4 +121,6 @@ manually tuning bridge priority or path cost.
 In production networks, the root bridge is typically placed at the
 distribution or core layer rather than the access layer.
 
+| [⬅️ Previous Lab](../05%20STP%20(CML%20%2B%20PKT)) | [🏠 Main Menu](../README.md) | [Next Lab ➡️](../05C%20STP%20Port%20Fast%20%26%20BDPU%20GUARD%20(CML%20%2B%20PKT)) |
+|:--- | :---: | ---: |
 
