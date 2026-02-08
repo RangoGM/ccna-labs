@@ -1,4 +1,4 @@
-## Lab 12F: IPv6 RA GUARD - Defeating Rogue Router Advertisement Attacks
+## Lab 16: IPv6 RA GUARD - Defeating Rogue Router Advertisement Attacks
 
 ### Objective
 The objective of this lab is to mitigate **Rogue Router Advertisement (RA)** attacks by implementing the **IPv6 RA Guard feature** on a Cisco Switch. We simulate an attacker impersonating a default gateway to hijack network traffic (Man-in-the-Middle) and demonstrate how the defense system drops these malicious packets at the ingress port.
