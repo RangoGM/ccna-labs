@@ -1,3 +1,10 @@
+<br>
+
+| [⬅️ Back to Table of Contents](../README.md) |
+| :--- |
+
+
+
 ## Lab 11 - HSRP Enterprise Redundancy (PKT Optimal)
 
 #### **(HSRP + STP Load Sharing + Dual DHCP on L3 Switches)**
@@ -166,3 +173,9 @@ This lab represents a **real-world enterprise campus design** combining:
 HSRP and STP are intentionally aligned to optimize traffic flow and avoid suboptimal forwarding paths.
 
 This design scales well and serves as a strong foundation for advanced technologies such as routing protocols, IP SLA tracking, and automation.
+
+
+| [⬅️ Previous Lab](../10C%20OSPF%20Multi-Area%20(CML%20%2B%20PKT)) | [🏠 Main Menu](../README.md) | [Next Lab ➡️](../11B%20HSRP%20Enterprise-Grade%20High%20Availability%20(CML)) |
+|:--- | :---: | ---: |
+
+
