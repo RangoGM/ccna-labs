@@ -32,7 +32,7 @@ Each folder represents one independent lab and contains:
 ### 🛠 Tech Stack & Tools
 - **Virtualization:** VMware Workstation Pro.
 - **Network Engine:** Cisco Modeling Labs (CML) & Cisco Packet Tracer.
-- **End-Nodes:** Authentic Linux Distributions (Ubuntu, Kali, Debian).
+- **Operating Systems** Authentic Linux Distributions (Ubuntu, Kali, Debian), Window 10/11 Stack.
 - **Analysis:** Wireshark, tcpdump, sysctl for kernel tuning.
 
 ---
@@ -54,21 +54,23 @@ Each folder represents one independent lab and contains:
 - **LAB 05(A)**: STP
 - **LAB 05B**: STP Root Bridge
 - **LAB 05C**: STP PortFast & BPDU Guard
-- **LAB 06**: Ethernet Channel
+- **LAB 06**: Ethernet Channel & ASIC Hashing
 - **LAB 07**: Static Routing
 - **LAB 08**: Dynamic Routing (RIPv2)
 - **LAB 9A**: Dynamic Routing (EIGRP - Feasible Successor)
 - **LAB 9B**: Dynamic Routing (EIGRP - Unequal-Cost Load Balancing)
-- **LAB 10A**: Dynamic Routing (OSPF - Single Path)
+- **LAB 10A**: Dynamic Routing (OSPF - Single Area)
 - **LAB 10B**: Dynamic Routing (OSPF - DR - BDR - DROTHER Election)
 - **LAB 10C**: Dynamic Routing (OSPF - Multi Area)
-- **LAB 11**: HSRP Enterprise Redundancy
+- **LAB 11A**: HSRP Enterprise Redundancy (PKT Optimized)
+- **LAB 11B**: HSRP Enterprise-Grade High Availability (CML more Optimized)
 - **LAB 12A**: IPv6 Addressing & Basic Connectivity
-- **LAB 12B**: IPv6 Static Routing
-- **LAB 12C**: IPv6 - OSPFv3 IPv6 Dynamic Routing
-- **Lab 12D**: IPv6 SLAAC (**CML FOCUSED**)
-- **Lab 12E (12E.1 + 12E.2)**: DHCPv6 Implement Stateless/Statefull (**CML FOCUSED**)
-- **Lab 12F**: IPv6 RA GUARD (**CML FOCUSED**)
+- **LAB 12B**: IPv6 Basic Connectivity & Windows Stack Deep-Dive 
+- **LAB 12C**: IPv6 SLAAC & Linux Kernel Behavior (**CML FOCUSED**)
+- **Lab 13**: IPv6 Static Routing
+- **Lab 14**: OSPFv3
+- **Lab 15 (15.1 + 15.2)**: DHCPv6 Implement Stateless/Statefull (**CML FOCUSED**)
+- **Lab 16**: IPv6 RA GUARD (**CML FOCUSED**)
 
 *Note: These labs focus on building large-scale networks to understand complex routing propagation and redundancy.*
 
