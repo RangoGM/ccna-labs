@@ -1,4 +1,10 @@
-## Lab 12B - IPv6 Static Routing
+<br>
+
+| [⬅️ Back to Table of Contents](../README.md) |
+| :--- |
+
+
+## Lab 13 - IPv6 Static Routing
 
 ### Topology
 
@@ -185,3 +191,7 @@ ping ipv6 <destination>
 - Directly connected IPv6 static routes may fail in some implementations
 - Recursive static routing is commonly used and preferred for simplicity
 - This lab demonstrates why IPv6 static routing must be configured more carefully than IPv4
+
+| [⬅️ Previous Lab](../12C%20IPV6%20SLAAC%20(CML%20FOCUSED)) | [🏠 Main Menu](../README.md) | [Next Lab ➡️](../14%20OSPFv3%20(CML%20%2B%20PKT)) |
+|:--- | :---: | ---: |
+
