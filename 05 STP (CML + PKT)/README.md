@@ -1,3 +1,9 @@
+<br>
+
+| [⬅️ Back to Table of Contents](../README.md) |
+| :--- |
+
+
 ## Lab 05 - Spanning Tree Protocol (STP)
 
 ### Topology
@@ -186,3 +192,9 @@ Although some ports may appear blocked, this behavior is expected and ensures a 
 End devices use static IP addresses for basic connectivity testing.
 
 STP recalculates the topology if a link fails, allowing blocked ports to transition into a forwarding state.
+
+---
+| [⬅️ Previous Lab](../04%20DHCP%20(CML%20%2B%20PKT)) | [🏠 Main Menu](../README.md) | [Next Lab ➡️](../05B%20STP%20Root%20Bridge%20(CML%20%2B%20PKT)) |
+|:--- | :---: | ---: |
+
+
