@@ -1,3 +1,9 @@
+<br>
+
+| [⬅️ Back to Table of Contents](../README.md) |
+| :--- |
+
+
 ## Lab 15: DHCPv6 Implementation - Stateless vs. Stateful (15.1 + 15.2)
 
 ### Objective
@@ -139,4 +145,8 @@ After the reboot and running sudo `dhclient -6 -v eth0`, the host successfully o
 
 ### Professional Insight
 This lab demonstrates the "stubborn" nature of real-world operating systems compared to simulators. While Packet Tracer handles flag changes instantly, a real Linux Kernel requires manual intervention (Kernel tuning and IPv6 stack resets) to correctly transition from SLAAC to Stateful DHCPv6.
+
+| [⬅️ Previous Lab](../14%20OSPFv3%20(CML%20%2B%20PKT)) | [🏠 Main Menu](../README.md) | [Next Lab ➡️](../16%20IPv6%20RA%20GUARD%20(CML%20FOCUSED)) |
+|:--- | :---: | ---: |
+
 
