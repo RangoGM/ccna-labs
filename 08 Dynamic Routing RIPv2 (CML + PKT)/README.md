@@ -143,17 +143,20 @@ RIPv2 only counts the number of "stops" (routers) along the path, completely ign
 <img width="1900" height="761" alt="Screenshot 2026-02-03 105237" src="https://github.com/user-attachments/assets/9fb13077-b4c0-4ad7-9018-72308263780b" />
 
 ***Host 1** can now reach **Host 2** but:*
+> [!WARNING]
+> - RIPv2 is a Distance Vector protocol that uses a single, simplistic metric: **Hop Count.**
+> - **Metric Ignorance:** RIPv2 does not understand **"Bandwidth", "Delay," or "Link Speed".** It only counts how many **routers** a packet must pass through.
 
-- RIPv2 is a Distance Vector protocol that uses a single, simplistic metric: **Hop Count.**
-- **Metric Ignorance:** RIPv2 does not understand **"Bandwidth", "Delay," or "Link Speed".** It only counts how many **routers** a packet must pass through.
 - The Comparison:
-  - **Path A Metric** = 2 (**R_HQ** - **R2** - **R_BRANCH**)
-  - **Path B Metric** = 3 (**R_HQ** - **R3** - **R4** - **R_BRANCH**)
+  - **Path A Metric** = 2 (**R_HQ** → **R2** → **R_BRANCH**)
+  - **Path B Metric** = 3 (**R_HQ** → **R3** → **R4** → **R_BRANCH**)
 - The Decision: Since **2 < 3**, RIPv2 considers the **56kbps** link as the **"Best Path"** and installs it in the routing table, **completely ignoring** the superior capacity of the **longer route**.
-**Key Takeaway:** This lab demonstrates why RIPv2 is **obsolete** for **modern, high-speed networks**. It prioritizes the **"shortest"** path over the **"fastest"** path, leading to severe performance **bottlenecks**.
+
+➡️ **Key Takeaway:** This lab demonstrates why RIPv2 is **obsolete** for **modern, high-speed networks**. It prioritizes the **"shortest"** path over the **"fastest"** path, leading to severe performance **bottlenecks**.
+
 ---
 
-#### Shutdown Best Link
+### Shutdown Best Link
 
  **📸 Screenshot:**
 
@@ -161,19 +164,20 @@ RIPv2 only counts the number of "stops" (routers) along the path, completely ign
 
 *ICMP Packets go through **Backup links***
 
-🛑 **The "Cable Cut" Paradox: Shutdown vs. Physical Failure**
+> [!CAUTION]
+> ### 🛑 **The "Cable Cut" Paradox: Shutdown vs. Physical Failure**
 
 In this lab, I tested two failure scenarios:
 
 
-**Software Shutdown:** The router immediately poisons the route, and traffic failover happens in seconds. *(But it is still not working efficiently in modern network with high scalability devices")*
+- **Software Shutdown:** The router immediately poisons the route, and traffic failover happens in seconds. *(But it is still not working efficiently in modern network with high scalability devices")*
 
 **📸 Screenshot:**
 
 
 <img width="739" height="389" alt="Screenshot 2026-02-03 110256" src="https://github.com/user-attachments/assets/088f6dcb-8e61-42f4-b455-77004a363907" />
 
-**Physical Disconnect (CML Link Break):** This revealed the fatal flaw of RIPv2. Because RIPv2 relies on **periodic timers** rather than **active neighbor keepalives**, the network suffered a **180-second** outage. The neighbors kept **forwarding traffic** into the **"broken" link** because they were waiting for the **Invalid Timer** to **expire**.
+- **Physical Disconnect (CML Link Break):** This revealed the fatal flaw of RIPv2. Because RIPv2 relies on **periodic timers** rather than **active neighbor keepalives**, the network suffered a **180-second** outage. The neighbors kept **forwarding traffic** into the **"broken" link** because they were waiting for the **Invalid Timer** to **expire**.
 
 **📸 Screenshot:**
 
@@ -187,7 +191,8 @@ In this lab, I tested two failure scenarios:
 
 This 3-minute downtime is unacceptable for modern business networks...
 
-- Can reduce **router rip timers basic** to lower the updates packet times, this lead to the router could decided forwarding the frame to the **backup** links as soon as possible, but again still not reliable if manually every routers in high scalability network.
+> [!WARNING]
+ Can reduce **router rip timers basic** to lower the updates packet times, this lead to the router could decided forwarding the frame to the **backup** links as soon as possible, but again still not reliable if manually every routers in high scalability network.
 
 **📸 Screenshot:**
 
@@ -199,12 +204,13 @@ This 3-minute downtime is unacceptable for modern business networks...
 
 ---
 
-#### VLSM
+### VLSM
 
-**The "Classful" Trap:** Why no `auto-summary` is **Mandatory**
+> [!CAUTION]
+> ### **The "Classful" Trap:** Why no `auto-summary` is **Mandatory**
 In this experiment, I tested RIPv2's behavior with **Auto-Summary** enabled. Because RIPv2 has **"Classful"** roots, it attempts to **summarize subnets** to their major network boundaries **(Class A, B, or C)** when advertising them across a different network.
 
-The Result: When I assigned `172.16.1.0/24` to **R1** and `172.16.2.0/24` to **R3**, both routers advertised the exact same `172.16.0.0/16` summary to the core. This created a **Discontiguous Network** conflict. **The core router**, receiving the **same summary** from **two different directions**, became **confused—leading** to **unstable routing** and **broken connectivity.**
+➡️ **The Result:** When I assigned `172.16.1.0/24` to **R1** and `172.16.2.0/24` to **R3**, both routers advertised the exact same `172.16.0.0/16` summary to the core. This created a **Discontiguous Network** conflict. **The core router**, receiving the **same summary** from **two different directions**, became **confused—leading** to **unstable routing** and **broken connectivity.**
 
 **📸 Screenshot:**
 
@@ -216,11 +222,13 @@ The Result: When I assigned `172.16.1.0/24` to **R1** and `172.16.2.0/24` to **R
 
  *My ping tests returned "Destination Host Unreachable". The packets were being "black-holed" or sent to the wrong router half the time, proving that without the no auto-summary command, RIPv2 cannot effectively support VLSM or discontiguous networks.*
 
-**The Fix:** By issuing the `no auto-summary` command, I forced RIPv2 to include the **specific subnet mask (VLSM)** in its updates. This allows the protocol to function in a **"Classless"** manner, ensuring that specific subnets are recognized and routed correctly across the entire topology.
+> [!TIP]
+> **The Fix:** By issuing the `no auto-summary` command, I forced RIPv2 to include the **specific subnet mask (VLSM)** in its updates. This allows the protocol to function in a **"Classless"** manner, ensuring that specific subnets are recognized and routed correctly across the entire topology.
 
 ---
 
-#### Full Mesh Topology: Redundancy or Chaos?
+> [!CAUTION]
+> ### 🛑 Full Mesh Topology: Redundancy or Chaos?
 
 **📸 Screenshot:**
 
@@ -234,9 +242,10 @@ My **final experiment** with RIPv2 in a **Full Mesh topology** revealed its **bi
 
 **A mesh this complex is too noisy for such a simple protocol**. It's time to move on to more intelligent, event-driven routing...
 
-That's why we are leaving the 90s behind and heading to OSPF and Security labs. 😉
+> [!TIP]
+> That's why we are leaving the 90s behind and heading to OSPF and Security labs. 😉
 
-**Final Verdict on RIPv2:** It is automated, yes. But it is **noisy, slow to heal, and mathematically "shallow"**. It treats a **world-class fiber optic** link and a **rusty copper wire** exactly the same if they are both one hop away.
+➡️ **Final Verdict on RIPv2:** It is automated, yes. But it is **noisy, slow to heal, and mathematically "shallow"**. It treats a **world-class fiber optic** link and a **rusty copper wire** exactly the same if they are both one hop away.
 
 ---
 
@@ -258,10 +267,10 @@ That's why we are leaving the 90s behind and heading to OSPF and Security labs. 
 ---
 
 ### Notes
-RIP is a distance-vector routing protocol that uses hop count as its metric.
-The maximum hop count supported by RIP is 15, which limits its scalability.
-
-Although RIP is rarely used in modern production networks, it is included in CCNA to help understand the fundamentals of dynamic routing protocols.
+> [!NOTE]
+> - RIP is a distance-vector routing protocol that uses hop count as its metric.
+> - The maximum hop count supported by RIP is 15, which limits its scalability.
+> - Although RIP is rarely used in modern production networks, it is included in CCNA to help understand the fundamentals of dynamic routing protocols.
 
 
 | [⬅️ Previous Lab](../07%20Static%20Routing%20(CML%20%2B%20PKT)) | [🏠 Main Menu](../README.md) | [Next Lab ➡️](../09A%20EIGRP%20Feasible%20Successor%20(CML%20%2B%20PKT)) |
