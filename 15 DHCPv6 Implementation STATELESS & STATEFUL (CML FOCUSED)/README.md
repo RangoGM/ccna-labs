@@ -1,4 +1,4 @@
-## Lab 12E: DHCPv6 Implementation - Stateless vs. Stateful (12E.1 + 12E.2)
+## Lab 15: DHCPv6 Implementation - Stateless vs. Stateful (15.1 + 15.2)
 
 ### Objective
 The goal of this lab is to move beyond simple IPv6 addressing and master the two primary methods of dynamic configuration in a dual-stack or IPv6-only environment. We focus on the interaction between a **Cisco IOSv Router (CML)** and a **Real Linux Host (VMware).**
@@ -21,7 +21,7 @@ The behavior of the host is determined by the **M (Managed Address)** and O **Ot
 
 ---
 
-### 📂 12E.1: Stateless DHCPv6 (SLAAC + DNS)
+### 📂 15.1: Stateless DHCPv6 (SLAAC + DNS)
 
 #### Objective
 Configure a Cisco IOSv Router to provide IPv6 addresses via **SLAAC** while using **Stateless DHCPv6** to hand out "Other" information like DNS servers to a Linux host.
@@ -83,7 +83,7 @@ Stateless DHCPv6 is a hybrid approach. This lab demonstrated that configuring th
 
 ----
 
-### 📂 Lab 12E.2: Stateful DHCPv6 Implementation (Full Managed Mode)
+### 📂 Lab 15.2: Stateful DHCPv6 Implementation (Full Managed Mode)
 
 #### Objective
 
