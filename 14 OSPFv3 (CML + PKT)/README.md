@@ -1,3 +1,9 @@
+<br>
+
+| [⬅️ Back to Table of Contents](../README.md) |
+| :--- |
+
+
 ## Lab 14 - OSPFv3 (IPv6 Dynamic Routing)
 
 ### Topology
@@ -326,4 +332,7 @@ Remind OSPF adjacencies step:
 - Neighbor adjacencies use **link-local IPv6 addresses**
 - Router ID is mandatory and uses IPv4 format
 - This topology reflects a **realistic IPv6 routed enterprise segment**
+
+| [⬅️ Previous Lab](../13%20IPv6%20Static%20Routing%20(CML%20%2B%20PKT)) | [🏠 Main Menu](../README.md) | [Next Lab ➡️](../15%20DHCPv6%20Implementation%20STATELESS%20%26%20STATEFUL%20(CML%20FOCUSED)) |
+|:--- | :---: | ---: |
 
