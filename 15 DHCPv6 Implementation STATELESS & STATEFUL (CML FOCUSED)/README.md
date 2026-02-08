@@ -15,15 +15,14 @@ The goal of this lab is to move beyond simple IPv6 addressing and master the two
 - **Analysis Tool:** Wireshark (via CML External Connector) - *Optional*.
 
 ---
-
-### Core Concepts: The Flags
-The behavior of the host is determined by the **M (Managed Address)** and O **Other Configuration)** flags within the ICMPv6 Router Advertisement (RA) sent by the router.
-
-|Method|M-Flag|O-Flag|Description|
-|-|--|--|-|
-|**SLAAC (Default)**|0|0|"Host gets Prefix from RA, generates its own Interface ID."|
-|**Stateless DHCPv6**|0|1|"Host uses SLAAC for IP, but asks DHCPv6 for DNS/Domain."|
-|**Stateful DHCPv6**|1|1|Host ignores SLAAC and gets everything from the DHCPv6 server.|
+> [!IMPORTANT]
+> ### Core Concepts: The Flags
+> The behavior of the host is determined by the **M (Managed Address)** and O **Other Configuration)** flags within the ICMPv6 Router Advertisement (RA) sent by the router.
+> |Method|M-Flag|O-Flag|Description|
+> |-|--|--|-|
+> |**SLAAC (Default)**|0|0|"Host gets Prefix from RA, generates its own Interface ID."|
+> |**Stateless DHCPv6**|0|1|"Host uses SLAAC for IP, but asks DHCPv6 for DNS/Domain."|
+> |**Stateful DHCPv6**|1|1|Host ignores SLAAC and gets everything from the DHCPv6 server.|
 
 ---
 
@@ -82,10 +81,11 @@ After the manual force, the Linux host correctly updated its DNS settings and es
 
 <img width="542" height="134" alt="Screenshot 2026-01-30 223025" src="https://github.com/user-attachments/assets/f82ae46f-4e8b-42ea-acae-fb9f110c072a" />
 
----
 
-### Key Takeaway
-Stateless DHCPv6 is a hybrid approach. This lab demonstrated that configuring the network infrastructure (Cisco) is only half the battle; the End-Device (Linux) must be properly tuned to interpret and act on the ICMPv6 flags (M/O bits) correctly.
+
+> [!NOTE]
+> ### 💡 Key Takeaway
+> **Stateless DHCPv6 is a hybrid approach. This lab demonstrated that configuring the network infrastructure (Cisco) is only half the battle; the End-Device (Linux) must be properly tuned to interpret and act on the ICMPv6 flags (M/O bits) correctly.**
 
 ----
 
@@ -112,12 +112,14 @@ The router is configured to set the **M-flag (Managed)** and specifically disabl
 
 ---
 
-#### 2. Linux Host Configuration & Troubleshooting
-Interfacing a real Linux Kernel with Stateful DHCPv6 requires specific tuning to handle Router Advertisements (RA) and address conflicts.
+>[!WARNING]
+> #### 2. Linux Host Configuration & Troubleshooting
+> Interfacing a real Linux Kernel with Stateful DHCPv6 requires specific tuning to handle Router Advertisements (RA) and address conflicts.
+> - **Kernel Tuning:** To ensure the Linux node listens to the Router's M-flag, the accept_ra parameter must be forced to 2.
+> - **The Link-Local Crisis:** During the lab, the interface lost its Link-Local address (FE80::) after multiple configuration resets. Without an FE80 address, DHCPv6 communication is impossible.
 
-- **Kernel Tuning:** To ensure the Linux node listens to the Router's M-flag, the accept_ra parameter must be forced to 2.
-- **The Link-Local Crisis:** During the lab, the interface lost its Link-Local address (FE80::) after multiple configuration resets. Without an FE80 address, DHCPv6 communication is impossible.
-- **The Fix:** A full system reboot was performed to re-initialize the IPv6 stack and regenerate the Link-Local address from the MAC address.
+>[!TIP]
+> #### **The Fix:** A full system reboot was performed to re-initialize the IPv6 stack and regenerate the Link-Local address from the MAC address.
 
 **📸 Screenshot:**
 
@@ -143,8 +145,8 @@ After the reboot and running sudo `dhclient -6 -v eth0`, the host successfully o
 
 ---
 
-### Professional Insight
-This lab demonstrates the "stubborn" nature of real-world operating systems compared to simulators. While Packet Tracer handles flag changes instantly, a real Linux Kernel requires manual intervention (Kernel tuning and IPv6 stack resets) to correctly transition from SLAAC to Stateful DHCPv6.
+### 📖 Professional Insight
+**This lab demonstrates the "stubborn" nature of real-world operating systems compared to simulators. While Packet Tracer handles flag changes instantly, a real Linux Kernel requires manual intervention (Kernel tuning and IPv6 stack resets) to correctly transition from SLAAC to Stateful DHCPv6.**
 
 | [⬅️ Previous Lab](../14%20OSPFv3%20(CML%20%2B%20PKT)) | [🏠 Main Menu](../README.md) | [Next Lab ➡️](../16%20IPv6%20RA%20GUARD%20(CML%20FOCUSED)) |
 |:--- | :---: | ---: |
