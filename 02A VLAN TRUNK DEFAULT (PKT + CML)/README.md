@@ -126,14 +126,13 @@ SW-CORE(config-if)#switchport mode trunk
 ---
 
 ### Notes
-This lab builds directly on Lab 01 and serves as a foundation for VLAN trunk
+> [!NOTE]
+> - This lab builds directly on Lab 01 and serves as a foundation for VLAN trunk
 restriction and inter-VLAN routing.
-
-By default, an IEEE 802.1Q trunk allows all VLANs. Since the same VLANs exist
+> - By default, an IEEE 802.1Q trunk allows all VLANs. Since the same VLANs exist
 on both switches and no restrictions are applied, traffic is successfully
 forwarded across the trunk.
-
-VLAN 1 is used as the native VLAN by default. Native VLAN configuration and
+> - VLAN 1 is used as the native VLAN by default. Native VLAN configuration and
 mismatch scenarios are not covered in this lab.
 
 ---
