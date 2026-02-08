@@ -207,7 +207,9 @@ The **ICMP Entropy Challenge:** Most ICMP-based tests are characterized by **Low
 
 Objective Testing with **iperf3:** To achieve an objective result, I deployed a dual-Kali setup (Server and Client). By running iperf3 across **multiple TCP ports**, I introduced high entropy into the traffic stream, **forcing the switch to evaluate distinct flows**.
 
-**⚠️ NOTE on Virtualization: Please be aware that this is a demonstration within Cisco Modeling Labs (CML). The software-based hashing used in IOL (IOS on Linux) images may behave differently than the dedicated Hardware ASICs found in physical switches. While this provides an objective look at flow mechanics, real-world hardware ASICs often have more advanced distribution capabilities**
+
+> [!WARNING]
+> **⚠️ NOTE on Virtualization: Please be aware that this is a demonstration within Cisco Modeling Labs (CML). The software-based hashing used in IOL (IOS on Linux) images may behave differently than the dedicated Hardware ASICs found in physical switches. While this provides an objective look at flow mechanics, real-world hardware ASICs often have more advanced distribution capabilities**
 
 **📸 Screen shots:**
 
@@ -233,7 +235,8 @@ Objective Testing with **iperf3:** To achieve an objective result, I deployed a 
 
   - **Deterministic vs. Software ASIC:** CML utilizes software-based IOL (IOS on Linux) hashing, which is a functional simulation and may lack the granular distribution found in physical hardware ASICs.
 
-**🔴 The observed imbalance isn't a failure; it proves the algorithm is correctly prioritizing Flow Integrity (keeping packets in order) over forced mathematical equality.**
+> [!CAUTION]
+> **🔴 The observed imbalance isn't a failure; it proves the algorithm is correctly prioritizing Flow Integrity (keeping packets in order) over forced mathematical equality.**
 
 ---
 
@@ -271,11 +274,11 @@ Objective Testing with **iperf3:** To achieve an objective result, I deployed a 
 ---
 
 ### Notes
-EtherChannel requires all member interfaces to have identical Layer 2 configurations, including switchport mode, encapsulation, and VLAN settings.
 
-When EtherChannel is formed, STP no longer sees individual physical links. Instead, the Port-channel is treated as a single logical interface, which may cause STP to recalculate port roles and blocking states.
-
-LACP is an IEEE standard protocol and is recommended for safer and more predictable EtherChannel negotiation.
+> [!NOTE]
+> - EtherChannel requires all member interfaces to have identical Layer 2 configurations, including switchport mode, encapsulation, and VLAN settings.
+> - When EtherChannel is formed, STP no longer sees individual physical links. Instead, the Port-channel is treated as a single logical interface, which may cause STP to recalculate port roles and blocking states.
+> - LACP is an IEEE standard protocol and is recommended for safer and more predictable EtherChannel negotiation.
 
 | [⬅️ Previous Lab](../05C%20STP%20Port%20Fast%20%26%20BDPU%20GUARD%20(CML%20%2B%20PKT)) | [🏠 Main Menu](../README.md) | [Next Lab ➡️](../07%20Static%20Routing%20(CML%20%2B%20PKT)) |
 |:--- | :---: | ---: |
