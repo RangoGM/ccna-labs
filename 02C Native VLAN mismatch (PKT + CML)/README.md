@@ -108,7 +108,8 @@ SWITCH(config-if)# switchport trunk native vlan 99
 
 ### Common Misconfiguration / Critical Exception
 
-- But if we change native VLAN exactly like VLAN in access ports switch, this is what will gonna happen:
+> [!CAUTION]
+> **But if we change native VLAN exactly like VLAN in access ports switch, this is what will gonna happen:**
 
 #### Topology
 
@@ -139,10 +140,13 @@ SWITCH(config-if)# switchport trunk native vlan 99
 *(Kali_HR VLAN 20 IP Adress)*
 
 - *(Theres no default gateway configured on both hosts because theres no Inter-VLAN Routing (Next Lab), so hosts can send ARP request to reach other hosts in the same subnet)*
+
 - *(Typically, different VLANs are assigned to different subnets. To enable communication between hosts in mismatched VLANs for this lab, we must manually override this by placing both hosts into the same subnet.)*
+
 - *(By default, Cisco switches employ **PVID Consistency Check** via **STP**. When a Native VLAN mismatch is detected, STP places the port into a **'broken' (root-inconsistent) state** to prevent potential **Layer 2 loops** and traffic leaking between different broadcast domains.)*
 
--> By disabling all this features (*NOT RECOMMEND IN REALIFE*) this will allowed different VLAN can reach each other.
+> [!WARNING]
+> → **By disabling all this features (*NOT RECOMMEND IN REALIFE*) this will allowed different VLAN can reach each other.**
 
 <img width="520" height="183" alt="Screenshot 2026-02-01 144101" src="https://github.com/user-attachments/assets/f6a64a10-940c-4c68-a6fc-3f9ccedb059d" />
 
@@ -162,21 +166,18 @@ SWITCH(config-if)# switchport trunk native vlan 99
 
 ### Notes
 
-This lab intentionally introduces a native VLAN mismatch on an IEEE 802.1Q
+> [!NOTE]
+> - This lab intentionally introduces a native VLAN mismatch on an IEEE 802.1Q
 trunk to demonstrate a common configuration issue.
-
-By default, the native VLAN carries untagged frames on a trunk. When the native
+> - By default, the native VLAN carries untagged frames on a trunk. When the native
 VLAN is different on each side of the trunk, untagged traffic may be
 misinterpreted, leading to potential security and stability risks.
-
-In this lab, a dedicated VLAN (VLAN 99) is used as the native VLAN on one switch.
+> - In this lab, a dedicated VLAN (VLAN 99) is used as the native VLAN on one switch.
 No end devices are assigned to this VLAN, which helps avoid unintended traffic
 leakage and misleading connectivity results.
-
-Although the trunk link remains operational, a native VLAN mismatch condition
+> - Although the trunk link remains operational, a native VLAN mismatch condition
 exists and warning messages may be observed.
-
-Best practice is to avoid using a user VLAN as the native VLAN and to explicitly
+> - Best practice is to avoid using a user VLAN as the native VLAN and to explicitly
 configure and match the native VLAN on both ends of a trunk.
 
 ---
