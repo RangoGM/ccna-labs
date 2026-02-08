@@ -1,3 +1,8 @@
+<br>
+
+| [⬅️ Back to Table of Contents](../README.md) |
+| :--- |
+
 ## Lab 10C - OSPF Multi-Area (ABR & LSA Propagation)
 
 ### Topology (PKT)
@@ -185,3 +190,7 @@ In Packet Tracer, OSPF adjacencies may occasionally fail to update correctly aft
 If Layer 1-3 checks are correct but routing does not converge, **reloading the affected routers may be required**.
 
 This lab represents a typical enterprise OSPF design with hierarchical routing and improved scalability.
+
+| [⬅️ Previous Lab](../10B%20OSPF%20Elections%20(CML%20%2B%20PKT)) | [🏠 Main Menu](../README.md) | [Next Lab ➡️](../11A%20HSRP%20Enterprise%20Redundancy%20(PKT)) |
+|:--- | :---: | ---: |
+
