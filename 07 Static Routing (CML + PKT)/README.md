@@ -1,3 +1,8 @@
+<br>
+
+| [⬅️ Back to Table of Contents](../README.md) |
+| :--- |
+
 ## Lab 07 - Static Routing
 
 ### Topology
@@ -194,3 +199,7 @@ Manual path management is clearly not scalable for high-availability environment
 Static routing requires manual configuration and does not scale well in large networks.
 
 This lab helps build a foundation for understanding dynamic routing protocols such as RIP, EIGRP and OSPF.
+
+| [⬅️ Previous Lab](../06%20Ethernet%20Channel%20%26%20ASIC%20Ha) | [🏠 Main Menu](../README.md) | [Next Lab ➡️](../08%20Dynamic%20Routing%20RIPv2%20(CML%20%2B%20PKT)) |
+|:--- | :---: | ---: |
+
