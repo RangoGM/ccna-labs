@@ -182,14 +182,14 @@ router ospf 1
 ---
 
 ### Notes
-OSPF requires all non-backbone areas to connect to **Area 0** for inter-area routing.
+> [!NOTE]
+> - OSPF requires all non-backbone areas to connect to **Area 0** for inter-area routing.
+> - ABRs generate **Type 3 LSAs** to advertise networks between areas.
+> - This lab represents a typical enterprise OSPF design with hierarchical routing and improved scalability.
 
-ABRs generate **Type 3 LSAs** to advertise networks between areas.
-
-In Packet Tracer, OSPF adjacencies may occasionally fail to update correctly after configuration changes.
-If Layer 1-3 checks are correct but routing does not converge, **reloading the affected routers may be required**.
-
-This lab represents a typical enterprise OSPF design with hierarchical routing and improved scalability.
+> [!WARNING]
+> - In Packet Tracer, OSPF adjacencies may occasionally fail to update correctly after configuration changes.
+> - If Layer 1-3 checks are correct but routing does not converge, **reloading the affected routers may be required**.
 
 | [⬅️ Previous Lab](../10B%20OSPF%20Elections%20(CML%20%2B%20PKT)) | [🏠 Main Menu](../README.md) | [Next Lab ➡️](../11A%20HSRP%20Enterprise%20Redundancy%20(PKT)) |
 |:--- | :---: | ---: |
