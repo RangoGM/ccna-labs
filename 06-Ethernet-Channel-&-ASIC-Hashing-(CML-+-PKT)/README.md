@@ -280,6 +280,6 @@ Objective Testing with **iperf3:** To achieve an objective result, I deployed a 
 > - When EtherChannel is formed, STP no longer sees individual physical links. Instead, the Port-channel is treated as a single logical interface, which may cause STP to recalculate port roles and blocking states.
 > - LACP is an IEEE standard protocol and is recommended for safer and more predictable EtherChannel negotiation.
 
-| [⬅️ Previous Lab](../05C%20STP%20Port%20Fast%20%26%20BDPU%20GUARD%20(CML%20%2B%20PKT)) | [🏠 Main Menu](../README.md) | [Next Lab ➡️](../07%20Static%20Routing%20(CML%20%2B%20PKT)) |
+| [⬅️ Previous Lab](../05C-STP-Port-Fast-%26-BDPU-GUARD-(CML-%2B-PKT)) | [🏠 Main Menu](../README.md) | [Next Lab ➡️](../07-Static-Routing-(CML-%2B-PKT)) |
 |:--- | :---: | ---: |
 

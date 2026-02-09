@@ -197,6 +197,6 @@ ping ipv6 <destination>
 > - Recursive static routing is commonly used and preferred for simplicity
 > - This lab demonstrates why IPv6 static routing must be configured more carefully than IPv4
 
-| [⬅️ Previous Lab](../12C%20IPV6%20SLAAC%20(CML%20FOCUSED)) | [🏠 Main Menu](../README.md) | [Next Lab ➡️](../14%20OSPFv3%20(CML%20%2B%20PKT)) |
+| [⬅️ Previous Lab](../12C-IPV6-SLAAC-(CML-FOCUSED)) | [🏠 Main Menu](../README.md) | [Next Lab ➡️](../14-OSPFv3-(CML-%2B-PKT)) |
 |:--- | :---: | ---: |
 

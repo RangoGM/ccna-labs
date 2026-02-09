@@ -137,6 +137,6 @@ mismatch scenarios are not covered in this lab.
 
 ---
 
-| [⬅️ Previous Lab](../01%20VLAN%20BASIC%20(PKT)) | [🏠 Main Menu](../README.md) | [Next Lab ➡️](../02B%20VLAN%20Trunking%20(Allowed%20VLAN%20Restriction)%20(PKT)) |
+| [⬅️ Previous Lab](../01-VLAN-BASIC-(PKT)) | [🏠 Main Menu](../README.md) | [Next Lab ➡️](../02B-VLAN-Trunking-(Allowed-VLAN-Restriction)-(PKT)) |
 |:--- | :---: | ---: |
 

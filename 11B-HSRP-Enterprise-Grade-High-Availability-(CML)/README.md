@@ -313,7 +313,7 @@ This lab implements a highly resilient "Diamond" (X-House) topology designed for
 > |**System Load**| **More CPU load** because it has to process the full ICMP packet |Very **lightweight**, can be handled by hardware **(ASIC)**|
 > |**Application**| **Static Route** or when **depth testing** is needed | Specifically used for **OSPF, BGP, EIGRP** for **immediate and gentle disconnection** (Neighbor) when a connection is established|
 
-| [⬅️ Previous Lab](../11A%20HSRP%20Enterprise%20Redundancy%20(PKT)) | [🏠 Main Menu](../README.md) | [Next Lab ➡️](../12A%20IPv6%20Addressing%20%26%20Basic%20Connectivity%20(PKT)) |
+| [⬅️ Previous Lab](../11A-HSRP-Enterprise-Redundancy-(PKT)) | [🏠 Main Menu](../README.md) | [Next Lab ➡️](../12A-IPv6-Addressing-%26-Basic-Connectivity-(PKT)) |
 |:--- | :---: | ---: |
 
 

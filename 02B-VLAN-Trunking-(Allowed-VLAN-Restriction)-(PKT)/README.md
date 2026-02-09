@@ -88,5 +88,5 @@ SW-CORE(config-if)# switchport trunk allowed vlan 10,20
 and cannot traverse the trunk link.
 
 ---
-| [⬅️ Previous Lab](../02A%20VLAN%20TRUNK%20DEFAULT%20(PKT%20%2B%20CML)) | [🏠 Main Menu](../README.md) | [Next Lab ➡️](../02C%20Native%20VLAN%20mismatch%20(PKT%20%2B%20CML)) |
+| [⬅️ Previous Lab](../02A-VLAN-TRUNK-DEFAULT-(PKT-%2B-CML)) | [🏠 Main Menu](../README.md) | [Next Lab ➡️](../02C-Native-VLAN-mismatch-(PKT-%2B-CML)) |
 |:--- | :---: | ---: |

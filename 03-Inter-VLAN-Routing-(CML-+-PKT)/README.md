@@ -176,5 +176,5 @@ not per switch.
 separate VLANs while maintaining Layer 2 segmentation.
 
 ---
-| [⬅️ Previous Lab](../02C%20Native%20VLAN%20mismatch%20(PKT%20%2B%20CML)) | [🏠 Main Menu](../README.md) | [Next Lab ➡️](../04%20DHCP%20(CML%20%2B%20PKT)) |
+| [⬅️ Previous Lab](../02C-Native-VLAN-mismatch-(PKT-%2B-CML)) | [🏠 Main Menu](../README.md) | [Next Lab ➡️](../04-DHCP-(CML-%2B-PKT)) |
 |:--- | :---: | ---: |

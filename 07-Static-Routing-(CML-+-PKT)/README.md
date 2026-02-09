@@ -200,6 +200,6 @@ ROUTER(config)# ip route <destination-network> <subnet-mask> <next-hop-ip>
 > - Static routing requires manual configuration and does not scale well in large networks.
 > - This lab helps build a foundation for understanding dynamic routing protocols such as RIP, EIGRP and OSPF.
 
-| [⬅️ Previous Lab](../06%20Ethernet%20Channel%20%26%20ASIC%20Hashing%20(CML%20%2B%20PKT)) | [🏠 Main Menu](../README.md) | [Next Lab ➡️](../08%20Dynamic%20Routing%20RIPv2%20(CML%20%2B%20PKT)) |
+| [⬅️ Previous Lab](../06-Ethernet-Channel-%26-ASIC-Hashing-(CML-%2B-PKT)) | [🏠 Main Menu](../README.md) | [Next Lab ➡️](../08-Dynamic-Routing-RIPv2-(CML-%2B-PKT)) |
 |:--- | :---: | ---: |
 

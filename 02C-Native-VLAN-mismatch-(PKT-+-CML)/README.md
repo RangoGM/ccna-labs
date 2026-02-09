@@ -181,7 +181,7 @@ exists and warning messages may be observed.
 configure and match the native VLAN on both ends of a trunk.
 
 ---
-| [⬅️ Previous Lab](../02B%20VLAN%20Trunking%20(Allowed%20VLAN%20Restriction)%20(PKT)) | [🏠 Main Menu](../README.md) | [Next Lab ➡️](../03%20Inter%20VLAN%20Routing%20(CML%20%2B%20PKT)) |
+| [⬅️ Previous Lab](../02B-VLAN-Trunking-(Allowed-VLAN-Restriction)-(PKT)) | [🏠 Main Menu](../README.md) | [Next Lab ➡️](../03-Inter-VLAN-Routing-(CML-%2B-PKT)) |
 |:--- | :---: | ---: |
 
 

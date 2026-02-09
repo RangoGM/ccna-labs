@@ -177,7 +177,7 @@ The ultimate test of EIGRP's **Unequal Cost Load Balancing** was verified throug
 > - EIGRP supports unequal-cost load balancing, allowing multiple routes with different metrics to be installed in the routing table as long as they satisfy the feasibility condition.
 > - This behavior is useful in networks with redundant links of different bandwidths or delays.
 
-| [⬅️ Previous Lab](../09A%20EIGRP%20Feasible%20Successor%20(CML%20%2B%20PKT)) | [🏠 Main Menu](../README.md) | [Next Lab ➡️](../10A%20OSPF%20Single%20Area%20(CML%20%2B%20PKT)) |
+| [⬅️ Previous Lab](../09A-EIGRP-Feasible-Successor-(CML-%2B-PKT)) | [🏠 Main Menu](../README.md) | [Next Lab ➡️](../10A-OSPF-Single-Area-(CML-%2B-PKT)) |
 |:--- | :---: | ---: |
 
   

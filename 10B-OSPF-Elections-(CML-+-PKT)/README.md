@@ -272,7 +272,7 @@ interface <interface-id>
 > [!TIP]
 >  Best practice is to place DR and BDR on routers located at the core or distribution layer, while edge routers (such as Internet-facing routers) operate as DROTHER.
 
-| [⬅️ Previous Lab](../10A%20OSPF%20Single%20Area%20(CML%20%2B%20PKT)) | [🏠 Main Menu](../README.md) | [Next Lab ➡️](../10C%20OSPF%20Multi-Area%20(CML%20%2B%20PKT)) |
+| [⬅️ Previous Lab](../10A-OSPF-Single-Area-(CML-%2B-PKT)) | [🏠 Main Menu](../README.md) | [Next Lab ➡️](../10C-OSPF-Multi-Area-(CML-%2B-PKT)) |
 |:--- | :---: | ---: |
 
 

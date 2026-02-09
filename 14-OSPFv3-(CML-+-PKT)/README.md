@@ -335,6 +335,6 @@ In this **OSPFv3 (IPv6)** lab, I want to highlight an even more efficient method
 > - Router ID is mandatory and uses IPv4 format
 > - This topology reflects a **realistic IPv6 routed enterprise segment**
 
-| [⬅️ Previous Lab](../13%20IPv6%20Static%20Routing%20(CML%20%2B%20PKT)) | [🏠 Main Menu](../README.md) | [Next Lab ➡️](../15%20DHCPv6%20Implementation%20STATELESS%20%26%20STATEFUL%20(CML%20FOCUSED)) |
+| [⬅️ Previous Lab](../13-IPv6-Static-Routing-(CML-%2B-PKT)) | [🏠 Main Menu](../README.md) | [Next Lab ➡️](../15-DHCPv6-Implementation-STATELESS-%26-STATEFUL-(CML-FOCUSED)) |
 |:--- | :---: | ---: |
 

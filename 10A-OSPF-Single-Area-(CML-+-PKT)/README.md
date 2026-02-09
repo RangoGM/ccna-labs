@@ -305,5 +305,5 @@ $$\text{Cost} = \frac{\text{Reference Bandwidth}}{\text{Interface Bandwidth}}$$
 > - Manual router ID configuration ensures predictable OSPF behavior and simplifies troubleshooting.
 > - OSPF automatically recalculates the shortest path using the SPF algorithm when topology changes occur.
 
-| [⬅️ Previous Lab](../09B%20EIGRP%20Unequal-Cost%20(CML%20%2B%20PKT)) | [🏠 Main Menu](../README.md) | [Next Lab ➡️](../10B%20OSPF%20Elections%20(CML%20%2B%20PKT)) |
+| [⬅️ Previous Lab](../09B-EIGRP-Unequal-Cost-(CML-%2B-PKT)) | [🏠 Main Menu](../README.md) | [Next Lab ➡️](../10B-OSPF-Elections-(CML-%2B-PKT)) |
 |:--- | :---: | ---: |

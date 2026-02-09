@@ -192,7 +192,7 @@ connectivity.
 > - STP recalculates the topology if a link fails, allowing blocked ports to transition into a forwarding state.
 
 ---
-| [⬅️ Previous Lab](../04%20DHCP%20(CML%20%2B%20PKT)) | [🏠 Main Menu](../README.md) | [Next Lab ➡️](../05B%20STP%20Root%20Bridge%20(CML%20%2B%20PKT)) |
+| [⬅️ Previous Lab](../04-DHCP-(CML-%2B-PKT)) | [🏠 Main Menu](../README.md) | [Next Lab ➡️](../05B-STP-Root-Bridge-(CML-%2B-PKT)) |
 |:--- | :---: | ---: |
 
 

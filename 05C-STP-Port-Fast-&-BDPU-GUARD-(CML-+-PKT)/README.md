@@ -141,5 +141,5 @@ SWITCH(config)# spanning-tree bpduguard default
 > - BPDU Guard provides protection by disabling a port that receives BPDUs, preventing accidental or unauthorized switches from affecting the STP topology.
 > - These features are commonly used together as a best practice in enterprise access-layer networks.
 
-| [⬅️ Previous Lab](../05B%20STP%20Root%20Bridge%20(CML%20%2B%20PKT)) | [🏠 Main Menu](../README.md) | [Next Lab ➡️](../06%20Ethernet%20Channel%20%26%20ASIC%20Hashing%20(CML%20%2B%20PKT)) |
+| [⬅️ Previous Lab](../05B-STP-Root-Bridge-(CML-%2B-PKT)) | [🏠 Main Menu](../README.md) | [Next Lab ➡️](../06-Ethernet-Channel-%26-ASIC-Hashing-(CML-%2B-PKT)) |
 |:--- | :---: | ---: |

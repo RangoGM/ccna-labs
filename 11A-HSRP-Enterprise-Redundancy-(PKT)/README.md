@@ -174,7 +174,7 @@ ip dhcp pool VLAN10
 > - This design scales well and serves as a strong foundation for advanced technologies such as routing protocols, IP SLA tracking, and automation.
 
 
-| [⬅️ Previous Lab](../10C%20OSPF%20Multi-Area%20(CML%20%2B%20PKT)) | [🏠 Main Menu](../README.md) | [Next Lab ➡️](../11B%20HSRP%20Enterprise-Grade%20High%20Availability%20(CML)) |
+| [⬅️ Previous Lab](../10C-OSPF-Multi-Area-(CML-%2B-PKT)) | [🏠 Main Menu](../README.md) | [Next Lab ➡️](../11B-HSRP-Enterprise-Grade-High-Availability-(CML)) |
 |:--- | :---: | ---: |
 
 

@@ -273,5 +273,5 @@ My **final experiment** with RIPv2 in a **Full Mesh topology** revealed its **bi
 > - Although RIP is rarely used in modern production networks, it is included in CCNA to help understand the fundamentals of dynamic routing protocols.
 
 
-| [⬅️ Previous Lab](../07%20Static%20Routing%20(CML%20%2B%20PKT)) | [🏠 Main Menu](../README.md) | [Next Lab ➡️](../09A%20EIGRP%20Feasible%20Successor%20(CML%20%2B%20PKT)) |
+| [⬅️ Previous Lab](../07-Static-Routing-(CML-%2B-PKT)) | [🏠 Main Menu](../README.md) | [Next Lab ➡️](../09A-EIGRP-Feasible-Successor-(CML-%2B-PKT)) |
 |:--- | :---: | ---: |

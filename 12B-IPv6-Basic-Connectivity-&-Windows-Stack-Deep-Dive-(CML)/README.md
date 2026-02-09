@@ -281,7 +281,7 @@ Think of the ifIndex as the unique **ID Card Number** assigned to a network adap
 > - **PowerShell Granularity:** Learned the strict distinction between managing IP addresses (NetIPAddress) and routing tables (NetRoute).
 > - **Muscle Memory:** Developed reflexes for EUI-64 address calculation and manual LLA management to simplify troubleshooting in complex environments.
 
-| [⬅️ Previous Lab](../12A%20IPv6%20Addressing%20%26%20Basic%20Connectivity%20(PKT)) | [🏠 Main Menu](../README.md) | [Next Lab ➡️](../12C%20IPV6%20SLAAC%20(CML%20FOCUSED)) |
+| [⬅️ Previous Lab](../12A-IPv6-Addressing-%26-Basic-Connectivity-(PKT)) | [🏠 Main Menu](../README.md) | [Next Lab ➡️](../12C-IPV6-SLAAC-(CML-FOCUSED)) |
 |:--- | :---: | ---: |
 
 

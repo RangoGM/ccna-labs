@@ -191,6 +191,6 @@ router ospf 1
 > - In Packet Tracer, OSPF adjacencies may occasionally fail to update correctly after configuration changes.
 > - If Layer 1-3 checks are correct but routing does not converge, **reloading the affected routers may be required**.
 
-| [⬅️ Previous Lab](../10B%20OSPF%20Elections%20(CML%20%2B%20PKT)) | [🏠 Main Menu](../README.md) | [Next Lab ➡️](../11A%20HSRP%20Enterprise%20Redundancy%20(PKT)) |
+| [⬅️ Previous Lab](../10B-OSPF-Elections-(CML-%2B-PKT)) | [🏠 Main Menu](../README.md) | [Next Lab ➡️](../11A-HSRP-Enterprise-Redundancy-(PKT)) |
 |:--- | :---: | ---: |
 

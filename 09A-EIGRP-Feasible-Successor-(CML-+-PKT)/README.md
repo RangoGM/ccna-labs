@@ -211,6 +211,6 @@ In this experiment, I intentionally increased the **delay** on the backup neighb
 > - This behavior demonstrates EIGRP's fast convergence and reliability compared to traditional distance-vector routing protocols.
 
 
-| [⬅️ Previous Lab](../08%20Dynamic%20Routing%20RIPv2%20(CML%20%2B%20PKT)) | [🏠 Main Menu](../README.md) | [Next Lab ➡️](../09B%20EIGRP%20Unequal-Cost%20(CML%20%2B%20PKT)) |
+| [⬅️ Previous Lab](../08-Dynamic-Routing-RIPv2-(CML-%2B-PKT)) | [🏠 Main Menu](../README.md) | [Next Lab ➡️](../09B-EIGRP-Unequal-Cost-(CML-%2B-PKT)) |
 |:--- | :---: | ---: |
 
