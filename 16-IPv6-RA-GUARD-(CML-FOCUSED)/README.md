@@ -126,7 +126,7 @@ ip -6 addr show eth0
 > - **Simulation Limitations:** Testing revealed that `device-role` monitor may fail to drop packets in some virtual IOL images; switching to `device-role host` ensured 100% enforcement.
 > - **Bridge Shortcut Mitigation:** Successfully implemented `Network Segmentation` by using separate virtual adapters to force traffic through the security control layer.
 
-| [⬅️ Previous Lab](../15-DHCPv6-Implementation-STATELESS-%26-STATEFUL-(CML-FOCUSED)) | [🏠 Main Menu](../README.md) | [Next Lab ➡️] |
+| [⬅️ Previous Lab](../15-DHCPv6-Implementation-STATELESS-%26-STATEFUL-(CML-FOCUSED)) | [🏠 Main Menu](../README.md) | [Next Lab ➡️](../17-Hybrid-DNS-Infrastructure-(CML))|
 |:--- | :---: | ---: |
 
 
