@@ -26,14 +26,21 @@
 ---
 
 <p align="center">
-  <img src="[https://github-readme-stats-eight-theta.vercel.app/api?username=RangoGM&show_icons=true&theme=tokyonight](https://github-readme-stats-eight-theta.vercel.app/api?username=RangoGM&show_icons=true&theme=tokyonight)" alt="RangoGM Stats" />
-  <br/>
-  <img src="[https://github-readme-stats-eight-theta.vercel.app/api/top-langs/?username=RangoGM&layout=compact&theme=tokyonight](https://github-readme-stats-eight-theta.vercel.app/api/top-langs/?username=RangoGM&layout=compact&theme=tokyonight)" alt="Top Langs" />
-</p>
+<img src="https://github-profile-trophy.vercel.app/?username=RangoGM&theme=tokyonight" alt="Trophies" />
+
+<br/>
+
+<img src="https://github-readme-stats-sigma-five.vercel.app/api?username=RangoGM&show_icons=true&theme=tokyonight" alt="Stats" />
+<img src="https://github-readme-stats-sigma-five.vercel.app/api/top-langs/?username=RangoGM&layout=compact&theme=tokyonight" alt="Top Langs" />
+
+<br/>
+
+<img src="https://github-readme-streak-stats.herokuapp.com/?user=RangoGM&theme=tokyonight" alt="Streak" />
 
 </div>
 
 ---
+
 ### 🚀 My Lab Philosophy: Quality over Quantity
 
 
