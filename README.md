@@ -2,10 +2,12 @@
 
 
 <div align="center">
-
+  
 ![CCNA](https://img.shields.io/badge/CCNA-200--301-blue?style=for-the-badge&logo=cisco)   
 
-```text
+<pre align="center">
+
+
   /$$$$$$   /$$$$$$  /$$   /$$  /$$$$$$ 
  /$$__  $$ /$$__  $$| $$$ | $$ /$$__  $$
 | $$  \__/| $$  \__/| $$$$| $$| $$  \ $$
@@ -16,9 +18,9 @@
  \______/  \______/ |__/  \__/|__/  |__/
 
 [ NETWORK & RESEARCH ]
+                                    
+</pre>
 
-```                                        
-                                     
 </div>                                        
 
 ---
