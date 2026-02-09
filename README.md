@@ -1,13 +1,6 @@
 ## CCNA Labs: Bridging Simulation (Packet Tracer) and High-Fidelity Reality (CML) 
 
 
-<p align="center">
-  <img src="https://github-readme-stats.vercel.app/api?username=RangoGM&show_icons=true&theme=tokyonight" alt="Stats" />
-  <br/>
-  <img src="https://github-readme-stats.vercel.app/api/top-langs/?username=RangoGM&layout=compact&theme=tokyonight" alt="Top Langs" />
-</p>
-
-
 <div align="center">
 
 ![CCNA](https://img.shields.io/badge/CCNA-200--301-blue?style=for-the-badge&logo=cisco)   
@@ -28,7 +21,15 @@
                                      
 </div>                                        
 
+---
 
+<p align="center">
+  <img src="https://github-readme-stats.vercel.app/api?username=RangoGM&show_icons=true&theme=tokyonight" alt="RangoGM's GitHub Stats" />
+  <br/><br/>
+  <img src="https://github-readme-stats.vercel.app/api/top-langs/?username=RangoGM&layout=compact&theme=tokyonight" alt="RangoGM's Top Languages" />
+</p>
+
+---
 ### 🚀 My Lab Philosophy: Quality over Quantity
 
 
