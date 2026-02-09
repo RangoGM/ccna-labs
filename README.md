@@ -1,12 +1,24 @@
+<div align="center">
+  
+![Header](https://capsule-render.vercel.app/api?type=waving&color=auto&height=200&section=header&text=Rango%20Networking%20Lab&fontSize=70)
+
+</div>
+
+
+<div align="center">
+
 ## CCNA Labs: Bridging Simulation (Packet Tracer) and High-Fidelity Reality (CML) 
+
+</div>
 
 
 <div align="center">
   
-![CCNA](https://img.shields.io/badge/CCNA-200--301-blue?style=for-the-badge&logo=cisco)   
+![CCNA](https://img.shields.io/badge/CCNA-200--301-blue?style=for-the-badge&logo=cisco) 
+
 
 <pre align="center">
-
+  
 
   /$$$$$$   /$$$$$$  /$$   /$$  /$$$$$$ 
  /$$__  $$ /$$__  $$| $$$ | $$ /$$__  $$
@@ -19,23 +31,25 @@
 
 [ NETWORK & RESEARCH ]
                                     
-</pre>
-
-</div>                                        
+</pre>                                 
 
 ---
 
 <p align="center">
-<img src="https://github-profile-trophy.vercel.app/?username=RangoGM&theme=tokyonight" alt="Trophies" />
+  
+<tr>
+    <td align="center">
+      <img src="https://github-readme-stats-sigma-five.vercel.app/api?username=RangoGM&show_icons=true&theme=tokyonight" height="195px" alt="Stats" />
+    </td>
+    <td align="center">
+      <img src="https://github-readme-streak-stats.herokuapp.com/?user=RangoGM&theme=tokyonight" height="195px" alt="Streak" />
+    </td>
+  </tr>
+</table>
 
-<br/>
-
-<img src="https://github-readme-stats-sigma-five.vercel.app/api?username=RangoGM&show_icons=true&theme=tokyonight" alt="Stats" />
-<img src="https://github-readme-stats-sigma-five.vercel.app/api/top-langs/?username=RangoGM&layout=compact&theme=tokyonight" alt="Top Langs" />
-
-<br/>
-
-<img src="https://github-readme-streak-stats.herokuapp.com/?user=RangoGM&theme=tokyonight" alt="Streak" />
+<p align="center">
+  <img src="https://raw.githubusercontent.com/platane/snk/output/github-contribution-grid-snake-dark.svg" alt="Snake" width="80%" />
+</p>
 
 </div>
 
@@ -83,6 +97,9 @@ Each folder represents one independent lab and contains:
 ### 🛠 Tech Stack & Tools
   
 ### 💻 Virtualization & Network Engine
+
+<img src="https://cdn.simpleicons.org/vmware/607078" height="48" alt="VMware" style="vertical-align: top; margin: 4px;" />
+
 ![VMware](https://img.shields.io/badge/VMware_Workstation_Pro-607078?style=for-the-badge&logo=vmware&logoColor=white)
 ![Cisco CML](https://img.shields.io/badge/Cisco_CML-Modeling_Labs-orange?style=for-the-badge&logo=cisco&logoColor=white)
 ![Packet Tracer](https://img.shields.io/badge/Packet_Tracer-Simulation-005A70?style=for-the-badge&logo=cisco&logoColor=white)
@@ -154,10 +171,15 @@ I don't just "input commands"; I analyze how data moves from the **Application L
 ![Location](https://img.shields.io/badge/Location-Ho_Chi_Minh_City,_Vietnam-EA4335?style=for-the-badge&logo=google-maps&logoColor=white)
 [![Facebook](https://img.shields.io/badge/Facebook-1877F2?style=for-the-badge&logo=facebook&logoColor=white)](https://www.facebook.com/dat.trangia.96)
 [![Discord](https://img.shields.io/badge/Discord-5865F2?style=for-the-badge&logo=discord&logoColor=white)](discordapp.com/users/698729316703404154)
+![Views](https://komarev.com/ghpvc/?username=RangoGM&color=blueviolet&style=for-the-badge&label=PROFILE+VIEWS)
 
 </div>
 
 
-
-
+<div align="center">
+  <img src="https://cdn.simpleicons.org/vmware/607078" height="48" alt="VMware" style="vertical-align: middle; margin: 0 20px;" />
+  <img src="https://cdn.simpleicons.org/cisco/1BA0D7" height="48" alt="Cisco" style="vertical-align: middle; margin: 0 20px;" />
+  <img src="https://cdn.simpleicons.org/kalilinux/557C94" height="48" alt="Kali" style="vertical-align: middle; margin: 0 20px;" />
+  <img src="https://cdn.simpleicons.org/windows11/0078D6?v=2" height="48" alt="Windows" style="vertical-align: middle; margin: 0 20px;" />
+</div>
 
