@@ -35,8 +35,7 @@
 
 ---
 
-<p align="center">
-  
+<table align="center">
 <tr>
     <td align="center">
       <img src="https://github-readme-stats-sigma-five.vercel.app/api?username=RangoGM&show_icons=true&theme=tokyonight" height="195px" alt="Stats" />
