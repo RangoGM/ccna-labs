@@ -138,33 +138,33 @@ Each folder represents one independent lab and contains:
 
 |LAB #|Topic & Objective|(CML)|Status|Difficulty|
 |-----|-----------------|-----|------|----------|
-|[**Lab 01**](./01-VLAN-BASIC-(PKT))|Basic VLAN Configuration (Access Ports)|❌|✅ Done|★|
-|[**Lab 02A**](./02A-VLAN-TRUNK-DEFAULT-(PKT-+-CML))|VLAN Trunking (Default Trunk)|✅|✅ Done|★ ★|
-|[**Lab 02B**](./02B-VLAN-Trunking-(Allowed-VLAN-Restriction)-(PKT))|VLAN Trunking (Allowed VLAN Restriction)|❌|✅ Done|★ ★|
-|[**Lab 02C**](./02C-Native-VLAN-mismatch-(PKT-+-CML))|**(EXTRA)** VLAN Trunking (Native VLAN mismatch)|✅|✅ Done|★ ★ ★|
-|[**Lab 03**](./03-Inter-VLAN-Routing-(CML-+-PKT))|Inter-VLAN Routing (Router-on-a-Stick)|✅|✅ Done|★★|
-|[**Lab 04**](./04-DHCP-(CML-+-PKT))|DHCP|✅|✅ Done|★ ★|
-|[**LAB 05(A)**](./05-STP-(CML-+-PKT))|STP|✅|✅ Done|★ ★|
-|[**LAB 05B**](./05B-STP-Root-Bridge-(CML-+-PKT))|STP Root Bridge|✅|✅ Done|★ ★|
-|[**LAB 05C**](./05C-STP-Port-Fast-&-BDPU-GUARD-(CML-+-PKT))|STP PortFast & BPDU Guard|✅|✅ Done|★ ★|
-|[**LAB 06**](./06-Ethernet-Channel-&-ASIC-Hashing-(CML-+-PKT))|Ethernet Channel & ASIC Hashing|✅|✅ Done|★ ★ ★|
-|[**LAB 07**](./07-Static-Routing-(CML-+-PKT))|Static Routing|✅|✅ Done|★ ★ ★|
-|[**LAB 08**](./08-Dynamic-Routing-RIPv2-(CML-+-PKT))|Dynamic Routing (RIPv2)|✅|✅ Done|★ ★ ★|
-|[**LAB 9A**](./09A-EIGRP-Feasible-Successor-(CML-+-PKT))| 🏆 Dynamic Routing (EIGRP - Feasible Successor) + **BFD**|✅|✅ Done|★ ★ ★ ⯪|
-|[**LAB 9B**](./09B-EIGRP-Unequal-Cost-(CML-+-PKT))|Dynamic Routing (EIGRP - Unequal-Cost Load Balancing)|✅|✅ Done|★ ★ ★|
-|[**LAB 10A**](./10A-OSPF-Single-Area-(CML-+-PKT))|Dynamic Routing (OSPF - Single Area)|✅|✅ Done|★ ★ ★|
-|[**LAB 10B**](./10B-OSPF-Elections-(CML-+-PKT))|Dynamic Routing (OSPF - DR - BDR - DROTHER Election)|✅|✅ Done|★ ★ ★|
-|[**LAB 10C**](./10C-OSPF-Multi-Area-(CML-+-PKT))|Dynamic Routing (OSPF - Multi Area)|✅|✅ Done|★ ★ ★|
-|[**LAB 11A**](./11A-HSRP-Enterprise-Redundancy-(PKT))| 🏆 HSRP Enterprise Redundancy (PKT Optimized)|❌|✅ Done|★ ★ ★ ★|
-|[**LAB 11B**](./11B-HSRP-Enterprise-Grade-High-Availability-(CML))| 🏆 HSRP Enterprise-Grade High Availability (CML more Optimized)|✅|✅ Done|★ ★ ★ ★ ⯪|
-|[**LAB 12A**](./12A-IPv6-Addressing-&-Basic-Connectivity-(PKT))|IPv6 Addressing & Basic Connectivity|❌|✅ Done|★ ⯪|
-|[**LAB 12B**](./12B-IPv6-Basic-Connectivity-&-Windows-Stack-Deep-Dive-(CML))| 🏆 IPv6 Basic Connectivity & Windows Stack Deep-Dive|✅|✅ Done|★ ★ ★ ⯪|
-|[**LAB 12C**](./12C-IPV6-SLAAC-(CML-FOCUSED))| 🏆 IPv6 SLAAC & Linux Kernel Behavior (**CML FOCUSED**)|✅|✅ Done|★ ★ ★ ★|
-|[**Lab 13**](./13-IPv6-Static-Routing-(CML-+-PKT))|IPv6 Static Routing|✅|✅ Done|★ ★ ⯪|
-|[**Lab 14**](./14-OSPFv3-(CML-+-PKT))| 🏆 OSPFv3|✅|✅ Done|★ ★ ★ ★|
-|[**Lab 15 (15.1 + 15.2)**](./15-DHCPv6-Implementation-STATELESS-&-STATEFUL-(CML-FOCUSED))| 🏆 DHCPv6 Implement Stateless/Statefull (**CML FOCUSED**)|✅|✅ Done|★ ★ ★ ★ ⯪|
-|[**Lab 16**](./16-IPv6-RA-GUARD-(CML-FOCUSED))| 🏆 IPv6 RA GUARD (**CML FOCUSED**)|✅|✅ Done|★ ★ ★ ★ ★|
-|[**Lab 17**](./17-Hybrid-DNS-Infrastructure-(CML))|🏆 Hybrid DNS Infrastructure & Kali Linux Server (**LINUX FOCUSED**)|✅|✅ Done|★ ★ ★ ★ ⯪ |
+|[**Lab 01**](./01-VLAN-BASIC-(PKT))|Basic VLAN Configuration (Access Ports)|❌|✅ Done|⭐|
+|[**Lab 02A**](./02A-VLAN-TRUNK-DEFAULT-(PKT-+-CML))|VLAN Trunking (Default Trunk)|✅|✅ Done|⭐⭐|
+|[**Lab 02B**](./02B-VLAN-Trunking-(Allowed-VLAN-Restriction)-(PKT))|VLAN Trunking (Allowed VLAN Restriction)|❌|✅ Done|⭐⭐|
+|[**Lab 02C**](./02C-Native-VLAN-mismatch-(PKT-+-CML))|**(EXTRA)** VLAN Trunking (Native VLAN mismatch)|✅|✅ Done|⭐⭐⭐|
+|[**Lab 03**](./03-Inter-VLAN-Routing-(CML-+-PKT))|Inter-VLAN Routing (Router-on-a-Stick)|✅|✅ Done|⭐⭐|
+|[**Lab 04**](./04-DHCP-(CML-+-PKT))|DHCP|✅|✅ Done|⭐⭐|
+|[**LAB 05(A)**](./05-STP-(CML-+-PKT))|STP|✅|✅ Done|⭐⭐|
+|[**LAB 05B**](./05B-STP-Root-Bridge-(CML-+-PKT))|STP Root Bridge|✅|✅ Done|⭐⭐|
+|[**LAB 05C**](./05C-STP-Port-Fast-&-BDPU-GUARD-(CML-+-PKT))|STP PortFast & BPDU Guard|✅|✅ Done|⭐⭐|
+|[**LAB 06**](./06-Ethernet-Channel-&-ASIC-Hashing-(CML-+-PKT))|Ethernet Channel & ASIC Hashing|✅|✅ Done|⭐⭐⭐|
+|[**LAB 07**](./07-Static-Routing-(CML-+-PKT))|Static Routing|✅|✅ Done|⭐⭐⭐|
+|[**LAB 08**](./08-Dynamic-Routing-RIPv2-(CML-+-PKT))|Dynamic Routing (RIPv2)|✅|✅ Done|⭐⭐⭐|
+|[**LAB 9A**](./09A-EIGRP-Feasible-Successor-(CML-+-PKT))| 🏆 Dynamic Routing (EIGRP - Feasible Successor) + **BFD**|✅|✅ Done|⭐⭐⭐⭐|
+|[**LAB 9B**](./09B-EIGRP-Unequal-Cost-(CML-+-PKT))|Dynamic Routing (EIGRP - Unequal-Cost Load Balancing)|✅|✅ Done|⭐⭐⭐|
+|[**LAB 10A**](./10A-OSPF-Single-Area-(CML-+-PKT))|Dynamic Routing (OSPF - Single Area)|✅|✅ Done|⭐⭐⭐|
+|[**LAB 10B**](./10B-OSPF-Elections-(CML-+-PKT))|Dynamic Routing (OSPF - DR - BDR - DROTHER Election)|✅|✅ Done|⭐⭐⭐|
+|[**LAB 10C**](./10C-OSPF-Multi-Area-(CML-+-PKT))|Dynamic Routing (OSPF - Multi Area)|✅|✅ Done|⭐⭐⭐|
+|[**LAB 11A**](./11A-HSRP-Enterprise-Redundancy-(PKT))| 🏆 HSRP Enterprise Redundancy (PKT Optimized)|❌|✅ Done|⭐⭐⭐⭐|
+|[**LAB 11B**](./11B-HSRP-Enterprise-Grade-High-Availability-(CML))| 🏆 HSRP Enterprise-Grade High Availability (CML more Optimized)|✅|✅ Done|⭐⭐⭐⭐⭐|
+|[**LAB 12A**](./12A-IPv6-Addressing-&-Basic-Connectivity-(PKT))|IPv6 Addressing & Basic Connectivity|❌|✅ Done|⭐⭐|
+|[**LAB 12B**](./12B-IPv6-Basic-Connectivity-&-Windows-Stack-Deep-Dive-(CML))| 🏆 IPv6 Basic Connectivity & Windows Stack Deep-Dive|✅|✅ Done|⭐⭐⭐⭐|
+|[**LAB 12C**](./12C-IPV6-SLAAC-(CML-FOCUSED))| 🏆 IPv6 SLAAC & Linux Kernel Behavior (**CML FOCUSED**)|✅|✅ Done|⭐⭐⭐⭐|
+|[**Lab 13**](./13-IPv6-Static-Routing-(CML-+-PKT))|IPv6 Static Routing|✅|✅ Done|⭐⭐⭐|
+|[**Lab 14**](./14-OSPFv3-(CML-+-PKT))| 🏆 OSPFv3|✅|✅ Done|⭐⭐⭐⭐|
+|[**Lab 15 (15.1 + 15.2)**](./15-DHCPv6-Implementation-STATELESS-&-STATEFUL-(CML-FOCUSED))| 🏆 DHCPv6 Implement Stateless/Statefull (**CML FOCUSED**)|✅|✅ Done|⭐⭐⭐⭐|
+|[**Lab 16**](./16-IPv6-RA-GUARD-(CML-FOCUSED))| 🏆 IPv6 RA GUARD (**CML FOCUSED**)|✅|✅ Done|⭐⭐⭐⭐|
+|[**Lab 17**](./17-Hybrid-DNS-Infrastructure-(CML))|🏆 Hybrid DNS Infrastructure & Kali Linux Server (**LINUX FOCUSED**)|✅|✅ Done|⭐⭐⭐⭐⭐|
 
 *Note: These labs focus on building large-scale networks to understand complex routing propagation and redundancy.*
 
