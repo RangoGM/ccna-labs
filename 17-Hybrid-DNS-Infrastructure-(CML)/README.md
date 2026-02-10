@@ -147,6 +147,11 @@ These values manage how DNS synchronization and caching work:
 |**Expire**|	`2419200`	| If the Master is offline for this long, the Secondary server stops serving the zone (4 weeks).|
 |**Negative TTL**|	`604800`|	Cache duration for "NXDOMAIN" (Name Error) responses (1 week).|
 
+**3. Resource Records (NS & A)**
+- `IN NS ns1.server.com.`: **Name server**. Specifies that the host `ns1` is the designated server for this zone.
+- `ns1 IN A 1.1.1.1`: **Address Record**. Maps the hostname `ns1` to the physical IP address `1.1.1.1`.
+- `@ IN A 1.1.1.1:` Maps the **Apex domain** `server.com` directly to `1.1.1.1`.
+
 >[!IMPORTANT]
 > Verify the config, if is said `OK` you are good to go
 
