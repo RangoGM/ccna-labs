@@ -165,6 +165,7 @@ Each folder represents one independent lab and contains:
 |[**Lab 15 (15.1 + 15.2)**](./15-DHCPv6-Implementation-STATELESS-&-STATEFUL-(CML-FOCUSED))| 🏆 DHCPv6 Implement Stateless/Statefull (**CML FOCUSED**)|✅|✅ Done|⭐⭐⭐⭐|
 |[**Lab 16**](./16-IPv6-RA-GUARD-(CML-FOCUSED))| 🏆 IPv6 RA GUARD (**CML FOCUSED**)|✅|✅ Done|⭐⭐⭐⭐|
 |[**Lab 17**](./17-Hybrid-DNS-Infrastructure-(CML))|🏆 Hybrid DNS Infrastructure & Kali Linux Server (**LINUX FOCUSED**)|✅|✅ Done|⭐⭐⭐⭐⭐|
+|[**Lab 18**](./18-Standard-ACL-(CML-+-PKT))| Standard ACL - Enterprise Traffic Engineering & Security Baseline |✅|✅ Done|⭐⭐|
 
 *Note: These labs focus on building large-scale networks to understand complex routing propagation and redundancy.*
 
