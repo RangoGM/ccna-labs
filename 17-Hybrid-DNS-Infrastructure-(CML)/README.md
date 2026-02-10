@@ -277,5 +277,5 @@ ip domain lookup
 > - **Service Recovery:** Encountering `exit-code` often indicates a permissions issue on the zone file or a stray bracket in the config.
 > - **The "Flush" Requirement:** Always run `ipconfig /flushdns` on Windows between tests, or you'll be analyzing "Ghost Traffic" from the local cache instead of the live network.
 
-| [⬅️ Previous Lab](../16-IPv6-RA-GUARD-(CML-FOCUSED)) | [🏠 Main Menu](../README.md) | [Next Lab ➡️] |
+| [⬅️ Previous Lab](../16-IPv6-RA-GUARD-(CML-FOCUSED)) | [🏠 Main Menu](../README.md) | [Next Lab ➡️](../18-Standard-ACL-(CML-%2B-PKT)) |
 |:--- | :---: | ---: |
