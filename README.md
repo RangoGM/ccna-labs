@@ -138,12 +138,12 @@ Each folder represents one independent lab and contains:
 
 |LAB #|Topic & Objective|(CML)|Status|Difficulty|
 |-----|-----------------|-----|------|----------|
-|[**Lab 01**](./01-VLAN-BASIC-(PKT))|Basic VLAN Configuration (Access Ports)|❌|✅ Done|⭐|
-|[**Lab 02A**](./02A-VLAN-TRUNK-DEFAULT-(PKT-+-CML))|VLAN Trunking (Default Trunk)|✅|✅ Done|⭐⭐|
-|[**Lab 02B**](./02B-VLAN-Trunking-(Allowed-VLAN-Restriction)-(PKT))|VLAN Trunking (Allowed VLAN Restriction)|❌|✅ Done|⭐⭐|
+|[**LAB 01**](./01-VLAN-BASIC-(PKT))|Basic VLAN Configuration (Access Ports)|❌|✅ Done|⭐|
+|[**LAB 02A**](./02A-VLAN-TRUNK-DEFAULT-(PKT-+-CML))|VLAN Trunking (Default Trunk)|✅|✅ Done|⭐⭐|
+|[**LAB 02B**](./02B-VLAN-Trunking-(Allowed-VLAN-Restriction)-(PKT))|VLAN Trunking (Allowed VLAN Restriction)|❌|✅ Done|⭐⭐|
 |[**Lab 02C**](./02C-Native-VLAN-mismatch-(PKT-+-CML))|**(EXTRA)** VLAN Trunking (Native VLAN mismatch)|✅|✅ Done|⭐⭐⭐|
-|[**Lab 03**](./03-Inter-VLAN-Routing-(CML-+-PKT))|Inter-VLAN Routing (Router-on-a-Stick)|✅|✅ Done|⭐⭐|
-|[**Lab 04**](./04-DHCP-(CML-+-PKT))|DHCP|✅|✅ Done|⭐⭐|
+|[**LAB 03**](./03-Inter-VLAN-Routing-(CML-+-PKT))|Inter-VLAN Routing (Router-on-a-Stick)|✅|✅ Done|⭐⭐|
+|[**LAB 04**](./04-DHCP-(CML-+-PKT))|DHCP|✅|✅ Done|⭐⭐|
 |[**LAB 05(A)**](./05-STP-(CML-+-PKT))|STP|✅|✅ Done|⭐⭐|
 |[**LAB 05B**](./05B-STP-Root-Bridge-(CML-+-PKT))|STP Root Bridge|✅|✅ Done|⭐⭐|
 |[**LAB 05C**](./05C-STP-Port-Fast-&-BDPU-GUARD-(CML-+-PKT))|STP PortFast & BPDU Guard|✅|✅ Done|⭐⭐|
@@ -160,12 +160,13 @@ Each folder represents one independent lab and contains:
 |[**LAB 12A**](./12A-IPv6-Addressing-&-Basic-Connectivity-(PKT))|IPv6 Addressing & Basic Connectivity|❌|✅ Done|⭐⭐|
 |[**LAB 12B**](./12B-IPv6-Basic-Connectivity-&-Windows-Stack-Deep-Dive-(CML))| 🏆 IPv6 Basic Connectivity & Windows Stack Deep-Dive|✅|✅ Done|⭐⭐⭐⭐|
 |[**LAB 12C**](./12C-IPV6-SLAAC-(CML-FOCUSED))| 🏆 IPv6 SLAAC & Linux Kernel Behavior (**CML FOCUSED**)|✅|✅ Done|⭐⭐⭐⭐|
-|[**Lab 13**](./13-IPv6-Static-Routing-(CML-+-PKT))|IPv6 Static Routing|✅|✅ Done|⭐⭐⭐|
-|[**Lab 14**](./14-OSPFv3-(CML-+-PKT))| 🏆 OSPFv3|✅|✅ Done|⭐⭐⭐⭐|
-|[**Lab 15 (15.1 + 15.2)**](./15-DHCPv6-Implementation-STATELESS-&-STATEFUL-(CML-FOCUSED))| 🏆 DHCPv6 Implement Stateless/Statefull (**CML FOCUSED**)|✅|✅ Done|⭐⭐⭐⭐|
-|[**Lab 16**](./16-IPv6-RA-GUARD-(CML-FOCUSED))| 🏆 IPv6 RA GUARD (**CML FOCUSED**)|✅|✅ Done|⭐⭐⭐⭐|
-|[**Lab 17**](./17-Hybrid-DNS-Infrastructure-(CML))|🏆 Hybrid DNS Infrastructure & Kali Linux Server (**LINUX FOCUSED**)|✅|✅ Done|⭐⭐⭐⭐⭐|
-|[**Lab 18**](./18-Standard-ACL-(CML-+-PKT))| Standard ACL - Enterprise Traffic Engineering & Security Baseline |✅|✅ Done|⭐⭐|
+|[**LAB 13**](./13-IPv6-Static-Routing-(CML-+-PKT))|IPv6 Static Routing|✅|✅ Done|⭐⭐⭐|
+|[**LAB 14**](./14-OSPFv3-(CML-+-PKT))| 🏆 OSPFv3|✅|✅ Done|⭐⭐⭐⭐|
+|[**LAB 15 (15.1 + 15.2)**](./15-DHCPv6-Implementation-STATELESS-&-STATEFUL-(CML-FOCUSED))| 🏆 DHCPv6 Implement Stateless/Statefull (**CML FOCUSED**)|✅|✅ Done|⭐⭐⭐⭐|
+|[**LAB 16**](./16-IPv6-RA-GUARD-(CML-FOCUSED))| 🏆 IPv6 RA GUARD (**CML FOCUSED**)|✅|✅ Done|⭐⭐⭐⭐|
+|[**LAB 17**](./17-Hybrid-DNS-Infrastructure-(CML))|🏆 Hybrid DNS Infrastructure & Kali Linux Server (**LINUX FOCUSED**)|✅|✅ Done|⭐⭐⭐⭐⭐|
+|[**LAB 18**](./18-Standard-ACL-(CML-+-PKT))| Standard ACL - Enterprise Traffic Engineering & Security Baseline |✅|✅ Done|⭐⭐|
+|[**LAB 19**](./19-NAT-(CML-+-PKT))|Comprehensive NAT Architectures - Static, Dynamic & PAT|✅|✅ Done|⭐⭐⭐|
 
 *Note: These labs focus on building large-scale networks to understand complex routing propagation and redundancy.*
 
