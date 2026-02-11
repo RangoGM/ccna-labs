@@ -14,6 +14,52 @@
 - 6 PC
 - 3 VLANs
 
+```mermaid
+
+graph LR
+
+    SW((CORE SWITCH))
+
+
+    classDef blackText color:#000,font-weight:bold,font-size:12px;
+    classDef labelStyle color:#fff,font-weight:bold,font-size:12px;
+
+    subgraph V10 [VLAN 10: SALES <br/> Subnet: 192.168.1.0/24 <br/>]
+    direction TB
+    PC1(PC1)
+    PC2(PC2)
+end
+
+subgraph V20 [VLAN 20: IT <br/> Subnet: 192.168.2.0/24 <br/>]
+    direction TB
+    PC3(PC3)
+    PC4(PC4)
+end
+
+subgraph V30 [VLAN 30: HR <br/> Subnet: 192.168.3.0/24 <br/>]
+    direction TB
+    PC5(PC5)
+    PC6(PC6)
+end
+
+
+V10 ~~~ V20 ~~~ V30
+
+V10 --- SW
+V20 --- SW
+V30 --- SW
+
+class V10 labelStyle
+class V20 blackText
+class V30 labelStyle
+
+style V10 fill:#0A0CBD,stroke:#01579b
+style V20 fill:#fff3a0,stroke:#ffb300
+style V30 fill:#f325f5,stroke:#8e24aa
+style SW fill:#2e7d32,color:#fff,stroke-width:4px
+```
+
+
 ### Goal 
 - Understanding the VLAN concept
 - Verify traffic isolation between different VLANs
