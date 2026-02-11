@@ -30,7 +30,7 @@ The network is split into two primary branches connected via an **Internet Route
 Branch 1 simulates a scenario where internal hosts need fixed public mappings.
 
 - **Network Specs:** LAN `192.168.1.0/24` | Public Subnet `203.0.113.0/24`.
-- **Static NAT (Single Host): Maps one private IP to one specific public IP.
+- **Static NAT (Single Host):** Maps one private IP to one specific public IP.
 
 ```bash
 R1(config)# interface e0/1
@@ -90,6 +90,7 @@ To ensure the NAT addresses are reachable across the infrastructure, we implemen
 - **The Correct "Best Practice" Config**
 In a real-world ISP scenario, we only advertise the **Public Interconnects** and the **Server** path. We keep the Private LANs invisible.
 
+ 
 ```bash
 // On R1 (Static NAT Branch)
 R1(config)# router ospf 1
@@ -105,6 +106,8 @@ INTERNET(config-router)# network 1.1.1.0 0.0.0.3 area 0  // Server (The destinat
 INTERNET(config-router)# network 203.0.113.0 0.0.0.255 area 0
 INTERNET(config-router)# network 203.0.114.0 0.0.0.3 area 0
 ```
+
+
 ---
 
 > [!IMPORTANT]
@@ -158,7 +161,7 @@ Successful reachability in this lab depends on two distinct layers working in ha
 >[!WARNING]
 > #### 1. NAT is NOT Routing
 > During testing, we confirmed that simply configuring NAT is not enough.
-> - **The Mask:** NAT successfully hides the private IP (`192.168.1.12`) behind a public alias (`203.0.113.10`) and can ping the INTERNET (`203.0.113.1`) without routing but dont be get trick by this because the **Private IP** has been changed to **Inside Global** got the **same subnet** as the INTERNET so that is why the packets can sending out towards the INTERNET.
+> - **The Mask:** NAT successfully hides the private IP (`192.168.1.12`) behind a public alias (`203.0.113.10`) and can ping the INTERNET (`203.0.113.1`) without routing but don't be tricked by this because the **Private IP** has been changed to **Inside Global** got the **same subnet** as the INTERNET so that is why the packets can sending out towards the INTERNET.
 > - **The Map:** However, without **OSPF**, the packets have no "map" to reach the Server (`1.1.1.1`). NAT only changes the identity; it does not build the road to the destination.
 > #### 2. The Return Path (ISP Role)
 > The most critical part of verification is the Return Path.
@@ -222,7 +225,7 @@ What happens if we "accidentally" advertise the Private LANs (`192.168.x.x`) int
 To avoid confusion between Private and Public perspectives, we use this standard table to track our packets. Let's use **Branch 1 (Static NAT)** as the example:
 
 
-|Term|Simple Defination|Example in Lab|
+|Term|Simple Definition|Example in Lab|
 |-|-|-|
 |**Inside Local**|The **real IP** of the host inside your network.|`192.168.1.12`|
 |**Inside Global**|The **Public IP** that the world sees you as (The Mask).|`203.0.113.10`|
@@ -263,11 +266,8 @@ However, thanks to **NAT Overload** and **Static NAT** logic:
 
 <img width="956" height="200" alt="Screenshot 2026-02-11 213821" src="https://github.com/user-attachments/assets/4f3973b7-ca5e-43e4-9e59-9e44eb1ca1db" />
 
-*(Real world simulation NAT working invincibility with the INTERNET)*
+*(Real world simulation NAT working invisibility with the INTERNET)*
 
 
 | [⬅️ Previous Lab](../18-Standard-ACL-(CML-+-PKT)) | [🏠 Main Menu](../README.md) | [Next Lab ➡️]|
 |:--- | :---: | ---: |
-
-
-
