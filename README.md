@@ -141,7 +141,7 @@ Each folder represents one independent lab and contains:
 |[**LAB 01**](./01-VLAN-BASIC-(PKT))|Basic VLAN Configuration (Access Ports)|❌|✅ Done|⭐|
 |[**LAB 02A**](./02A-VLAN-TRUNK-DEFAULT-(PKT-+-CML))|VLAN Trunking (Default Trunk)|✅|✅ Done|⭐⭐|
 |[**LAB 02B**](./02B-VLAN-Trunking-(Allowed-VLAN-Restriction)-(PKT))|VLAN Trunking (Allowed VLAN Restriction)|❌|✅ Done|⭐⭐|
-|[**Lab 02C**](./02C-Native-VLAN-mismatch-(PKT-+-CML))|**(EXTRA)** VLAN Trunking (Native VLAN mismatch)|✅|✅ Done|⭐⭐⭐|
+|[**LAB 02C**](./02C-Native-VLAN-mismatch-(PKT-+-CML))|**(EXTRA)** VLAN Trunking (Native VLAN mismatch)|✅|✅ Done|⭐⭐⭐|
 |[**LAB 03**](./03-Inter-VLAN-Routing-(CML-+-PKT))|Inter-VLAN Routing (Router-on-a-Stick)|✅|✅ Done|⭐⭐|
 |[**LAB 04**](./04-DHCP-(CML-+-PKT))|DHCP|✅|✅ Done|⭐⭐|
 |[**LAB 05(A)**](./05-STP-(CML-+-PKT))|STP|✅|✅ Done|⭐⭐|
@@ -167,6 +167,7 @@ Each folder represents one independent lab and contains:
 |[**LAB 17**](./17-Hybrid-DNS-Infrastructure-(CML))|🏆 Hybrid DNS Infrastructure & Kali Linux Server (**LINUX FOCUSED**)|✅|✅ Done|⭐⭐⭐⭐⭐|
 |[**LAB 18**](./18-Standard-ACL-(CML-+-PKT))| Standard ACL - Enterprise Traffic Engineering & Security Baseline |✅|✅ Done|⭐⭐|
 |[**LAB 19**](./19-NAT-(CML-+-PKT))|Comprehensive NAT Architectures - Static, Dynamic & PAT|✅|✅ Done|⭐⭐⭐|
+|[**LAB 20**](./20-Extended-ACL-&-Services-(CML-+-PKT))|🏆 Advanced Network Security - Extended ACL & Service Hardening|✅|✅ Done|⭐⭐⭐⭐⭐|
 
 *Note: These labs focus on building large-scale networks to understand complex routing propagation and redundancy.*
 
