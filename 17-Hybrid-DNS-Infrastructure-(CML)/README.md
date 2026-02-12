@@ -22,7 +22,7 @@ To eliminate "Local Resolution Shortcuts," this lab is designed with a strictly 
 
 **📸 Screenshot:**
 
-<img width="960" height="374" alt="Screenshot 2026-02-10 013817" src="https://github.com/user-attachments/assets/f80e035f-a865-4501-9dec-a4c0a17638b5" />
+![alt text](https://github.com/user-attachments/assets/f80e035f-a865-4501-9dec-a4c0a17638b5" />
 
 ---
 ### Install Bind9 on Linux 
