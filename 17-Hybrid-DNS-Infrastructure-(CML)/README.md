@@ -22,7 +22,7 @@ To eliminate "Local Resolution Shortcuts," this lab is designed with a strictly 
 
 **📸 Screenshot:**
 
-![alt text](https://github.com/user-attachments/assets/f80e035f-a865-4501-9dec-a4c0a17638b5" />
+<img width="960" height="374" alt="Screenshot 2026-02-10 013817" src="https://github.com/user-attachments/assets/f80e035f-a865-4501-9dec-a4c0a17638b5" />
 
 ---
 ### Install Bind9 on Linux 
@@ -39,10 +39,7 @@ systemctl status named
 **📸 Screenshot:**
 
 
-
-<img width="1000" height="400" alt="Screenshot 2026-02-10 015639" src="https://github.com/user-attachments/assets/30265da2-9521-42f9-89e5-af70aa2b95c3" />
-
-
+![alt text](https://github.com/user-attachments/assets/30265da2-9521-42f9-89e5-af70aa2b95c3)
 
 
 - If not use this command to activate the Service:
