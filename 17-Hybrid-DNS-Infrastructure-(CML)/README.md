@@ -38,7 +38,12 @@ systemctl status named
 ```
 **📸 Screenshot:**
 
-<img width="1137" height="500" alt="Screenshot 2026-02-10 015639" src="https://github.com/user-attachments/assets/30265da2-9521-42f9-89e5-af70aa2b95c3" />
+
+
+<img width="1000" height="400" alt="Screenshot 2026-02-10 015639" src="https://github.com/user-attachments/assets/30265da2-9521-42f9-89e5-af70aa2b95c3" />
+
+
+
 
 - If not use this command to activate the Service:
 
