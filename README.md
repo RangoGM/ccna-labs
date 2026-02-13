@@ -167,7 +167,7 @@ Each folder represents one independent lab and contains:
 |[**LAB 17**](./17-Hybrid-DNS-Infrastructure-(CML))|🏆 Hybrid DNS Infrastructure & Kali Linux Server (**LINUX FOCUSED**)|✅|✅ Done|⭐⭐⭐⭐⭐|
 |[**LAB 18**](./18-Standard-ACL-(CML-+-PKT))| Standard ACL - Enterprise Traffic Engineering & Security Baseline |✅|✅ Done|⭐⭐|
 |[**LAB 19**](./19-NAT-(CML-+-PKT))|Comprehensive NAT Architectures - Static, Dynamic & PAT|✅|✅ Done|⭐⭐⭐|
-|[**LAB 20**](./20-Extended-ACL-&-Services-(CML-+-PKT))|🏆 Advanced Network Security - Extended ACL & Service Hardening|✅|✅ Done|⭐⭐⭐⭐⭐|
+|[**LAB 20**](./20-Extended-ACL-&-Services-(CML-+-PKT))|🏆 Advanced Network Security - Extended ACL & Service Hardening **(LINUX FOCUSED)**|✅|✅ Done|⭐⭐⭐⭐⭐|
 
 *Note: These labs focus on building large-scale networks to understand complex routing propagation and redundancy.*
 
