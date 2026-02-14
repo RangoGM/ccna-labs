@@ -276,7 +276,7 @@ sudo chown -R www-data:www-data /var/www/html/syslog
 
 - **Table Name:** The primary data table is `SystemEvents` (capital **S** and **E**). If you type `systemevents`(default) in your SQL commands or Web configuration, the system will return a "Table does not exist" error.
 
-- **Best Practice:** Always run `SHOW TABLES;` after selecting your database to verify the exact casing before running `ALTER` or `SELEC`T queries.
+- **Best Practice:** Always run `SHOW TABLES;` after selecting your database to verify the exact casing before running `ALTER` or `SELECT` queries.
 
 #### 2. Understanding the Access Command: `sudo mysql -u root`
 
@@ -554,7 +554,7 @@ R1(config)# logging 10.0.99.100
 ### Conclusion
 Lab 21 successfully transitions from basic logging to an **Enterprise-grade Centralized Log Management system**. By overcoming SQL schema mismatches and DNS display bugs, we have built a robust environment capable of scaling to thousands of devices.
 
->![IMPORTANT]
+>[!IMPORTANT]
 > ### Syslog Severity Levels
 > These values are stored in the `ntseverity` (or `priority`) column in our database.
 
