@@ -7,7 +7,7 @@
 
 ### Overview
 
-📌 Quick Navigation
+#### 📌 Quick Navigation
 
 * [🏗️ Network Topology & IP Schema](#network-topology--ip-schema)
 * [⚙️ Key Configurations](#key-configurations)
