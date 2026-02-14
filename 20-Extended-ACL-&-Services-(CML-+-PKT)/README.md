@@ -355,6 +355,6 @@ SIUUUUUU! Lab 20 Completed! 🔥
 [⬆ Back to Top](#-quick-navigation)
 
 
-| [⬅️ Previous Lab](../19-NAT-(CML-+-PKT)) | [🏠 Main Menu](../README.md) | [Next Lab ➡️] |
+| [⬅️ Previous Lab](../19-NAT-(CML-+-PKT)) | [🏠 Main Menu](../README.md) | [Next Lab ➡️](../21-Enterprise-Syslog-(CML-+-PKT))|
 |:--- | :---: | ---: |
 
