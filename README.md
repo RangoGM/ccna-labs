@@ -169,6 +169,7 @@ Each folder represents one independent lab and contains:
 |[**LAB 19**](./19-NAT-(CML-+-PKT))|Comprehensive NAT Architectures - Static, Dynamic & PAT|✅|✅ Done|⭐⭐⭐|
 |[**LAB 20**](./20-Extended-ACL-&-Services-(CML-+-PKT))|🏆 Advanced Network Security - Extended ACL & Service Hardening **(LINUX FOCUSED)**|✅|✅ Done|⭐⭐⭐⭐⭐|
 |[**LAB 21**](./21-Enterprise-Syslog-(CML-+-PKT))|🏆 Enterprise Centralized Logging - Rsyslog, MariaDB & Web UI Hardening **(LINUX FOCUSED)**|✅|✅ Done|⭐⭐⭐⭐⭐⭐|
+|[**LAB 22**](./22-NTP-(CML-+-PKT))|Infrastructure Hardening: Automated Syslog & Secure NTP Orchestration **(LINUX FOCUSED)**|✅|✅ Done|⭐⭐⭐|
 
 *Note: These labs focus on building large-scale networks to understand complex routing propagation and redundancy.*
 
