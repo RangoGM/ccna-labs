@@ -82,7 +82,7 @@ wget "https://raw.githubusercontent.com/RangoGM/ccna-labs/refs/heads/main/21-Ent
 
 <img width="1719" height="888" alt="image" src="https://github.com/user-attachments/assets/f434018c-01ae-40cc-aef6-af63994bfde4" />
 
-- Remember **Internet** access is still require to download services. And the [**Web UI Installation**](./https://github.com/RangoGM/ccna-labs/tree/main/21-Enterprise-Syslog-(CML-%2B-PKT)#phase-2-web-interface-log-analyzer) is the same as **Lab 21** but instead of a **blank webpage**, the code now **automatically fixes** the error for you.
+- Remember **Internet** access is still require to download services. And the [**Web UI Installation**](https://github.com/RangoGM/ccna-labs/tree/main/21-Enterprise-Syslog-(CML-%2B-PKT)#phase-2-web-interface-log-analyzer) is the same as **Lab 21** but instead of a **blank webpage**, the code now **automatically fixes** the error for you.
 
 - Try to `no shut` and `shutdown` random Interfaces on R1:
 
