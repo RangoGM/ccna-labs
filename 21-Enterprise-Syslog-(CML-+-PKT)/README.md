@@ -584,7 +584,7 @@ Lab 21 successfully transitions from basic logging to an **Enterprise-grade Cent
 [⬆ Back to Top](#-quick-navigation)
 
 
-| [⬅️ Previous Lab](../20-Extended-ACL-&-Services-(CML-+-PKT)) | [🏠 Main Menu](../README.md) | [Next Lab ➡️] |
+| [⬅️ Previous Lab](../20-Extended-ACL-&-Services-(CML-+-PKT)) | [🏠 Main Menu](../README.md) | [Next Lab ➡️](../22-NTP-(CML-+-PKT))|
 |:--- | :---: | ---: |
 
 
