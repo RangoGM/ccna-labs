@@ -188,7 +188,7 @@ snmp-server enable traps
 
 #### 🚀 Syslog 
 
-For **Syslog Automation Implement Code** access [**Lab 22**](./22-NTP-(CML-%2B-PKT)) for more Information.
+For **Syslog Automation Implement Code** access [**Lab 22**](../22-NTP-(CML-%2B-PKT)) for more Information.
 
 **📸 Screenshot:**
 
