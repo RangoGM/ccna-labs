@@ -376,5 +376,5 @@ The success of this lab is not measured by the presence of an asterisk (`*`), bu
 [⬆ Back to Top](#-quick-navigation)
 
 
-| [⬅️ Previous Lab](../21-Enterprise-Syslog-(CML-%2B-PKT)) | [🏠 Main Menu](../README.md) | [Next Lab ➡️] |
+| [⬅️ Previous Lab](../21-Enterprise-Syslog-(CML-%2B-PKT)) | [🏠 Main Menu](../README.md) | [Next Lab ➡️](./23-SNMPv3-(CML))|
 |:--- | :---: | ---: |
