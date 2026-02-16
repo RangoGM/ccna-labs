@@ -51,7 +51,7 @@ This lab demonstrates the deployment of a **Native SNMPv3** management framework
  
 ---
 
-### ⚙️ Key Configuration
+### Key Configuration
 
 #### 1. Cisco Router R1 (Syslog + SNMP)
 <details>
@@ -184,7 +184,7 @@ snmp-server enable traps
 
 ---
 
-### 🚀 Server Services Implement (Syslog + SNMP)
+### Server Services Implement (Syslog + SNMP)
 
 #### 🚀 Syslog 
 
@@ -212,7 +212,7 @@ For **Syslog Automation Implement Code** access [**Lab 22**](./22-NTP-(CML-%2B-P
 
 ---
 
-### 🔍 Verification Packet Capture & Analysis (READ)
+### Verification Packet Capture & Analysis (READ)
 
 #### 🔍 Router R1
 
@@ -300,7 +300,7 @@ snmpwalk -v3 -l authPriv -u RangoAdmin -a SHA -A RangoAuthPass99 -x AES -X Rango
 
 ---
 
-### 📝 Change ISO MIB to Human Readable & SCP Files from Admin, `snmpset` - WRITE (Extra)
+### Change ISO MIB to Human Readable & SCP Files from Admin, `snmpset` - WRITE (Extra)
 
 #### 📝 Generated a comprehensive system report and securely transferred it to the Admin Host using **SCP**:
 
@@ -411,7 +411,7 @@ snmpset -v3 -l authPriv -u RangoAdmin -a SHA -A RangoAuthPass99 -x AES -X RangoA
 
 ---
 
-### 🕵️ Troubleshooting & Audit Analysis
+### Troubleshooting & Audit Analysis
 - **The Encoding Battle:** Identified `Encoding packets errors` caused by initial password mismatches. Resolved by synchronizing SHA/AES keys across the infrastructure.
 
 - **The Audit Trail:** Integrated with **Syslog**. Every SNMP-based configuration change was logged in real-time on the LogAnalyzer Dashboard, providing a "Who/What/When" evidence chain.
