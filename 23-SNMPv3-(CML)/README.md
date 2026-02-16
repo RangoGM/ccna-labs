@@ -15,7 +15,7 @@
 * [🚀 Server Services Setup](#server-services-implement-syslog--snmp)
 * [🔍 Verification & Packet Analysis](#verification-packet-capture--analysis-read)
 * [📝 Human Readable & SCP Files](#change-iso-mib-to-human-readable--scp-files-from-admin-snmpset---write-extra)
-* [🛠️ Troubleshooting & Conclusion](#-troubleshooting--audit-analysis)
+* [🛠️ Troubleshooting & Conclusion](#troubleshooting--audit-analysis)
 
 This lab demonstrates the deployment of a **Native SNMPv3** management framework, bypassing legacy insecure protocols. We implemented a complete communication loop between a Cisco Router and an Ubuntu NMS, covering all major SNMP message classes with **AuthPriv** security (SHA/AES-128).
 
