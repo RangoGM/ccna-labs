@@ -409,10 +409,15 @@ interface eth1/0
 
 #### VI.2. CPU Usage
 
+<div align="center">
+
 |System Metric|Unprotected (Flooding)|Protected (Violation Restrict)|
+|-|-|-|
 |**System CPU Load**| **~95%** (Barely dropped)| **~75%** (Drop after that **~15%**)|
 |**CAM Intergrity**|Compromised|Maintained|
 |**Audit Visibility**|Zero (Silent Failure)|Real-time (SNMP/Syslog)|
+
+</div>
 
 **Peak CPU (No Security):** 95%
 
