@@ -171,6 +171,7 @@ Each folder represents one independent lab and contains:
 |[**LAB 21**](./21-Enterprise-Syslog-(CML-+-PKT))|🏆 Enterprise Centralized Logging - Rsyslog, MariaDB & Web UI Hardening **(LINUX FOCUSED)**|✅|✅ Done|⭐⭐⭐⭐⭐⭐|
 |[**LAB 22**](./22-NTP-(CML-+-PKT))|Infrastructure Hardening: Automated Syslog & Secure NTP Orchestration **(LINUX FOCUSED)**|✅|✅ Done|⭐⭐⭐|
 |[**LAB 23**](./23-SNMPv3-(CML))|🏆 Full-Stack Enterprise SNMPv3 Monitoring & Control (**CML & LINUX FOCUSED**)|✅|✅ Done|⭐⭐⭐⭐⭐|
+|[**LAB 24**](./24-Port-Security-(Research))|:electron: Port Security Enforcement & Temporal Authorization Analysis (**Research Project**)|✅|✅ Done|![Research Grade](https://img.shields.io/badge/LEVEL-RESEARCH_ANALYSIS-black?style=for-the-badge&logo=target)|
 
 *Note: These labs focus on building large-scale networks to understand complex routing propagation and redundancy.*
 
