@@ -433,6 +433,6 @@ Lab 22 represents a fully matured Management Plane. By mastering **Native SNMPv3
 [⬆ Back to Top](#-quick-navigation)
 
 
-| [⬅️ Previous Lab](../22-NTP-(CML-%2B-PKT)) | [🏠 Main Menu](../README.md) | [Next Lab ➡️] |
+| [⬅️ Previous Lab](../22-NTP-(CML-%2B-PKT)) | [🏠 Main Menu](../README.md) | [Next Lab ➡️](../24-Port-Security-(Research))|
 |:--- | :---: | ---: |
 
