@@ -75,6 +75,8 @@ This experiment represents **Phase II – Identity Enforcement Architecture Anal
 
 </div>
 
+[⬆ Back to Top](#-quick-navigation)
+
 ---
 
 ### III. RADIUS Integration Validation
@@ -260,6 +262,8 @@ This **confirms:**
 - **✔ User credentials valid**
 - **✔ Control-plane AAA communication functioning properly**
 
+[⬆ Back to Top](#-quick-navigation)
+
 ---
 
 ### IV. Expected IEEE 802.1X Authentication Flow
@@ -279,6 +283,8 @@ This **confirms:**
 6. Port transitions from *unauthorized* to *authorized*
 
 7. Data traffic permitted
+
+[⬆ Back to Top](#-quick-navigation)
 
 ---
 
@@ -366,6 +372,8 @@ network={
 
 *(No **dot1x** features verify commands)*
 
+[⬆ Back to Top](#-quick-navigation)
+
 ---
 
 ### VI. Architectural Interpretation
@@ -391,6 +399,8 @@ The experiment demonstrates a clear separation between:
 >[!WARNING]
 > #### This indicates that **IOSvL2 in CML Free does not implement a full IEEE 802.1X authenticator engine.**
 
+[⬆ Back to Top](#-quick-navigation)
+
 ---
 
 ### VII. Platform Capability Limitation
@@ -410,6 +420,8 @@ The experiment demonstrates a clear separation between:
 - Platform capability must be **validated** before drawing conclusions about **security feature** behavior.
 
 - **Virtualized L2 environments** may not fully replicate **enterprise hardware** functionality.
+
+[⬆ Back to Top](#-quick-navigation)
 
 ---
 
@@ -436,6 +448,8 @@ The experiment demonstrates a clear separation between:
 
 </div>
 
+[⬆ Back to Top](#-quick-navigation)
+
 ---
 
 #### IX. Research Significance
@@ -458,6 +472,8 @@ The experiment demonstrates a clear separation between:
 
 - [✔] Providing a realistic boundary condition for further research
 
+[⬆ Back to Top](#-quick-navigation)
+
 ---
 
 ### X. Forward Path
@@ -474,3 +490,9 @@ The experiment demonstrates a clear separation between:
 
 >[!NOTE]
 > #### Full enterprise-grade 802.1X enforcement remains future work requiring hardware-capable platforms (e.g., Catalyst 9000 series).
+
+[⬆ Back to Top](#-quick-navigation)
+
+
+| [⬅️ Previous Lab](../24-Port-Security-(Research)) | [🏠 Main Menu](../README.md) | [Next Lab ➡️]|
+|:--- | :---: | ---: |
