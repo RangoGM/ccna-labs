@@ -5,7 +5,17 @@
 
 ## Lab 24: Port Security Enforcement & Temporal Authorization Analysis
 
-**🔍 Research Project:** Implementation of a Layer 2 Network Infrastructure Security Model in Dual-Stack IPv4/IPv6 Environments on Cisco Platforms.
+<div align=center>
+ 
+### 🔍 Research Project
+
+#### Design and Empirical Evaluation of a Layered Access-Control Security Model for Enterprise Access Networks
+
+(IP-Version Agnostic Architecture with Dual-Stack Considerations)
+
+</div>
+
+---
 
 **📝 Core Focus:** MAC Flooding Mitigation & System Resource Optimization.
 
