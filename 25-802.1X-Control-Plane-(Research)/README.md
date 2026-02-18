@@ -39,7 +39,7 @@ This lab evaluates the architectural deployment of IEEE 802.1X within a virtuali
 * [**V. Observed Behavior in IOSvL2 (CML Free)**](#v-observed-behavior-in-iosvl2-cml-free)
 * [**VI. Architectural Interpretation**](#vi-architectural-interpretation)
 * [**VII. Platform Capability Limitation**](#vii-platform-capability-limitation)
-* [**VIII. Security Design Implications**](#vii-temporal-authorization-window-race-condition)
+* [**VIII. Security Design Implications**](#viii-security-design-implications)
 * [**IX. Research Significance**](#ix-research-significance)
 * [**X. Forward Path**](#x-forward-path)
 
@@ -452,7 +452,7 @@ The experiment demonstrates a clear separation between:
 
 ---
 
-#### IX. Research Significance
+### IX. Research Significance
 
 #### Despite the absence of full port authorization enforcement, this lab successfully:
 
