@@ -508,6 +508,6 @@ $\text{Overall Reduced} = \frac{95 - 15}{95} \times 100 \approx \mathbf{84.21\%}
 [⬆ Back to Top](#-quick-navigation)
 
 
-| [⬅️ Previous Lab](../23-SNMPv3-(CML)) | [🏠 Main Menu](../README.md) | [Next Lab ➡️] |
+| [⬅️ Previous Lab](../23-SNMPv3-(CML)) | [🏠 Main Menu](../README.md) | [Next Lab ➡️](../25-802.1X-Control-Plane-(Research))|
 |:--- | :---: | ---: |
 
