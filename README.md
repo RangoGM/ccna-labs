@@ -87,43 +87,6 @@ Each folder represents one independent lab and contains:
   - **Example Configuration:** Key CLI snippets.
   - **Verification:** Proof of connectivity or security enforcement (e.g., show commands, Wireshark captures).
   - **Troubleshooting Notes:** Real-world issues encountered (e.g., Linux RA acceptance, interface states).
- 
----
-
-
-<div align="center">
-  
-### 🛠 Tech Stack & Tools
-  
-### 💻 Virtualization & Network Engine
-
-<img src="https://cdn.simpleicons.org/vmware/607078" height="48" alt="VMware" style="vertical-align: top; margin: 4px;" />
-<img src="https://cdn.simpleicons.org/cisco/1BA0D7" height="48" alt="Cisco" style="vertical-align: top; margin: 4px;" />
-
-![VMware](https://img.shields.io/badge/VMware_Workstation_Pro-607078?style=for-the-badge&logo=vmware&logoColor=white)
-![Cisco CML](https://img.shields.io/badge/Cisco_CML-Modeling_Labs-orange?style=for-the-badge&logo=cisco&logoColor=white)
-![Packet Tracer](https://img.shields.io/badge/Packet_Tracer-Simulation-005A70?style=for-the-badge&logo=cisco&logoColor=white)
-
-### 🐧 Operating Systems
-
-<img src="https://skillicons.dev/icons?i=linux" />
-<img src="https://skillicons.dev/icons?i=kali" />
-<img src="https://skillicons.dev/icons?i=windows" />
-
-![Kali Linux](https://img.shields.io/badge/Kali_Linux-PenTesting-557C94?style=for-the-badge&logo=kali-linux&logoColor=white)
-![Ubuntu](https://img.shields.io/badge/Ubuntu-Linux-E95420?style=for-the-badge&logo=ubuntu&logoColor=white)
-![Windows 10/11](https://img.shields.io/badge/Windows_10/11-Stack-0078D6?style=for-the-badge&logo=windows&logoColor=white)
-
-### 🔍 Analysis & Kernel Tuning
-
-<img src="https://cdn.simpleicons.org/wireshark/1679A7" height="48" alt="Wireshark" style="vertical-align: top; margin: 0 20px;" />
-
-![Wireshark](https://img.shields.io/badge/Wireshark-Packet_Analysis-1679A7?style=for-the-badge&logo=wireshark&logoColor=white)
-![tcpdump](https://img.shields.io/badge/tcpdump-CLI_Analysis-4169E1?style=for-the-badge)
-![sysctl](https://img.shields.io/badge/sysctl-Kernel_Tuning-black?style=for-the-badge)
-
-</div>
-
 
 ---
 
@@ -186,11 +149,6 @@ I don't just "input commands"; I analyze how data moves from the **Application L
 
 <div align="center">
 
-### 📍 CURRENT BASE & CONNECT
-![Location](https://img.shields.io/badge/Location-Ho_Chi_Minh_City,_Vietnam-EA4335?style=for-the-badge&logo=google-maps&logoColor=white)
-[![Facebook](https://img.shields.io/badge/Facebook-1877F2?style=for-the-badge&logo=facebook&logoColor=white)](https://www.facebook.com/dat.trangia.96)
-[![Discord](https://img.shields.io/badge/Discord-5865F2?style=for-the-badge&logo=discord&logoColor=white)](discordapp.com/users/698729316703404154)
-[![Gmail](https://img.shields.io/badge/Gmail-D14836?style=for-the-badge&logo=gmail&logoColor=white)](mailto:dattrangia13@gmail.com)
 ![Views](https://komarev.com/ghpvc/?username=RangoGM&color=blueviolet&style=for-the-badge&label=PROFILE+VIEWS)
 
 </div>
