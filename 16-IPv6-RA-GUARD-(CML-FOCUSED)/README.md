@@ -85,7 +85,7 @@ RA_GUARD(config-nd-raguard)# device-role host
 RA_GUARD(config)# interface e0/0
 RA_GUARD(config-if)# ipv6 nd raguard attach-policy TRUSTED
 
-RA_GUARD(config)# interface range e0/0 - 1
+RA_GUARD(config)# interface range e0/1 - 2
 RA_GUARD(config-if)# ipv6 nd raguard attach-policy UNTRUSTED
 
 ```
